@@ -1,0 +1,8 @@
+Phase 11 report format repair start
+Date: 2026-05-08T18:32:05+00:00
+Qube: dev-workbench
+
+Backup dir: reports/_backup_phase11_20260508_183205
+
+Existing reports backup:
+reports/_backup_phase11_20260508_183205/devsecops_lab_report.md

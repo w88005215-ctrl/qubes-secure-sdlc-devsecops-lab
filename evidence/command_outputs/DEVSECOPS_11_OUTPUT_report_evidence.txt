@@ -1,0 +1,41 @@
+Phase 11 report evidence
+Date: 2026-05-08T18:33:23+00:00
+Qube: dev-workbench
+
+[Report files]
+-rw-rw-r-- 1 user user 9.9K May  8 18:32 reports/devsecops_lab_report_en.md
+-rw-rw-r-- 1 user user 1.6K May  8 18:32 reports/devsecops_lab_report.md
+-rw-rw-r-- 1 user user  12K May  8 18:32 reports/devsecops_lab_report_ru.md
+-rw-rw-r-- 1 user user 1.2K May  8 18:33 reports/REPORT_BUILD_NOTES.md
+
+[Reports tree]
+reports
+├── _backup_phase11_20260508_183205
+│   └── devsecops_lab_report.md
+├── devsecops_lab_report_en.md
+├── devsecops_lab_report.md
+├── devsecops_lab_report_ru.md
+└── REPORT_BUILD_NOTES.md
+
+2 directories, 5 files
+
+[Line counts]
+  350 reports/devsecops_lab_report_en.md
+   34 reports/devsecops_lab_report.md
+  350 reports/devsecops_lab_report_ru.md
+   44 reports/REPORT_BUILD_NOTES.md
+  778 total
+
+[Policy evidence]
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
+
+[Git status]
+ M reports/devsecops_lab_report.md
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_phase10_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_report_evidence.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_report_format_repair_start.txt
+?? reports/REPORT_BUILD_NOTES.md
+?? reports/_backup_phase11_20260508_183205/
+?? reports/devsecops_lab_report_en.md
+?? reports/devsecops_lab_report_ru.md

@@ -1,0 +1,12 @@
+ M PROJECT_TREE.txt
+ M reports/devsecops_lab_report.md
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_phase10_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_git_status_before_phase11_commit.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_phase11_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_project_tree_after_report.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_report_evidence.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_report_format_repair_start.txt
+?? reports/REPORT_BUILD_NOTES.md
+?? reports/_backup_phase11_20260508_183205/
+?? reports/devsecops_lab_report_en.md
+?? reports/devsecops_lab_report_ru.md

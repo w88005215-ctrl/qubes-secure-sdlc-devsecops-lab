@@ -1,0 +1,23 @@
+Phase 11 acceptance check
+Date: 2026-05-08T18:34:15+00:00
+Qube: dev-workbench
+
+[OK] main report landing
+[OK] RU report
+[OK] EN report
+[OK] report build notes
+[OK] report evidence output
+[OK] project tree after report
+[OK] PROJECT_TREE.txt
+
+[Required report sections check]
+[OK] RU Executive Summary
+[OK] RU Evidence Table
+[OK] RU Limitations
+[OK] EN Executive Summary
+[OK] EN Evidence Table
+[OK] EN Limitations
+
+[Policy status check]
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
