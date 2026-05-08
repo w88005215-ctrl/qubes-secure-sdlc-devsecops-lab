@@ -1,0 +1,10 @@
+Phase 6 Syft SBOM generation
+Qube: security-runner
+Date: 2026-05-08T15:43:34+00:00
+Target: app/vulnerable-version
+
+[0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal)
+
+Syft return code: 0
+[OK] Syft CycloneDX SBOM created
+5

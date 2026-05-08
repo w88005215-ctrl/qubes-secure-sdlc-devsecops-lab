@@ -1,0 +1,10 @@
+Phase 6 pip-audit vulnerable dependency scan
+Qube: security-runner
+Date: 2026-05-08T15:40:17+00:00
+Target: app/vulnerable-version/requirements.txt
+
+Found 24 known vulnerabilities in 5 packages
+
+pip-audit return code: 0
+[OK] pip-audit JSON report created
+13

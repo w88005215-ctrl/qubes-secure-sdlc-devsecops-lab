@@ -1,0 +1,24 @@
+Phase 6 security-runner workspace preparation
+Qube: security-runner
+Date: 2026-05-08T15:37:22+00:00
+
+Incoming repository:
+/home/user/QubesIncoming/dev-workbench/qubes-secure-sdlc-devsecops-lab
+
+Working repository:
+/home/user/qubes-secure-sdlc-devsecops-lab
+
+Git branch:
+vulnerable-baseline
+
+Git log:
+605b5be (HEAD -> vulnerable-baseline) docs: add phase 5 EN doc fix git evidence
+1048c68 docs: fix phase 5 English security tools documentation
+54d4da0 docs: add phase 5 git evidence
+8f2e13f docs: add phase 5 security tools installation evidence
+0b2ca14 docs: add phase 4 git evidence
+
+Required paths:
+[OK] app/vulnerable-version
+[OK] docker/vulnerable.Dockerfile
+[OK] iac/vulnerable

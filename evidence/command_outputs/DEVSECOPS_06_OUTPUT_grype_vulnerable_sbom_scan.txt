@@ -1,0 +1,10 @@
+Phase 6 Grype vulnerable SBOM scan
+Qube: security-runner
+Date: 2026-05-08T15:43:54+00:00
+Target: evidence/sbom/DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+
+[0052]  WARN error updating db error=unable to update vulnerability database: unable to download db: write /home/user/.cache/grype/db/grype-db-download1136199822/vulnerability.db: no space left on device
+[0052] ERROR [31mfailed to load vulnerability db: database does not exist[0m
+
+Grype return code: 1
+[WARN] Grype JSON report missing or empty

@@ -1,0 +1,14 @@
+Phase 6 Bandit vulnerable scan
+Qube: security-runner
+Date: 2026-05-08T15:39:16+00:00
+Target: app/vulnerable-version
+
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[json]	INFO	JSON output written to file: evidence/scan_reports/bandit/DEVSECOPS_06_REPORT_bandit_vulnerable.json
+
+Bandit return code: 1
+[OK] Bandit JSON report created
+7

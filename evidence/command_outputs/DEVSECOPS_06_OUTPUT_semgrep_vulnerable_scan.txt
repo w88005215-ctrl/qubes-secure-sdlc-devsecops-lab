@@ -1,0 +1,40 @@
+Phase 6 Semgrep vulnerable scan
+Qube: security-runner
+Date: 2026-05-08T15:38:10+00:00
+
+Target:
+- app/vulnerable-version
+- docker
+- iac/vulnerable
+
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 9 files tracked by git with 1059 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  <multilang>      47       9          Community    1059                                                                
+  python          243       1                                                                                           
+  terraform       101       1                                                                                           
+  dockerfile        6       1                                                                                           
+                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 10 (10 blocking)
+ • Rules run: 397
+ • Targets scanned: 9
+ • Parsed lines: ~100.0%
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 397 rules on 9 files: 10 findings.
+
+Semgrep return code: 0
+[OK] Semgrep JSON report created
+10

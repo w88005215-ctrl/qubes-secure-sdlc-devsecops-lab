@@ -1,0 +1,42 @@
+Phase 6 evidence package for dev-workbench
+Qube: security-runner
+Date: 2026-05-08T15:45:22+00:00
+
+Package path:
+/home/user/devsecops-phase6-evidence
+
+Package tree:
+/home/user/devsecops-phase6-evidence
+├── command_outputs
+│   ├── DEVSECOPS_06_OUTPUT_bandit_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_checkov_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_evidence_package_tree.txt
+│   ├── DEVSECOPS_06_OUTPUT_gitleaks_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_grype_vulnerable_sbom_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_pip_audit_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_pre_scan_tool_check.txt
+│   ├── DEVSECOPS_06_OUTPUT_security_runner_workspace_preparation.txt
+│   ├── DEVSECOPS_06_OUTPUT_semgrep_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_syft_sbom_generation.txt
+│   ├── DEVSECOPS_06_OUTPUT_trivy_vulnerable_scans.txt
+│   └── DEVSECOPS_06_OUTPUT_vulnerable_scan_summary.txt
+├── sbom
+│   └── DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+└── scan_reports
+    ├── bandit
+    │   └── DEVSECOPS_06_REPORT_bandit_vulnerable.json
+    ├── checkov
+    │   └── DEVSECOPS_06_REPORT_checkov_vulnerable.json
+    ├── gitleaks
+    │   └── DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
+    ├── grype
+    │   └── DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json
+    ├── pip-audit
+    │   └── DEVSECOPS_06_REPORT_pip_audit_vulnerable.json
+    ├── semgrep
+    │   └── DEVSECOPS_06_REPORT_semgrep_vulnerable.json
+    └── trivy
+        ├── DEVSECOPS_06_REPORT_trivy_dockerfile_vulnerable.json
+        └── DEVSECOPS_06_REPORT_trivy_iac_vulnerable.json
+
+11 directories, 21 files

@@ -1,0 +1,9 @@
+Phase 6 Checkov vulnerable IaC scan
+Qube: security-runner
+Date: 2026-05-08T15:41:45+00:00
+Target: iac/vulnerable
+
+
+Checkov return code: 1
+[OK] Checkov JSON report created
+4

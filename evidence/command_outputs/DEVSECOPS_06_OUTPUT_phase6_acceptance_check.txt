@@ -1,0 +1,23 @@
+Phase 6 acceptance check
+Qube: dev-workbench
+Date: 2026-05-08T15:46:28+00:00
+
+[OK] docs/ru/07_vulnerable_security_scans.md
+[OK] docs/en/07_vulnerable_security_scans.md
+[OK] evidence/scan_reports/semgrep/DEVSECOPS_06_REPORT_semgrep_vulnerable.json
+[OK] evidence/scan_reports/bandit/DEVSECOPS_06_REPORT_bandit_vulnerable.json
+[OK] evidence/scan_reports/gitleaks/DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
+[OK] evidence/scan_reports/checkov/DEVSECOPS_06_REPORT_checkov_vulnerable.json
+[FAIL] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json is missing or empty
+[OK] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_iac_vulnerable.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_dockerfile_vulnerable.json
+[OK] evidence/sbom/DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+[FAIL] evidence/scan_reports/grype/DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json is missing or empty
+[OK] evidence/command_outputs/DEVSECOPS_06_OUTPUT_vulnerable_scan_summary.txt
+[OK] evidence/command_outputs/DEVSECOPS_06_OUTPUT_project_tree_after_vulnerable_scans.txt
+[OK] PROJECT_TREE.txt
+[OK] evidence/scan_reports/pip-audit/DEVSECOPS_06_REPORT_pip_audit_vulnerable.json
+
+[OK] vulnerable fake secret marker still present
+
+[FAIL] Phase 6 acceptance check has blocking issues
