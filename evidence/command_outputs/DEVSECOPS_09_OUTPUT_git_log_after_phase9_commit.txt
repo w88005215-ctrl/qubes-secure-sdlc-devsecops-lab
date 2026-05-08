@@ -1,0 +1,12 @@
+c2fe9dd (HEAD -> remediation, tag: v1.3-policy-gate-passed) test: add fixed security scans and passed policy gate evidence
+a8de048 docs: add phase 8 git evidence
+2546af6 (tag: v1.2-remediation) fix: add remediated application infrastructure and documentation
+1f517c1 (vulnerable-baseline) docs: add phase 7 git evidence
+abc785e (tag: v1.1-policy-gate-failed) test: add failed policy gate for vulnerable baseline
+91f5596 docs: add phase 6 repair git evidence
+5090018 test: repair phase 6 vulnerable scan evidence
+2c80f58 docs: add gitleaks config repair git evidence
+4d3f764 test: add custom gitleaks lab secret detection config
+294b19c docs: add phase 6 git evidence
+8117435 test: add phase 6 vulnerable security scan evidence
+605b5be docs: add phase 5 EN doc fix git evidence

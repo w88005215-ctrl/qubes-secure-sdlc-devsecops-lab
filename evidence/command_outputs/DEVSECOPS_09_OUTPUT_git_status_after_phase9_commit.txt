@@ -1,0 +1,3 @@
+?? evidence/command_outputs/DEVSECOPS_09_OUTPUT_git_log_after_phase9_commit.txt
+?? evidence/command_outputs/DEVSECOPS_09_OUTPUT_git_status_after_phase9_commit.txt
+?? evidence/command_outputs/DEVSECOPS_09_OUTPUT_git_tags_after_phase9.txt
