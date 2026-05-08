@@ -1,0 +1,19 @@
+Phase 8 remediation diff
+Date: 2026-05-08T16:28:14+00:00
+Qube: dev-workbench
+Branch: remediation
+
+Changed files:
+?? app/fixed-version/app.py
+?? app/fixed-version/requirements.txt
+?? docker/fixed.Dockerfile
+?? evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_phase7_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_branch_before_remediation.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_branch_preparation.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_diff.txt
+?? iac/fixed/main.tf
+
+Diff summary:
+
+Full diff:

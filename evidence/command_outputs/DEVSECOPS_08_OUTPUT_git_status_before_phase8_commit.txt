@@ -1,0 +1,16 @@
+ M PROJECT_TREE.txt
+?? app/fixed-version/app.py
+?? app/fixed-version/requirements.txt
+?? docker/fixed.Dockerfile
+?? docs/en/09_remediation.md
+?? docs/ru/09_remediation.md
+?? evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_phase7_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_branch_before_remediation.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_fixed_files_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_git_status_before_phase8_commit.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_phase8_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_project_tree_after_remediation_files.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_branch_preparation.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_diff.txt
+?? iac/fixed/main.tf

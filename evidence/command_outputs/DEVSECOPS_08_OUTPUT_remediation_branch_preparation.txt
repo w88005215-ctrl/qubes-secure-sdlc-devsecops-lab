@@ -1,0 +1,21 @@
+Phase 8 remediation branch preparation
+Date: 2026-05-08T16:26:09+00:00
+Qube: dev-workbench
+
+Current branch:
+remediation
+
+Recent tags:
+v0.1-skeleton
+v1.0-vulnerable-baseline
+v1.1-policy-gate-failed
+
+Recent log:
+1f517c1 (HEAD -> remediation, vulnerable-baseline) docs: add phase 7 git evidence
+abc785e (tag: v1.1-policy-gate-failed) test: add failed policy gate for vulnerable baseline
+91f5596 docs: add phase 6 repair git evidence
+5090018 test: repair phase 6 vulnerable scan evidence
+2c80f58 docs: add gitleaks config repair git evidence
+4d3f764 test: add custom gitleaks lab secret detection config
+294b19c docs: add phase 6 git evidence
+8117435 test: add phase 6 vulnerable security scan evidence

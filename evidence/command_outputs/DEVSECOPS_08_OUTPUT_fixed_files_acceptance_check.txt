@@ -1,0 +1,24 @@
+Phase 8 fixed files acceptance check
+Date: 2026-05-08T16:28:42+00:00
+Qube: dev-workbench
+Branch: remediation
+
+[OK] app/fixed-version/app.py
+[OK] app/fixed-version/requirements.txt
+[OK] docker/fixed.Dockerfile
+[OK] iac/fixed/main.tf
+[OK] evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv
+[OK] evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_diff.txt
+
+Check: fixed version should not contain fake secret markers
+[OK] no obvious fake secret marker in fixed version
+
+Check: fixed IaC should not contain public ingress
+[OK] no public ingress in fixed IaC
+
+Check: fixed app should not use subprocess
+[OK] no subprocess or shell execution marker in fixed app
+
+Check: fixed app debug setting
+95:    app.run(host="127.0.0.1", port=port, debug=False)
+[OK] debug disabled in fixed app

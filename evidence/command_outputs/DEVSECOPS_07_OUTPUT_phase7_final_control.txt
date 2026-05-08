@@ -1,0 +1,34 @@
+Phase 7 final control
+Date: 2026-05-08T16:20:35+00:00
+Qube: dev-workbench
+
+[OK] policy gate script executable
+[OK] RU Phase 7 doc
+[OK] EN Phase 7 doc
+[OK] gate failed evidence
+[OK] gate failed validation
+[OK] gate failed summary JSON
+[OK] Phase 7 acceptance evidence
+[OK] Phase 7 git log evidence
+[OK] PROJECT_TREE.txt
+
+Policy status:
+POLICY_GATE_STATUS=FAILED
+
+Git branch:
+vulnerable-baseline
+
+Git tags:
+v0.1-skeleton
+v1.0-vulnerable-baseline
+v1.1-policy-gate-failed
+
+Git log:
+1f517c1 (HEAD -> vulnerable-baseline) docs: add phase 7 git evidence
+abc785e (tag: v1.1-policy-gate-failed) test: add failed policy gate for vulnerable baseline
+91f5596 docs: add phase 6 repair git evidence
+5090018 test: repair phase 6 vulnerable scan evidence
+2c80f58 docs: add gitleaks config repair git evidence
+4d3f764 test: add custom gitleaks lab secret detection config
+294b19c docs: add phase 6 git evidence
+8117435 test: add phase 6 vulnerable security scan evidence

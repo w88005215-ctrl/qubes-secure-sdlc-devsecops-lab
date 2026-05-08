@@ -1,0 +1,46 @@
+Phase 8 acceptance check
+Date: 2026-05-08T16:29:39+00:00
+Qube: dev-workbench
+Branch: remediation
+
+[OK] app/fixed-version/app.py
+[OK] app/fixed-version/requirements.txt
+[OK] docker/fixed.Dockerfile
+[OK] iac/fixed/main.tf
+[OK] docs/ru/09_remediation.md
+[OK] docs/en/09_remediation.md
+[OK] evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv
+[OK] evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_branch_preparation.txt
+[OK] evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_diff.txt
+[OK] evidence/command_outputs/DEVSECOPS_08_OUTPUT_fixed_files_acceptance_check.txt
+[OK] evidence/command_outputs/DEVSECOPS_08_OUTPUT_project_tree_after_remediation_files.txt
+[OK] PROJECT_TREE.txt
+
+Remediation matrix preview:
+ID,Category,Vulnerable Evidence,Remediation,Fixed Location,Expected Result
+R01,Secrets,Fake hardcoded secret detected by Gitleaks,Remove hardcoded fake secret and use environment-based configuration,app/fixed-version/app.py,Gitleaks should report zero findings
+R02,Dependency Security,Outdated vulnerable dependencies detected by pip-audit Trivy and Grype,Use pinned modern dependency versions,app/fixed-version/requirements.txt,High and critical dependency findings should be reduced or removed
+R03,SAST Unsafe Execution,Unsafe subprocess usage in vulnerable app,Remove shell command execution and replace with validation-only endpoint,app/fixed-version/app.py,SAST should not report unsafe subprocess execution
+R04,Debug Mode,Flask debug mode enabled in vulnerable app,Set debug=False and production environment,docker/fixed.Dockerfile and app/fixed-version/app.py,Debug mode finding should be removed
+R05,Security Headers,Missing or weak security headers,Add CSP X-Frame-Options X-Content-Type-Options Referrer-Policy and Permissions-Policy,app/fixed-version/app.py,Security headers are present
+R06,Dockerfile Security,Insecure Dockerfile practices,Use non-root user pinned base image and production settings,docker/fixed.Dockerfile,Dockerfile misconfiguration findings should be reduced
+R07,IaC Public Ingress,Terraform ingress allowed 0.0.0.0/0,Restrict ingress to internal lab CIDR 10.0.0.0/24,iac/fixed/main.tf,Public ingress gate condition should pass
+R08,Dependency Pinning,Unpinned dependency in vulnerable requirements,Pin dependency versions,app/fixed-version/requirements.txt,Dependency pinning issue should be removed
+R09,Input Validation,Missing input validation,Add allowlist input validation for name and target parameters,app/fixed-version/app.py,Input validation issue should be remediated
+
+Git status:
+ M PROJECT_TREE.txt
+?? app/fixed-version/app.py
+?? app/fixed-version/requirements.txt
+?? docker/fixed.Dockerfile
+?? docs/en/09_remediation.md
+?? docs/ru/09_remediation.md
+?? evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_phase7_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_branch_before_remediation.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_fixed_files_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_phase8_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_project_tree_after_remediation_files.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_branch_preparation.txt
+?? evidence/command_outputs/DEVSECOPS_08_OUTPUT_remediation_diff.txt
+?? iac/fixed/main.tf

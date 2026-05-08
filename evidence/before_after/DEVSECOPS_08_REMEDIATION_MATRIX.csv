@@ -1,0 +1,10 @@
+ID,Category,Vulnerable Evidence,Remediation,Fixed Location,Expected Result
+R01,Secrets,Fake hardcoded secret detected by Gitleaks,Remove hardcoded fake secret and use environment-based configuration,app/fixed-version/app.py,Gitleaks should report zero findings
+R02,Dependency Security,Outdated vulnerable dependencies detected by pip-audit Trivy and Grype,Use pinned modern dependency versions,app/fixed-version/requirements.txt,High and critical dependency findings should be reduced or removed
+R03,SAST Unsafe Execution,Unsafe subprocess usage in vulnerable app,Remove shell command execution and replace with validation-only endpoint,app/fixed-version/app.py,SAST should not report unsafe subprocess execution
+R04,Debug Mode,Flask debug mode enabled in vulnerable app,Set debug=False and production environment,docker/fixed.Dockerfile and app/fixed-version/app.py,Debug mode finding should be removed
+R05,Security Headers,Missing or weak security headers,Add CSP X-Frame-Options X-Content-Type-Options Referrer-Policy and Permissions-Policy,app/fixed-version/app.py,Security headers are present
+R06,Dockerfile Security,Insecure Dockerfile practices,Use non-root user pinned base image and production settings,docker/fixed.Dockerfile,Dockerfile misconfiguration findings should be reduced
+R07,IaC Public Ingress,Terraform ingress allowed 0.0.0.0/0,Restrict ingress to internal lab CIDR 10.0.0.0/24,iac/fixed/main.tf,Public ingress gate condition should pass
+R08,Dependency Pinning,Unpinned dependency in vulnerable requirements,Pin dependency versions,app/fixed-version/requirements.txt,Dependency pinning issue should be removed
+R09,Input Validation,Missing input validation,Add allowlist input validation for name and target parameters,app/fixed-version/app.py,Input validation issue should be remediated
