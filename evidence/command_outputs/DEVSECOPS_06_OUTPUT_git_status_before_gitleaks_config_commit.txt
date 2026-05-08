@@ -1,0 +1,4 @@
+?? .gitleaks.toml
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_git_status_before_gitleaks_config_commit.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_gitleaks_config_repair.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_phase6_final_control.txt

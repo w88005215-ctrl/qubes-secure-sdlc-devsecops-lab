@@ -1,0 +1,25 @@
+Phase 6 Gitleaks config repair
+Qube: dev-workbench
+Date: 2026-05-08T15:56:34+00:00
+
+[OK] .gitleaks.toml created
+
+Config preview:
+title = "Qubes Secure SDLC DevSecOps Lab Gitleaks Config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "devsecops-lab-fake-aws-access-key"
+description = "Detect intentionally fake AWS-style access key used for lab evidence"
+regex = '''AKIA[0-9A-Z]{16}|AKIAIOSFODNN7EXAMPLE'''
+keywords = ["AKIA"]
+tags = ["key", "AWS", "lab", "intentionally-vulnerable"]
+
+[[rules]]
+id = "devsecops-lab-fake-secret-marker"
+description = "Detect intentionally fake lab secret markers"
+regex = '''(?i)(fake[_-]?secret|demo[_-]?secret|intentionally[_-]?vulnerable[_-]?secret|hardcoded[_-]?secret)'''
+keywords = ["secret"]
+tags = ["secret", "lab", "intentionally-vulnerable"]
