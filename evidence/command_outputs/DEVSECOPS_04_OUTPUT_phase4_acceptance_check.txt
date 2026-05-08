@@ -1,0 +1,28 @@
+Phase 4 acceptance check
+Qube: dev-workbench
+Date: 2026-05-08T14:22:22+00:00
+
+[OK] app/vulnerable-version/app.py
+[OK] app/vulnerable-version/requirements.txt
+[OK] app/vulnerable-version/.env.example
+[OK] app/vulnerable-version/README.md
+[OK] docker/vulnerable.Dockerfile
+[OK] iac/vulnerable/main.tf
+[OK] docs/ru/05_vulnerable_demo_application.md
+[OK] docs/en/05_vulnerable_demo_application.md
+[OK] evidence/command_outputs/DEVSECOPS_04_OUTPUT_vulnerable_app_created.txt
+[OK] evidence/command_outputs/DEVSECOPS_04_OUTPUT_vulnerable_dockerfile_created.txt
+[OK] evidence/command_outputs/DEVSECOPS_04_OUTPUT_vulnerable_iac_created.txt
+[OK] evidence/command_outputs/DEVSECOPS_04_OUTPUT_vulnerable_demo_inventory.txt
+[OK] evidence/command_outputs/DEVSECOPS_04_OUTPUT_project_tree_after_vulnerable_demo_app.txt
+[OK] PROJECT_TREE.txt
+
+Defect presence checks:
+[OK] fake AWS access key marker present
+[OK] unsafe subprocess marker present
+[OK] debug mode marker present
+[OK] unpinned dependency marker present
+[OK] public ingress marker present
+[OK] insecure Dockerfile marker present
+
+[OK] Phase 4 acceptance check passed

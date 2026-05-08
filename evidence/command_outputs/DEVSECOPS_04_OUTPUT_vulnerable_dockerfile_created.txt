@@ -1,0 +1,29 @@
+Phase 4 vulnerable Dockerfile created
+Qube: dev-workbench
+Date: 2026-05-08T14:20:19+00:00
+
+File:
+-rw-rw-r-- 1 user user 455 May  8 14:20 docker/vulnerable.Dockerfile
+
+Preview:
+# INTENTIONALLY VULNERABLE Dockerfile for lab scanning.
+# Do not use this Dockerfile in production.
+
+FROM python:3.9
+
+WORKDIR /app
+
+COPY app/vulnerable-version/requirements.txt /app/requirements.txt
+
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+COPY app/vulnerable-version/ /app/
+
+ENV FLASK_ENV=development
+ENV FLASK_DEBUG=1
+ENV LAB_MODE=intentionally-vulnerable
+
+EXPOSE 5000
+
+# Intentionally runs as root by default.
+CMD ["python", "app.py"]

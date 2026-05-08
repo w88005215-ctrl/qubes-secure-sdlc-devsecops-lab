@@ -1,0 +1,13 @@
+Phase 4 vulnerable Flask app created
+Qube: dev-workbench
+Date: 2026-05-08T14:15:05+00:00
+
+Files:
+app/vulnerable-version/app.py
+app/vulnerable-version/.env.example
+app/vulnerable-version/.gitkeep
+app/vulnerable-version/__pycache__/app.cpython-313.pyc
+app/vulnerable-version/requirements.txt
+
+Python syntax check:
+[OK] python3 -m py_compile app/vulnerable-version/app.py

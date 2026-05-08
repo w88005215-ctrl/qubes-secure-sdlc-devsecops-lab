@@ -1,0 +1,18 @@
+ M PROJECT_TREE.txt
+?? app/vulnerable-version/.env.example
+?? app/vulnerable-version/README.md
+?? app/vulnerable-version/app.py
+?? app/vulnerable-version/requirements.txt
+?? docker/vulnerable.Dockerfile
+?? docs/en/05_vulnerable_demo_application.md
+?? docs/ru/05_vulnerable_demo_application.md
+?? evidence/command_outputs/DEVSECOPS_03_OUTPUT_phase3_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_branch_preparation.txt
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_git_status_before_phase4_commit.txt
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_phase4_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_project_tree_after_vulnerable_demo_app.txt
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_vulnerable_app_created.txt
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_vulnerable_demo_inventory.txt
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_vulnerable_dockerfile_created.txt
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_vulnerable_iac_created.txt
+?? iac/vulnerable/main.tf

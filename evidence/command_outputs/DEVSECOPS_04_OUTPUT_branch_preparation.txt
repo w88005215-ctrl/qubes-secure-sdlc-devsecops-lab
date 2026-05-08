@@ -1,0 +1,13 @@
+Phase 4 branch preparation
+Qube: dev-workbench
+Date: 2026-05-08T14:14:46+00:00
+
+Current branch:
+vulnerable-baseline
+
+Git log:
+05b1ee0 (HEAD -> vulnerable-baseline, main, develop) docs: add phase 3 git evidence
+e3fdf44 docs: add phase 3 TemplateVM and AppVM preparation evidence
+ffc0b3f docs: add phase 2 git evidence
+fe4884e docs: add phase 2 Qubes VM architecture documentation
+82bfaff docs: add phase 1 closeout git evidence

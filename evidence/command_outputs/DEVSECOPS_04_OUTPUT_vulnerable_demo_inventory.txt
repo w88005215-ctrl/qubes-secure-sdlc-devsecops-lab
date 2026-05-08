@@ -1,0 +1,37 @@
+Phase 4 vulnerable demo application inventory
+Qube: dev-workbench
+Date: 2026-05-08T14:21:58+00:00
+
+Created files:
+app/vulnerable-version/app.py
+app/vulnerable-version/.env.example
+app/vulnerable-version/.gitkeep
+app/vulnerable-version/__pycache__/app.cpython-313.pyc
+app/vulnerable-version/README.md
+app/vulnerable-version/requirements.txt
+docker/vulnerable.Dockerfile
+docs/en/05_vulnerable_demo_application.md
+docs/ru/05_vulnerable_demo_application.md
+iac/vulnerable/.gitkeep
+iac/vulnerable/main.tf
+
+Defect markers:
+app/vulnerable-version/.env.example:6:LAB_FAKE_API_KEY=fake-api-key-for-devsecops-lab-only
+app/vulnerable-version/README.md:16:| D-04 | debug mode enabled | app.run debug=True |
+app/vulnerable-version/app.py:7:# INTENTIONALLY VULNERABLE LAB CODE
+app/vulnerable-version/app.py:9:FAKE_AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
+app/vulnerable-version/app.py:10:FAKE_AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+app/vulnerable-version/app.py:11:FAKE_GITHUB_TOKEN = "ghp_FAKE_TOKEN_FOR_SECURITY_LAB_ONLY_1234567890"
+app/vulnerable-version/app.py:50:    # INTENTIONALLY VULNERABLE:
+app/vulnerable-version/app.py:51:    # Unsafe subprocess usage with shell=True and user-controlled input.
+app/vulnerable-version/app.py:53:    output = subprocess.check_output(command, shell=True, text=True, stderr=subprocess.STDOUT)
+app/vulnerable-version/app.py:66:    # INTENTIONALLY VULNERABLE:
+app/vulnerable-version/app.py:77:    # INTENTIONALLY VULNERABLE:
+app/vulnerable-version/app.py:81:        "fake_access_key_id": FAKE_AWS_ACCESS_KEY_ID,
+app/vulnerable-version/app.py:87:    # INTENTIONALLY VULNERABLE:
+app/vulnerable-version/app.py:89:    app.run(host="0.0.0.0", port=5000, debug=True)
+docker/vulnerable.Dockerfile:1:# INTENTIONALLY VULNERABLE Dockerfile for lab scanning.
+iac/vulnerable/main.tf:1:# INTENTIONALLY VULNERABLE Terraform example for IaC scanning.
+iac/vulnerable/main.tf:21:    cidr_blocks = ["0.0.0.0/0"]
+iac/vulnerable/main.tf:29:    cidr_blocks = ["0.0.0.0/0"]
+iac/vulnerable/main.tf:37:    cidr_blocks = ["0.0.0.0/0"]

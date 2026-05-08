@@ -1,0 +1,22 @@
+Phase 3 final control
+Date: 2026-05-08T14:12:28+00:00
+Qube: dev-workbench
+
+[OK] PROJECT_TREE.txt
+[OK] RU Phase 3 doc
+[OK] EN Phase 3 doc
+[OK] dev-workbench base tools evidence
+[OK] security-runner base tools evidence
+[OK] Phase 3 checklist evidence
+[OK] Phase 3 acceptance evidence
+[OK] Phase 3 git log evidence
+
+Git branch:
+main
+
+Git log:
+05b1ee0 (HEAD -> main) docs: add phase 3 git evidence
+e3fdf44 docs: add phase 3 TemplateVM and AppVM preparation evidence
+ffc0b3f docs: add phase 2 git evidence
+fe4884e docs: add phase 2 Qubes VM architecture documentation
+82bfaff docs: add phase 1 closeout git evidence
