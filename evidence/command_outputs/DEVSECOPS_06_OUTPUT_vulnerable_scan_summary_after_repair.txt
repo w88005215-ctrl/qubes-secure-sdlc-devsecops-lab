@@ -1,0 +1,33 @@
+Phase 6 vulnerable scan summary after repair
+Qube: security-runner
+Date: 2026-05-08T16:11:53+00:00
+
+[Semgrep results count]
+10
+
+[Bandit results count]
+7
+
+[pip-audit dependency count]
+13
+
+[Gitleaks findings count]
+2
+
+[Checkov failed checks count]
+4
+
+[Trivy fs vulnerabilities count]
+17
+
+[Trivy IaC misconfigurations count]
+2
+
+[Trivy Dockerfile misconfigurations count]
+2
+
+[Syft SBOM components count]
+5
+
+[Grype matches count]
+17

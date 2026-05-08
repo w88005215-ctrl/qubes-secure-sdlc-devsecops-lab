@@ -1,0 +1,14 @@
+Phase 6 Gitleaks vulnerable secret scan repair
+Qube: security-runner
+Date: 2026-05-08T15:58:52+00:00
+
+Target: app/vulnerable-version
+Mode: gitleaks dir with custom .gitleaks.toml
+
+[90m3:58PM[0m [32mINF[0m [1mscanned ~6858 bytes (6.86 KB) in 16.5ms[0m
+[90m3:58PM[0m [33mWRN[0m [1mleaks found: 2[0m
+
+Gitleaks return code: 1
+[OK] Gitleaks JSON report created
+Findings count:
+2

@@ -1,0 +1,25 @@
+Phase 6 Trivy/Grype cache cleanup after storage resize
+Qube: security-runner
+Date: 2026-05-08T15:58:39+00:00
+
+Before cleanup:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvdb       9.8G  1.5G  8.4G  15% /home
+tmpfs           1.0G  4.0K  1.0G   1% /tmp
+
+3.1M	/home/user/.cache/trivy
+8.0K	/home/user/.cache/grype
+2026-05-08T15:58:39Z	INFO	Removing scan cache...
+2026-05-08T15:58:39Z	INFO	Removing vulnerability database...
+2026-05-08T15:58:39Z	INFO	Removing Java database...
+2026-05-08T15:58:39Z	INFO	Removing check bundle...
+2026-05-08T15:58:39Z	INFO	Removing VEX repositories...
+
+After cleanup:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvdb       9.8G  1.5G  8.4G  15% /home
+tmpfs           1.0G  4.0K  1.0G   1% /tmp
+
+New cache dirs:
+drwxr-xr-x. 2 user user 4096 May  8 15:58 /home/user/devsecops-tool-cache/grype-db
+drwxr-xr-x. 2 user user 4096 May  8 15:58 /home/user/devsecops-tool-cache/trivy

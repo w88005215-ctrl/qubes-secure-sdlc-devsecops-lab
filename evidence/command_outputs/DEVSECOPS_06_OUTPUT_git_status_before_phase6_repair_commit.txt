@@ -1,0 +1,16 @@
+ M PROJECT_TREE.txt
+ M evidence/scan_reports/gitleaks/DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
+ M evidence/scan_reports/grype/DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_git_status_before_phase6_repair_commit.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_gitleaks_vulnerable_scan_repair.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_grype_vulnerable_sbom_scan_repair.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_phase6_acceptance_check_after_repair.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_phase6_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_project_tree_after_phase6_repair.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_repair_evidence_import.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_repair_evidence_package_tree.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_repair_workspace_preparation.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_trivy_fs_vulnerable_scan_repair.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_trivy_grype_cache_cleanup_after_resize.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_vulnerable_scan_summary_after_repair.txt
+?? evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json

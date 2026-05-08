@@ -1,0 +1,29 @@
+Phase 6 acceptance check after repair
+Qube: dev-workbench
+Date: 2026-05-08T16:12:57+00:00
+
+[OK] .gitleaks.toml
+[OK] docs/ru/07_vulnerable_security_scans.md
+[OK] docs/en/07_vulnerable_security_scans.md
+[OK] evidence/scan_reports/semgrep/DEVSECOPS_06_REPORT_semgrep_vulnerable.json
+[OK] evidence/scan_reports/bandit/DEVSECOPS_06_REPORT_bandit_vulnerable.json
+[OK] evidence/scan_reports/pip-audit/DEVSECOPS_06_REPORT_pip_audit_vulnerable.json
+[OK] evidence/scan_reports/gitleaks/DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
+[OK] evidence/scan_reports/checkov/DEVSECOPS_06_REPORT_checkov_vulnerable.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_iac_vulnerable.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_dockerfile_vulnerable.json
+[OK] evidence/sbom/DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+[OK] evidence/scan_reports/grype/DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json
+[OK] evidence/command_outputs/DEVSECOPS_06_OUTPUT_vulnerable_scan_summary_after_repair.txt
+[OK] evidence/command_outputs/DEVSECOPS_06_OUTPUT_project_tree_after_phase6_repair.txt
+[OK] PROJECT_TREE.txt
+
+Gitleaks findings count: 2
+Trivy fs vulnerabilities count: 17
+Grype matches count: 17
+[OK] Gitleaks detected hardcoded fake secret
+[OK] Trivy fs report is readable
+[OK] Grype report is readable
+
+[OK] Phase 6 acceptance check after repair passed

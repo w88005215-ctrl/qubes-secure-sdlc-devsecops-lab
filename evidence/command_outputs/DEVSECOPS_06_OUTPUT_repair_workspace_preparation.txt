@@ -1,0 +1,17 @@
+Phase 6 repair workspace preparation
+Qube: security-runner
+Date: 2026-05-08T15:58:15+00:00
+
+Incoming repository:
+/home/user/QubesIncoming/dev-workbench/qubes-secure-sdlc-devsecops-lab
+
+Working repository:
+/home/user/qubes-secure-sdlc-devsecops-lab
+
+[OK] .gitleaks.toml present
+[OK] vulnerable SBOM present
+
+Disk space:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvdb       9.8G  1.5G  8.4G  15% /home
+tmpfs           1.0G  4.0K  1.0G   1% /tmp

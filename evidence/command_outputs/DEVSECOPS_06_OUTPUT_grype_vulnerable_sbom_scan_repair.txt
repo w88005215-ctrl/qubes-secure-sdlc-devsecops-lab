@@ -1,0 +1,25 @@
+Phase 6 Grype vulnerable SBOM scan repair
+Qube: security-runner
+Date: 2026-05-08T16:03:14+00:00
+
+Target: evidence/sbom/DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+Grype DB cache dir: /home/user/devsecops-tool-cache/grype-db
+
+Disk space before Grype:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvdb       9.8G  2.5G  7.4G  25% /home
+tmpfs           1.0G  4.0K  1.0G   1% /tmp
+
+
+Grype return code: 0
+[OK] Grype JSON report created
+Matches count:
+17
+
+Grype DB cache size:
+1.6G	/home/user/devsecops-tool-cache/grype-db
+
+Disk space after Grype:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvdb       9.8G  4.0G  5.8G  41% /home
+tmpfs           1.0G  4.0K  1.0G   1% /tmp

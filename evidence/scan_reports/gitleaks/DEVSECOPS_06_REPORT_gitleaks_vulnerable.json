@@ -1,1 +1,52 @@
-[]
+[
+ {
+  "RuleID": "devsecops-lab-fake-aws-access-key",
+  "Description": "Detect intentionally fake AWS-style access key used for lab evidence",
+  "StartLine": 4,
+  "EndLine": 4,
+  "StartColumn": 218,
+  "EndColumn": 237,
+  "Match": "AKIAIOSFODNN7EXAMPLE",
+  "Secret": "AKIAIOSFODNN7EXAMPLE",
+  "File": "app/vulnerable-version/__pycache__/app.cpython-313.pyc",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 3.6841838,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [
+   "key",
+   "AWS",
+   "lab",
+   "intentionally-vulnerable"
+  ],
+  "Fingerprint": "app/vulnerable-version/__pycache__/app.cpython-313.pyc:devsecops-lab-fake-aws-access-key:4"
+ },
+ {
+  "RuleID": "devsecops-lab-fake-aws-access-key",
+  "Description": "Detect intentionally fake AWS-style access key used for lab evidence",
+  "StartLine": 9,
+  "EndLine": 9,
+  "StartColumn": 28,
+  "EndColumn": 47,
+  "Match": "AKIAIOSFODNN7EXAMPLE",
+  "Secret": "AKIAIOSFODNN7EXAMPLE",
+  "File": "app/vulnerable-version/app.py",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 3.6841838,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [
+   "key",
+   "AWS",
+   "lab",
+   "intentionally-vulnerable"
+  ],
+  "Fingerprint": "app/vulnerable-version/app.py:devsecops-lab-fake-aws-access-key:9"
+ }
+]

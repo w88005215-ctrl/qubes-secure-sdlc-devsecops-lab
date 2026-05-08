@@ -1,0 +1,30 @@
+Phase 6 final control
+Date: 2026-05-08T15:46:44+00:00
+Qube: dev-workbench
+
+[OK] RU Phase 6 doc
+[OK] EN Phase 6 doc
+[OK] Semgrep report
+[OK] Bandit report
+[OK] Gitleaks report
+[OK] Checkov report
+[FAIL] Trivy fs report
+[OK] Trivy IaC report
+[OK] Trivy Dockerfile report
+[OK] Syft SBOM
+[FAIL] Grype report
+[OK] Phase 6 acceptance evidence
+[OK] Phase 6 git log evidence
+[OK] PROJECT_TREE.txt
+
+Git branch:
+vulnerable-baseline
+
+Git log:
+294b19c (HEAD -> vulnerable-baseline) docs: add phase 6 git evidence
+8117435 test: add phase 6 vulnerable security scan evidence
+605b5be docs: add phase 5 EN doc fix git evidence
+1048c68 docs: fix phase 5 English security tools documentation
+54d4da0 docs: add phase 5 git evidence
+8f2e13f docs: add phase 5 security tools installation evidence
+0b2ca14 docs: add phase 4 git evidence

@@ -1,0 +1,61 @@
+Phase 6 repair evidence package for dev-workbench
+Qube: security-runner
+Date: 2026-05-08T16:12:22+00:00
+
+Package path:
+/home/user/devsecops-phase6-repair-evidence
+
+Package tree:
+/home/user/devsecops-phase6-repair-evidence
+├── command_outputs
+│   ├── DEVSECOPS_06_OUTPUT_bandit_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_checkov_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_evidence_package_tree.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_log_after_gitleaks_config_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_log_after_phase6_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_status_after_phase6_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_status_before_gitleaks_config_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_status_before_phase6_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_gitleaks_config_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_gitleaks_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_gitleaks_vulnerable_scan_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_grype_vulnerable_sbom_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_grype_vulnerable_sbom_scan_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_incoming_evidence_import.txt
+│   ├── DEVSECOPS_06_OUTPUT_phase6_acceptance_check.txt
+│   ├── DEVSECOPS_06_OUTPUT_phase6_final_control.txt
+│   ├── DEVSECOPS_06_OUTPUT_pip_audit_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_pre_scan_tool_check.txt
+│   ├── DEVSECOPS_06_OUTPUT_project_tree_after_vulnerable_scans.txt
+│   ├── DEVSECOPS_06_OUTPUT_repair_evidence_package_tree.txt
+│   ├── DEVSECOPS_06_OUTPUT_repair_workspace_preparation.txt
+│   ├── DEVSECOPS_06_OUTPUT_security_runner_workspace_preparation.txt
+│   ├── DEVSECOPS_06_OUTPUT_semgrep_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_syft_sbom_generation.txt
+│   ├── DEVSECOPS_06_OUTPUT_trivy_fs_vulnerable_scan_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_trivy_grype_cache_cleanup_after_resize.txt
+│   ├── DEVSECOPS_06_OUTPUT_trivy_vulnerable_scans.txt
+│   ├── DEVSECOPS_06_OUTPUT_vulnerable_scan_summary.txt
+│   └── DEVSECOPS_06_OUTPUT_vulnerable_scan_summary_after_repair.txt
+├── config
+├── sbom
+│   └── DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+└── scan_reports
+    ├── bandit
+    │   └── DEVSECOPS_06_REPORT_bandit_vulnerable.json
+    ├── checkov
+    │   └── DEVSECOPS_06_REPORT_checkov_vulnerable.json
+    ├── gitleaks
+    │   └── DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
+    ├── grype
+    │   └── DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json
+    ├── pip-audit
+    │   └── DEVSECOPS_06_REPORT_pip_audit_vulnerable.json
+    ├── semgrep
+    │   └── DEVSECOPS_06_REPORT_semgrep_vulnerable.json
+    └── trivy
+        ├── DEVSECOPS_06_REPORT_trivy_dockerfile_vulnerable.json
+        ├── DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json
+        └── DEVSECOPS_06_REPORT_trivy_iac_vulnerable.json
+
+12 directories, 39 files
