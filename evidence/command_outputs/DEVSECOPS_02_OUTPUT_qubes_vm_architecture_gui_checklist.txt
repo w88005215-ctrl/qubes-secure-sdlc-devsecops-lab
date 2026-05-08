@@ -1,0 +1,23 @@
+Phase 2 Qubes VM Architecture GUI Checklist
+Qube used for repository work: dev-workbench
+Date: 2026-05-08T13:25:21+00:00
+
+VM setup method:
+- Created or verified manually through Qubes GUI / Qube Manager
+- No dom0 shell commands used for this project step
+- No qvm-* commands used in this project step
+
+Expected project qubes:
+- dev-workbench: repository and demo application development
+- security-runner: security tools execution
+- evidence-vault: evidence, screenshots, reports and SBOM storage
+- report-vm: report and presentation preparation
+
+Network design:
+- dev-workbench: network allowed for development tasks
+- security-runner: network allowed for tool installation and updates
+- evidence-vault: no network preferred
+- report-vm: network optional, can be disabled after preparation
+
+Evidence:
+- Screenshot expected: evidence/screenshots/DEVSECOPS_02_SCREENSHOT_qubes_vm_architecture_gui.png

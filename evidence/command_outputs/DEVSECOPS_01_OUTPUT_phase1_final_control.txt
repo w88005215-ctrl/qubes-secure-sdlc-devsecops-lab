@@ -1,0 +1,16 @@
+Phase 1 final control
+Date: 2026-05-08T13:13:19+00:00
+
+[OK] PROJECT_TREE.txt
+[OK] phase1 acceptance evidence
+[OK] branches and tags evidence
+[OK] git log after closeout
+[OK] evidence inventory
+
+  develop
+  evidence-pack
+* main
+  remediation
+  vulnerable-baseline
+
+v0.1-skeleton

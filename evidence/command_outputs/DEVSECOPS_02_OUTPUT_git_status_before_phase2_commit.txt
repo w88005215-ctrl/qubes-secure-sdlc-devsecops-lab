@@ -1,0 +1,10 @@
+ M PROJECT_TREE.txt
+?? docs/en/03_qubes_vm_architecture.md
+?? docs/ru/03_qubes_vm_architecture.md
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_phase1_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_02_OUTPUT_git_status_before_phase2_commit.txt
+?? evidence/command_outputs/DEVSECOPS_02_OUTPUT_phase2_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_02_OUTPUT_phase2_precheck_dev_workbench.txt
+?? evidence/command_outputs/DEVSECOPS_02_OUTPUT_project_tree_after_qubes_architecture.txt
+?? evidence/command_outputs/DEVSECOPS_02_OUTPUT_project_tree_before_qubes_architecture.txt
+?? evidence/command_outputs/DEVSECOPS_02_OUTPUT_qubes_vm_architecture_gui_checklist.txt

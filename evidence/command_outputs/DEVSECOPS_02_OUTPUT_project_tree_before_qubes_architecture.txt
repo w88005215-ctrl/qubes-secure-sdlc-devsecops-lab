@@ -28,14 +28,12 @@
 │   ├── en
 │   │   ├── 00_project_overview.md
 │   │   ├── 01_qubes_architecture.md
-│   │   ├── 02_evidence_workflow.md
-│   │   └── 03_qubes_vm_architecture.md
+│   │   └── 02_evidence_workflow.md
 │   ├── .gitkeep
 │   └── ru
 │       ├── 00_project_overview.md
 │       ├── 01_qubes_architecture.md
-│       ├── 02_evidence_workflow.md
-│       └── 03_qubes_vm_architecture.md
+│       └── 02_evidence_workflow.md
 ├── evidence
 │   ├── before_after
 │   │   └── .gitkeep
@@ -62,9 +60,7 @@
 │   │   ├── DEVSECOPS_01_OUTPUT_soc_style_alignment.txt
 │   │   ├── DEVSECOPS_01_OUTPUT_tree_files_validation.txt
 │   │   ├── DEVSECOPS_02_OUTPUT_phase2_precheck_dev_workbench.txt
-│   │   ├── DEVSECOPS_02_OUTPUT_project_tree_after_qubes_architecture.txt
 │   │   ├── DEVSECOPS_02_OUTPUT_project_tree_before_qubes_architecture.txt
-│   │   ├── DEVSECOPS_02_OUTPUT_qubes_vm_architecture_gui_checklist.txt
 │   │   ├── DEVSECOPS_99_OUTPUT_git_log.txt
 │   │   ├── DEVSECOPS_99_OUTPUT_git_status.txt
 │   │   ├── DEVSECOPS_99_OUTPUT_project_tree_final.txt
@@ -128,4 +124,4 @@
     ├── 09_collect_evidence.sh
     └── .gitkeep
 
-32 directories, 97 files
+32 directories, 93 files

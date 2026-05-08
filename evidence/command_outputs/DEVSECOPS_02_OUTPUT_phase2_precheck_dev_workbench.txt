@@ -1,0 +1,13 @@
+Phase 2 precheck
+Qube: dev-workbench
+Date: 2026-05-08T13:14:57+00:00
+
+Current git branch:
+main
+
+Current git status:
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_phase1_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_02_OUTPUT_phase2_precheck_dev_workbench.txt
+
+Current tags:
+v0.1-skeleton

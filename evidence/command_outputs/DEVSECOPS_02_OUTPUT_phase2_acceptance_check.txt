@@ -1,0 +1,14 @@
+Phase 2 acceptance check
+Qube: dev-workbench
+Date: 2026-05-08T13:26:21+00:00
+
+[OK] docs/ru/03_qubes_vm_architecture.md
+[OK] docs/en/03_qubes_vm_architecture.md
+[OK] evidence/command_outputs/DEVSECOPS_02_OUTPUT_qubes_vm_architecture_gui_checklist.txt
+[OK] evidence/command_outputs/DEVSECOPS_02_OUTPUT_project_tree_after_qubes_architecture.txt
+[OK] PROJECT_TREE.txt
+[WARN] Screenshot not found yet:
+evidence/screenshots/DEVSECOPS_02_SCREENSHOT_qubes_vm_architecture_gui.png
+Create it from Qubes GUI / Qube Manager before final report.
+
+[OK] Phase 2 acceptance check passed
