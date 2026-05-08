@@ -1,0 +1,2 @@
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_log_after_phase1_closeout.txt
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_status_after_phase1_closeout.txt

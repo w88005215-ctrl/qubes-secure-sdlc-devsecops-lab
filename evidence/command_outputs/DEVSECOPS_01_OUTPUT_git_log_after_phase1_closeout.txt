@@ -1,0 +1,3 @@
+bea3857 (HEAD -> main) docs: complete phase 1 repository skeleton evidence
+f88e76d (tag: v0.1-skeleton, vulnerable-baseline, remediation, evidence-pack, develop) docs: add git log evidence after tree fix
+83fcb63 fix: enforce non-empty project tree evidence generation
