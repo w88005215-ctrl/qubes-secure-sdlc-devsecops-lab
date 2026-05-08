@@ -1,0 +1,7 @@
+ M PROJECT_TREE.txt
+?? docs/en/06_security_tools_installation.md
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_acceptance_after_en_doc_fix.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_en_doc_fix_validation.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_git_status_before_en_doc_fix_commit.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_phase5_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_project_tree_after_en_doc_fix.txt

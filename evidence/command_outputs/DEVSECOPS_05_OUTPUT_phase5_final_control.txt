@@ -1,0 +1,22 @@
+Phase 5 final control
+Date: 2026-05-08T15:31:12+00:00
+Qube: dev-workbench
+
+[OK] RU Phase 5 doc
+[FAIL] EN Phase 5 doc
+[OK] installation model precheck
+[OK] tools versions evidence
+[OK] tools acceptance evidence
+[OK] Phase 5 acceptance evidence
+[OK] Phase 5 git log evidence
+[OK] PROJECT_TREE.txt
+
+Git branch:
+vulnerable-baseline
+
+Git log:
+54d4da0 (HEAD -> vulnerable-baseline) docs: add phase 5 git evidence
+8f2e13f docs: add phase 5 security tools installation evidence
+0b2ca14 docs: add phase 4 git evidence
+fb376a0 (tag: v1.0-vulnerable-baseline) feat: add intentionally vulnerable demo application baseline
+05b1ee0 (main, develop) docs: add phase 3 git evidence

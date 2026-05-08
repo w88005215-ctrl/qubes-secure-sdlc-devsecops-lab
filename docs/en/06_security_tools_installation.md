@@ -1,0 +1,53 @@
+# Security Tools Installation
+
+## Purpose
+
+Phase 5 installs automated security testing tools in security-runner.
+
+During this phase, tools are only installed and version-checked.
+
+Scanning the vulnerable-version is performed later in Phase 6.
+
+## Where Installation Happens
+
+| Qube | Purpose |
+|---|---|
+| security-runner | user-space security tools installation |
+| dev-workbench | evidence, documentation and git commit storage |
+
+## Installed Tools
+
+| Tool | Purpose |
+|---|---|
+| Semgrep | SAST |
+| Bandit | Python SAST |
+| pip-audit | Python dependency audit |
+| Gitleaks | secret scanning |
+| Trivy | dependency, container and IaC scanning |
+| Checkov | IaC scanning |
+| Syft | SBOM generation |
+| Grype | vulnerability scan by SBOM |
+
+## Installation Principle
+
+Tools are installed inside the security-runner AppVM:
+
+- ~/.local/bin for binaries
+- pipx for Python-based tools
+- TemplateVM ~/.local is not used
+- Docker Desktop is not used
+- cloud API is not a mandatory part of the project
+- project working files are not stored in dom0
+
+## Phase 5 Evidence
+
+| Evidence | Purpose |
+|---|---|
+| evidence/command_outputs/DEVSECOPS_05_OUTPUT_installation_model_precheck.txt | installation model precheck |
+| evidence/command_outputs/DEVSECOPS_05_OUTPUT_python_tools_installation.txt | Semgrep, Bandit, pip-audit, Checkov installation |
+| evidence/command_outputs/DEVSECOPS_05_OUTPUT_gitleaks_installation.txt | Gitleaks installation |
+| evidence/command_outputs/DEVSECOPS_05_OUTPUT_trivy_installation.txt | Trivy installation |
+| evidence/command_outputs/DEVSECOPS_05_OUTPUT_syft_grype_installation.txt | Syft and Grype installation |
+| evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_versions.txt | tool versions |
+| evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_acceptance_check.txt | tool availability check |
+| evidence/command_outputs/DEVSECOPS_05_OUTPUT_phase5_acceptance_check.txt | Phase 5 repository acceptance check |

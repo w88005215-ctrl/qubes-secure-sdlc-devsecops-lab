@@ -1,0 +1,14 @@
+Phase 5 acceptance check after EN doc fix
+Qube: dev-workbench
+Date: 2026-05-08T15:33:28+00:00
+
+[OK] RU Phase 5 doc
+[OK] EN Phase 5 doc
+[OK] installation model precheck
+[OK] tools versions evidence
+[OK] tools acceptance evidence
+[OK] original Phase 5 acceptance evidence
+[OK] tree after EN doc fix
+[OK] PROJECT_TREE.txt
+
+[OK] Phase 5 EN doc fix acceptance check completed
