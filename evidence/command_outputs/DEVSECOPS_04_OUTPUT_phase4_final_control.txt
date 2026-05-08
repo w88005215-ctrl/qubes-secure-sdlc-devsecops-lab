@@ -1,0 +1,27 @@
+Phase 4 final control
+Date: 2026-05-08T14:23:13+00:00
+Qube: dev-workbench
+
+[OK] vulnerable app.py
+[OK] vulnerable requirements.txt
+[OK] vulnerable Dockerfile
+[OK] vulnerable IaC
+[OK] RU vulnerable app doc
+[OK] EN vulnerable app doc
+[OK] Phase 4 acceptance evidence
+[OK] Phase 4 git log evidence
+[OK] PROJECT_TREE.txt
+
+Git branch:
+vulnerable-baseline
+
+Git tags:
+v0.1-skeleton
+v1.0-vulnerable-baseline
+
+Git log:
+0b2ca14 (HEAD -> vulnerable-baseline) docs: add phase 4 git evidence
+fb376a0 (tag: v1.0-vulnerable-baseline) feat: add intentionally vulnerable demo application baseline
+05b1ee0 (main, develop) docs: add phase 3 git evidence
+e3fdf44 docs: add phase 3 TemplateVM and AppVM preparation evidence
+ffc0b3f docs: add phase 2 git evidence

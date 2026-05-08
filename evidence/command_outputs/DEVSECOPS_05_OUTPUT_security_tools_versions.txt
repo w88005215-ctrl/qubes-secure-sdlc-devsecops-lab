@@ -1,0 +1,60 @@
+Phase 5 Security tools version inventory
+Qube: security-runner
+Date: 2026-05-08T15:29:10+00:00
+
+PATH:
+/home/user/.local/bin:/home/user/.local/bin:/home/user/.local/bin:/home/user/.local/bin:/home/user/bin:/usr/local/bin:/usr/bin
+
+Tool versions:
+
+[semgrep]
+1.162.0
+
+[bandit]
+bandit 1.9.4
+  python version = 3.14.4 (main, Apr 16 2026, 00:00:00) [GCC 15.2.1 20260123 (Red Hat 15.2.1-7)]
+
+[pip-audit]
+pip-audit 2.10.0
+
+[gitleaks]
+8.30.1
+
+[trivy]
+Version: 0.70.0
+
+[checkov]
+3.2.527
+
+[syft]
+Application:   syft
+Version:       1.44.0
+BuildDate:     2026-05-01T17:11:01Z
+GitCommit:     8cb78ce40ced6a731fb83f2a491a67444f541bf1
+GitDescription: v1.44.0
+Platform:      linux/amd64
+GoVersion:     go1.26.2
+Compiler:      gc
+SchemaVersion: 16.1.3
+
+[grype]
+Application:         grype
+Version:             0.112.0
+BuildDate:           2026-05-01T18:57:12Z
+GitCommit:           244f2a10a5668078fcf771454bbd832b3a5b9e8a
+GitDescription:      v0.112.0
+Platform:            linux/amd64
+GoVersion:           go1.26.2
+Compiler:            gc
+Syft Version:        v1.44.0
+Supported DB Schema: 6
+
+Binary locations:
+semgrep      /home/user/.local/bin/semgrep
+bandit       /home/user/.local/bin/bandit
+pip-audit    /home/user/.local/bin/pip-audit
+gitleaks     /home/user/.local/bin/gitleaks
+trivy        /home/user/.local/bin/trivy
+checkov      /home/user/.local/bin/checkov
+syft         /home/user/.local/bin/syft
+grype        /home/user/.local/bin/grype

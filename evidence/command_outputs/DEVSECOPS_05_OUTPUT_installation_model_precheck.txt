@@ -1,0 +1,26 @@
+Phase 5 installation model precheck
+Qube: security-runner
+Date: 2026-05-08T14:57:57+00:00
+
+Installation model:
+- Security tools will be installed inside security-runner AppVM
+- Target binary path: /home/user/.local/bin
+- Target pipx home: /home/user/.local/pipx
+- TemplateVM ~/.local is not used
+- Evidence will be copied to dev-workbench through qvm-copy
+
+Current user:
+user
+
+Home:
+/home/user
+
+Required base commands:
+[OK] python3 -> /usr/bin/python3
+[OK] pipx -> /usr/bin/pipx
+[OK] curl -> /usr/bin/curl
+[OK] wget -> /usr/bin/wget
+[OK] jq -> /usr/bin/jq
+[OK] tar -> /usr/bin/tar
+[OK] gzip -> /usr/bin/gzip
+[OK] unzip -> /usr/bin/unzip

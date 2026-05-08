@@ -1,0 +1,20 @@
+Phase 5 security tools acceptance check
+Qube: security-runner
+Date: 2026-05-08T15:29:29+00:00
+
+Mode:
+- safe interactive mode
+- no set -euo pipefail
+- no exit 1
+- failures are recorded in evidence
+
+[OK] semgrep -> /home/user/.local/bin/semgrep
+[OK] bandit -> /home/user/.local/bin/bandit
+[OK] pip-audit -> /home/user/.local/bin/pip-audit
+[OK] gitleaks -> /home/user/.local/bin/gitleaks
+[OK] trivy -> /home/user/.local/bin/trivy
+[OK] checkov -> /home/user/.local/bin/checkov
+[OK] syft -> /home/user/.local/bin/syft
+[OK] grype -> /home/user/.local/bin/grype
+
+[OK] Phase 5 security tools installation acceptance passed

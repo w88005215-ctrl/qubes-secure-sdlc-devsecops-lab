@@ -1,0 +1,15 @@
+ M PROJECT_TREE.txt
+?? docs/ru/06_security_tools_installation.md
+?? evidence/command_outputs/DEVSECOPS_04_OUTPUT_phase4_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_git_status_before_phase5_commit.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_gitleaks_installation.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_imported_security_runner_evidence_validation.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_installation_model_precheck.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_phase5_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_project_tree_after_security_tools_installation.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_python_tools_installation.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_qvm_copy_received_files.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_versions.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_syft_grype_installation.txt
+?? evidence/command_outputs/DEVSECOPS_05_OUTPUT_trivy_installation.txt

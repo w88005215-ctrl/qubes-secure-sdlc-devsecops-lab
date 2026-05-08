@@ -1,0 +1,7 @@
+/home/user/QubesIncoming/security-runner/devsecops-tools-evidence/DEVSECOPS_05_OUTPUT_security_tools_acceptance_check.txt
+/home/user/QubesIncoming/security-runner/devsecops-tools-evidence/DEVSECOPS_05_OUTPUT_trivy_installation.txt
+/home/user/QubesIncoming/security-runner/devsecops-tools-evidence/DEVSECOPS_05_OUTPUT_syft_grype_installation.txt
+/home/user/QubesIncoming/security-runner/devsecops-tools-evidence/DEVSECOPS_05_OUTPUT_gitleaks_installation.txt
+/home/user/QubesIncoming/security-runner/devsecops-tools-evidence/DEVSECOPS_05_OUTPUT_security_tools_versions.txt
+/home/user/QubesIncoming/security-runner/devsecops-tools-evidence/DEVSECOPS_05_OUTPUT_installation_model_precheck.txt
+/home/user/QubesIncoming/security-runner/devsecops-tools-evidence/DEVSECOPS_05_OUTPUT_python_tools_installation.txt

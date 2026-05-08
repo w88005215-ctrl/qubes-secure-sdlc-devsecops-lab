@@ -1,0 +1,20 @@
+Phase 5 imported security-runner evidence validation
+Qube: dev-workbench
+Date: 2026-05-08T15:30:07+00:00
+
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_installation_model_precheck.txt
+-rw-r--r-- 1 user user 637 May  8 15:30 evidence/command_outputs/DEVSECOPS_05_OUTPUT_installation_model_precheck.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_python_tools_installation.txt
+-rw-r--r-- 1 user user 1.5K May  8 15:30 evidence/command_outputs/DEVSECOPS_05_OUTPUT_python_tools_installation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_gitleaks_installation.txt
+-rw-r--r-- 1 user user 1012 May  8 15:30 evidence/command_outputs/DEVSECOPS_05_OUTPUT_gitleaks_installation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_trivy_installation.txt
+-rw-r--r-- 1 user user 3.5K May  8 15:30 evidence/command_outputs/DEVSECOPS_05_OUTPUT_trivy_installation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_syft_grype_installation.txt
+-rw-r--r-- 1 user user 1.5K May  8 15:30 evidence/command_outputs/DEVSECOPS_05_OUTPUT_syft_grype_installation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_versions.txt
+-rw-r--r-- 1 user user 1.4K May  8 15:30 evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_versions.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_acceptance_check.txt
+-rw-r--r-- 1 user user 615 May  8 15:30 evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_acceptance_check.txt
+
+[OK] Phase 5 imported evidence validation passed

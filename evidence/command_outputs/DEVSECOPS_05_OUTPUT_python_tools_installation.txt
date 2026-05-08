@@ -1,0 +1,60 @@
+Phase 5 Python security tools installation
+Qube: security-runner
+Date: 2026-05-08T15:01:00+00:00
+
+Installation model:
+- AppVM user-space installation
+- Target path: /home/user/.local/bin
+- TemplateVM ~/.local is not used
+
+pipx:
+1.11.1
+
+creating virtual environment...
+creating shared libraries...
+upgrading shared libraries...
+WARNING: Skipping setuptools as it is not installed.
+installing semgrep...
+done! ✨ 🌟 ✨
+  installed package semgrep 1.162.0, installed using Python 3.14.4
+  These apps are now available
+    - pysemgrep
+    - semgrep
+creating virtual environment...
+installing bandit from spec 'bandit[toml]'...
+done! ✨ 🌟 ✨
+  installed package bandit 1.9.4, installed using Python 3.14.4
+  These apps are now available
+    - bandit
+    - bandit-baseline
+    - bandit-config-generator
+  These manual pages are now available
+    - man1/bandit.1
+creating virtual environment...
+installing pip-audit...
+done! ✨ 🌟 ✨
+  installed package pip-audit 2.10.0, installed using Python 3.14.4
+  These apps are now available
+    - pip-audit
+creating virtual environment...
+installing checkov...
+done! ✨ 🌟 ✨
+  installed package checkov 3.2.527, installed using Python 3.14.4
+  These apps are now available
+    - checkov
+    - checkov.cmd
+
+Python security tool versions:
+
+[semgrep]
+1.162.0
+
+[bandit]
+bandit 1.9.4
+  python version = 3.14.4 (main, Apr 16 2026, 00:00:00) [GCC 15.2.1 20260123 (Red Hat 15.2.1-7)]
+
+[pip-audit]
+pip-audit 2.10.0
+
+[checkov]
+3.2.527

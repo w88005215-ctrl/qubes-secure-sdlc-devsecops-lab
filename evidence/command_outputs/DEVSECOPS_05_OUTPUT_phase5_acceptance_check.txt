@@ -1,0 +1,27 @@
+Phase 5 acceptance check
+Qube: dev-workbench
+Date: 2026-05-08T15:30:47+00:00
+
+[OK] docs/ru/06_security_tools_installation.md
+[FAIL] docs/en/06_security_tools_installation.md is missing or empty
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_installation_model_precheck.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_python_tools_installation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_gitleaks_installation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_trivy_installation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_syft_grype_installation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_versions.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_acceptance_check.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_imported_security_runner_evidence_validation.txt
+[OK] evidence/command_outputs/DEVSECOPS_05_OUTPUT_project_tree_after_security_tools_installation.txt
+[OK] PROJECT_TREE.txt
+
+[OK] semgrep mentioned in versions evidence
+[OK] bandit mentioned in versions evidence
+[OK] pip-audit mentioned in versions evidence
+[OK] gitleaks mentioned in versions evidence
+[OK] trivy mentioned in versions evidence
+[OK] checkov mentioned in versions evidence
+[OK] syft mentioned in versions evidence
+[OK] grype mentioned in versions evidence
+
+[FAIL] Phase 5 acceptance check failed
