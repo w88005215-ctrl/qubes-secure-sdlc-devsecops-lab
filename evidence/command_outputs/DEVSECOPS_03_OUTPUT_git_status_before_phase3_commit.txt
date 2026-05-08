@@ -1,0 +1,10 @@
+ M PROJECT_TREE.txt
+?? docs/en/04_template_appvm_preparation.md
+?? docs/ru/04_template_appvm_preparation.md
+?? evidence/command_outputs/DEVSECOPS_02_OUTPUT_phase2_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_03_OUTPUT_dev_workbench_base_tools_check.txt
+?? evidence/command_outputs/DEVSECOPS_03_OUTPUT_git_status_before_phase3_commit.txt
+?? evidence/command_outputs/DEVSECOPS_03_OUTPUT_phase3_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_03_OUTPUT_project_tree_after_template_appvm_preparation.txt
+?? evidence/command_outputs/DEVSECOPS_03_OUTPUT_security_runner_base_tools_check.txt
+?? evidence/command_outputs/DEVSECOPS_03_OUTPUT_template_appvm_preparation_checklist.txt

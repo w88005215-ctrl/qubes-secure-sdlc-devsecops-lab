@@ -1,0 +1,25 @@
+Phase 3 TemplateVM and AppVM preparation checklist
+Qube: dev-workbench
+Date: 2026-05-08T14:09:44+00:00
+
+TemplateVM preparation:
+- Base packages installed manually inside TemplateVM
+- AppVMs restarted through GUI
+
+dev-workbench:
+- Base tool versions checked
+- Evidence saved in repository
+
+security-runner:
+- Base tool versions checked
+- Output copied into repository evidence folder through GUI
+
+Tools intentionally NOT installed in Phase 3:
+- Semgrep
+- Bandit
+- pip-audit
+- Gitleaks
+- Trivy
+- Checkov
+- Syft
+- Grype

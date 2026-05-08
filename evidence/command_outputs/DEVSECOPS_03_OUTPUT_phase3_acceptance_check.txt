@@ -1,0 +1,23 @@
+Phase 3 acceptance check
+Qube: dev-workbench
+Date: 2026-05-08T14:11:53+00:00
+
+[OK] docs/ru/04_template_appvm_preparation.md
+[OK] docs/en/04_template_appvm_preparation.md
+[OK] evidence/command_outputs/DEVSECOPS_03_OUTPUT_dev_workbench_base_tools_check.txt
+[OK] evidence/command_outputs/DEVSECOPS_03_OUTPUT_security_runner_base_tools_check.txt
+[OK] evidence/command_outputs/DEVSECOPS_03_OUTPUT_template_appvm_preparation_checklist.txt
+[OK] evidence/command_outputs/DEVSECOPS_03_OUTPUT_project_tree_after_template_appvm_preparation.txt
+[OK] PROJECT_TREE.txt
+
+Checking required commands in dev-workbench:
+[OK] git
+[OK] tree
+[OK] curl
+[OK] wget
+[OK] jq
+[OK] python3
+[OK] pip3
+[OK] pipx
+
+[OK] Phase 3 acceptance check passed
