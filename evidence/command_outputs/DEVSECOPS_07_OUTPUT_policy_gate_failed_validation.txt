@@ -1,0 +1,6 @@
+
+Captured policy gate return code: 1
+[OK] Policy gate failed as expected for vulnerable baseline
+
+Policy status line:
+POLICY_GATE_STATUS=FAILED

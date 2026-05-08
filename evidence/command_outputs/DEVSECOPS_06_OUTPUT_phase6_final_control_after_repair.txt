@@ -1,0 +1,38 @@
+Phase 6 final control after repair
+Date: 2026-05-08T16:13:25+00:00
+Qube: dev-workbench
+
+[OK] Gitleaks config
+[OK] RU Phase 6 doc
+[OK] EN Phase 6 doc
+[OK] Semgrep report
+[OK] Bandit report
+[OK] pip-audit report
+[OK] Gitleaks report
+[OK] Checkov report
+[OK] Trivy fs report
+[OK] Trivy IaC report
+[OK] Trivy Dockerfile report
+[OK] Syft SBOM
+[OK] Grype report
+[OK] Phase 6 repair acceptance evidence
+[OK] Phase 6 repair git log evidence
+[OK] PROJECT_TREE.txt
+
+Finding counters:
+Gitleaks: 2
+Trivy fs: 17
+Grype: 17
+
+Git branch:
+vulnerable-baseline
+
+Git log:
+91f5596 (HEAD -> vulnerable-baseline) docs: add phase 6 repair git evidence
+5090018 test: repair phase 6 vulnerable scan evidence
+2c80f58 docs: add gitleaks config repair git evidence
+4d3f764 test: add custom gitleaks lab secret detection config
+294b19c docs: add phase 6 git evidence
+8117435 test: add phase 6 vulnerable security scan evidence
+605b5be docs: add phase 5 EN doc fix git evidence
+1048c68 docs: fix phase 5 English security tools documentation

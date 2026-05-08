@@ -1,0 +1,15 @@
+{
+  "phase": "Phase 7",
+  "version": "vulnerable-baseline",
+  "policy_gate_status": "FAILED",
+  "date": "2026-05-08T16:17:17+00:00",
+  "qube": "dev-workbench",
+  "blocked_conditions": {
+    "hardcoded_secret": 2,
+    "trivy_high_critical_dependency_vulnerabilities": 6,
+    "grype_high_critical_dependency_vulnerabilities": 6,
+    "public_ingress_0_0_0_0_0": 3,
+    "checkov_failed_checks": 4,
+    "trivy_dockerfile_high_critical_misconfigurations": 1
+  }
+}

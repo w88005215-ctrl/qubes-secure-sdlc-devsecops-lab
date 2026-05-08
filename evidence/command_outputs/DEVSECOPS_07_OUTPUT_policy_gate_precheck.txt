@@ -1,0 +1,21 @@
+Phase 7 policy gate precheck
+Date: 2026-05-08T16:15:43+00:00
+Qube: dev-workbench
+Branch: vulnerable-baseline
+
+[OK] evidence/scan_reports/semgrep/DEVSECOPS_06_REPORT_semgrep_vulnerable.json
+[OK] evidence/scan_reports/bandit/DEVSECOPS_06_REPORT_bandit_vulnerable.json
+[OK] evidence/scan_reports/pip-audit/DEVSECOPS_06_REPORT_pip_audit_vulnerable.json
+[OK] evidence/scan_reports/gitleaks/DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
+[OK] evidence/scan_reports/checkov/DEVSECOPS_06_REPORT_checkov_vulnerable.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_iac_vulnerable.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_dockerfile_vulnerable.json
+[OK] evidence/sbom/DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+[OK] evidence/scan_reports/grype/DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json
+
+Finding counters:
+Gitleaks: 2
+Trivy fs: 17
+Grype: 17
+Checkov failed checks: 4

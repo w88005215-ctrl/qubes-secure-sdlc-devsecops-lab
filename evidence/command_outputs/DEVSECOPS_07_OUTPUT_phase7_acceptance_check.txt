@@ -1,3 +1,23 @@
+Phase 7 acceptance check
+Date: 2026-05-08T16:19:44+00:00
+Qube: dev-workbench
+Branch: vulnerable-baseline
+
+[OK] scripts/08_policy_gate.sh
+[OK] docs/ru/08_policy_gate_failed.md
+[OK] docs/en/08_policy_gate_failed.md
+[OK] evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_precheck.txt
+[OK] evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_script_creation.txt
+[OK] evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt
+[OK] evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed_validation.txt
+[OK] evidence/before_after/DEVSECOPS_07_POLICY_GATE_FAILED_SUMMARY.json
+[OK] evidence/command_outputs/DEVSECOPS_07_OUTPUT_project_tree_after_policy_gate_failed.txt
+[OK] PROJECT_TREE.txt
+
+Policy status:
+POLICY_GATE_STATUS=FAILED
+
+Tree preview:
 .
 ├── app
 │   ├── fixed-version
@@ -118,132 +138,3 @@
 │   │   ├── DEVSECOPS_05_OUTPUT_git_status_before_phase5_commit.txt
 │   │   ├── DEVSECOPS_05_OUTPUT_imported_security_runner_evidence_validation.txt
 │   │   ├── DEVSECOPS_05_OUTPUT_installation_model_precheck.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_phase5_acceptance_check.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_phase5_final_control_after_fix.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_phase5_final_control.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_project_tree_after_en_doc_fix.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_project_tree_after_security_tools_installation.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_python_tools_installation.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_qvm_copy_received_files.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_security_tools_acceptance_check.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_security_tools_versions.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_syft_grype_installation.txt
-│   │   ├── DEVSECOPS_05_OUTPUT_trivy_installation.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_bandit_vulnerable_scan.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_checkov_vulnerable_scan.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_evidence_package_tree.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_gitleaks_config_repair.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_gitleaks_vulnerable_scan_repair.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_gitleaks_vulnerable_scan.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_git_log_after_gitleaks_config_commit.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_git_log_after_phase6_commit.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_git_log_after_phase6_repair_commit.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_git_status_after_phase6_commit.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_git_status_after_phase6_repair_commit.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_git_status_before_gitleaks_config_commit.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_git_status_before_phase6_commit.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_git_status_before_phase6_repair_commit.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_grype_vulnerable_sbom_scan_repair.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_grype_vulnerable_sbom_scan.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_incoming_evidence_import.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_phase6_acceptance_check_after_repair.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_phase6_acceptance_check.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_phase6_final_control_after_repair.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_phase6_final_control.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_pip_audit_vulnerable_scan.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_pre_scan_tool_check.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_project_tree_after_phase6_repair.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_project_tree_after_vulnerable_scans.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_repair_evidence_import.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_repair_evidence_package_tree.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_repair_workspace_preparation.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_security_runner_workspace_preparation.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_semgrep_vulnerable_scan.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_syft_sbom_generation.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_trivy_fs_vulnerable_scan_repair.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_trivy_grype_cache_cleanup_after_resize.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_trivy_vulnerable_scans.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_vulnerable_scan_summary_after_repair.txt
-│   │   ├── DEVSECOPS_06_OUTPUT_vulnerable_scan_summary.txt
-│   │   ├── DEVSECOPS_07_OUTPUT_policy_gate_failed_summary_json.txt
-│   │   ├── DEVSECOPS_07_OUTPUT_policy_gate_failed.txt
-│   │   ├── DEVSECOPS_07_OUTPUT_policy_gate_failed_validation.txt
-│   │   ├── DEVSECOPS_07_OUTPUT_policy_gate_precheck.txt
-│   │   ├── DEVSECOPS_07_OUTPUT_policy_gate_script_creation.txt
-│   │   ├── DEVSECOPS_07_OUTPUT_project_tree_after_policy_gate_failed.txt
-│   │   ├── DEVSECOPS_99_OUTPUT_git_log.txt
-│   │   ├── DEVSECOPS_99_OUTPUT_git_status.txt
-│   │   ├── DEVSECOPS_99_OUTPUT_project_tree_final.txt
-│   │   └── .gitkeep
-│   ├── EVIDENCE_INVENTORY.md
-│   ├── EVIDENCE_SUMMARY.md
-│   ├── logs
-│   ├── raw_archives
-│   ├── sbom
-│   │   ├── DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
-│   │   └── .gitkeep
-│   ├── scan_reports
-│   │   ├── bandit
-│   │   │   ├── DEVSECOPS_06_REPORT_bandit_vulnerable.json
-│   │   │   └── .gitkeep
-│   │   ├── checkov
-│   │   │   ├── DEVSECOPS_06_REPORT_checkov_vulnerable.json
-│   │   │   └── .gitkeep
-│   │   ├── gitleaks
-│   │   │   ├── DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
-│   │   │   └── .gitkeep
-│   │   ├── grype
-│   │   │   ├── DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json
-│   │   │   └── .gitkeep
-│   │   ├── pip-audit
-│   │   │   ├── DEVSECOPS_06_REPORT_pip_audit_vulnerable.json
-│   │   │   └── .gitkeep
-│   │   ├── semgrep
-│   │   │   ├── DEVSECOPS_06_REPORT_semgrep_vulnerable.json
-│   │   │   └── .gitkeep
-│   │   └── trivy
-│   │       ├── DEVSECOPS_06_REPORT_trivy_dockerfile_vulnerable.json
-│   │       ├── DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json
-│   │       ├── DEVSECOPS_06_REPORT_trivy_iac_vulnerable.json
-│   │       └── .gitkeep
-│   └── screenshots
-│       └── .gitkeep
-├── .github
-│   └── workflows
-│       ├── policy-gate.yml
-│       ├── sbom.yml
-│       └── security-pipeline.yml
-├── GITHUB_PUBLICATION_NOTE.md
-├── .gitignore
-├── .gitleaks.toml
-├── iac
-│   ├── fixed
-│   │   └── .gitkeep
-│   └── vulnerable
-│       ├── .gitkeep
-│       └── main.tf
-├── LICENSE
-├── presentation
-│   └── .gitkeep
-├── PROJECT_TREE.txt
-├── README_EN.md
-├── README.md
-├── README_RU.md
-├── RELEASE_CHECKLIST.md
-├── reports
-│   ├── devsecops_lab_report.md
-│   └── .gitkeep
-└── scripts
-    ├── 00_prepare_dirs.sh
-    ├── 01_collect_tool_versions.sh
-    ├── 02_run_sast.sh
-    ├── 03_run_sca.sh
-    ├── 04_run_secret_scan.sh
-    ├── 05_run_iac_scan.sh
-    ├── 06_generate_sbom.sh
-    ├── 07_run_container_scan.sh
-    ├── 08_policy_gate.sh
-    ├── 09_collect_evidence.sh
-    └── .gitkeep
-
-32 directories, 215 files

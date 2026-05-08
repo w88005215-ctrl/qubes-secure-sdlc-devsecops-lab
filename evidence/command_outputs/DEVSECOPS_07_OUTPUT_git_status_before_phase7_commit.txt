@@ -1,0 +1,13 @@
+ M PROJECT_TREE.txt
+ M scripts/08_policy_gate.sh
+?? docs/en/08_policy_gate_failed.md
+?? docs/ru/08_policy_gate_failed.md
+?? evidence/before_after/DEVSECOPS_07_POLICY_GATE_FAILED_SUMMARY.json
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_phase6_final_control_after_repair.txt
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_phase7_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed_summary_json.txt
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed_validation.txt
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_precheck.txt
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_script_creation.txt
+?? evidence/command_outputs/DEVSECOPS_07_OUTPUT_project_tree_after_policy_gate_failed.txt
