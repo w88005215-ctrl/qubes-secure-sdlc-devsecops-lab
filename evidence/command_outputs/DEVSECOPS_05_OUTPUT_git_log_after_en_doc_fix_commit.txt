@@ -1,0 +1,10 @@
+1048c68 (HEAD -> vulnerable-baseline) docs: fix phase 5 English security tools documentation
+54d4da0 docs: add phase 5 git evidence
+8f2e13f docs: add phase 5 security tools installation evidence
+0b2ca14 docs: add phase 4 git evidence
+fb376a0 (tag: v1.0-vulnerable-baseline) feat: add intentionally vulnerable demo application baseline
+05b1ee0 (main, develop) docs: add phase 3 git evidence
+e3fdf44 docs: add phase 3 TemplateVM and AppVM preparation evidence
+ffc0b3f docs: add phase 2 git evidence
+fe4884e docs: add phase 2 Qubes VM architecture documentation
+82bfaff docs: add phase 1 closeout git evidence
