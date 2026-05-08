@@ -1,0 +1,13 @@
+Phase 9 Checkov fixed IaC scan
+Qube: security-runner
+Date: 2026-05-08T16:39:12+00:00
+Target: iac/fixed
+
+
+Checkov return code: 1
+[OK] Checkov fixed JSON report created
+Failed checks count:
+1
+
+Public ingress check:
+[OK] no public ingress in fixed IaC

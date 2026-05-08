@@ -1,0 +1,47 @@
+Qubes Secure SDLC / DevSecOps Lab
+Policy Gate Evaluation
+Date: 2026-05-08T16:49:18+00:00
+Version: fixed
+
+Input reports:
+[OK] evidence/scan_reports/semgrep/DEVSECOPS_09_REPORT_semgrep_fixed.json
+[OK] evidence/scan_reports/bandit/DEVSECOPS_09_REPORT_bandit_fixed.json
+[OK] evidence/scan_reports/pip-audit/DEVSECOPS_09_REPORT_pip_audit_fixed.json
+[OK] evidence/scan_reports/gitleaks/DEVSECOPS_09_REPORT_gitleaks_fixed.json
+[OK] evidence/scan_reports/checkov/DEVSECOPS_09_REPORT_checkov_fixed.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_09_REPORT_trivy_fs_fixed.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_09_REPORT_trivy_iac_fixed.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_09_REPORT_trivy_dockerfile_fixed.json
+[OK] evidence/scan_reports/grype/DEVSECOPS_09_REPORT_grype_fixed_sbom.json
+
+Policy checks:
+
+Hardcoded secret findings: 0
+[PASS] no hardcoded secret detected
+
+SAST findings:
+- Semgrep total: 0
+- Semgrep ERROR severity: 0
+- Bandit HIGH severity: 0
+- Bandit MEDIUM severity: 0
+[PASS] no high/error SAST finding detected
+
+Dependency vulnerability findings:
+- pip-audit vulnerabilities: 4
+- Trivy HIGH/CRITICAL vulnerabilities: 0
+- Grype HIGH/CRITICAL vulnerabilities: 0
+[PASS] no high/critical dependency vulnerability detected
+
+IaC findings:
+- Checkov failed checks: 1
+- Trivy IaC HIGH/CRITICAL misconfigurations: 0
+- Public ingress 0.0.0.0/0 occurrences: 0
+[PASS] no public ingress 0.0.0.0/0 detected
+
+Container/Dockerfile configuration findings:
+- Trivy Dockerfile HIGH/CRITICAL misconfigurations: 0
+[PASS] no high/critical Dockerfile misconfiguration detected
+
+Final decision:
+POLICY_GATE_STATUS=PASSED
+Build is allowed to proceed.

@@ -1,0 +1,13 @@
+Phase 9 Grype fixed SBOM scan
+Qube: security-runner
+Date: 2026-05-08T16:41:07+00:00
+Target: evidence/sbom/DEVSECOPS_09_SBOM_fixed_syft_cyclonedx.json
+Grype DB cache: /home/user/devsecops-tool-cache/grype/db
+
+
+Grype return code: 0
+[OK] Grype fixed JSON report created
+Matches count:
+4
+HIGH/CRITICAL matches count:
+0

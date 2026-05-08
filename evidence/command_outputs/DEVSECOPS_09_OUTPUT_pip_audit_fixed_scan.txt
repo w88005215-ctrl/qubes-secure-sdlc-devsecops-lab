@@ -1,0 +1,11 @@
+Phase 9 pip-audit fixed dependency scan
+Qube: security-runner
+Date: 2026-05-08T16:38:00+00:00
+Target: app/fixed-version/requirements.txt
+
+Found 4 known vulnerabilities in 2 packages
+
+pip-audit return code: 1
+[OK] pip-audit fixed JSON report created
+Vulnerabilities count:
+4

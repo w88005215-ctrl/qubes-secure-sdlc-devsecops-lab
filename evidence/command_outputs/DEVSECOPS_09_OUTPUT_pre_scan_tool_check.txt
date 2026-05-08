@@ -1,0 +1,19 @@
+Phase 9 pre-scan tool check
+Qube: security-runner
+Date: 2026-05-08T16:35:56+00:00
+
+Tool availability:
+[OK] semgrep -> /home/user/.local/bin/semgrep
+[OK] bandit -> /home/user/.local/bin/bandit
+[OK] pip-audit -> /home/user/.local/bin/pip-audit
+[OK] gitleaks -> /home/user/.local/bin/gitleaks
+[OK] trivy -> /home/user/.local/bin/trivy
+[OK] checkov -> /home/user/.local/bin/checkov
+[OK] syft -> /home/user/.local/bin/syft
+[OK] grype -> /home/user/.local/bin/grype
+[OK] jq -> /usr/bin/jq
+
+Disk space:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvdb        20G  4.0G   16G  21% /home
+tmpfs           1.0G  4.0K  1.0G   1% /tmp

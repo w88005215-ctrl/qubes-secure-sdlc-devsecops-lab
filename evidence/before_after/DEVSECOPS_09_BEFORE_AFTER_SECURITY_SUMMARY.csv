@@ -1,0 +1,7 @@
+Metric,Vulnerable Version,Fixed Version,Expected Direction
+Gitleaks findings,2,0,Decrease to 0
+Trivy filesystem vulnerabilities,17,4,Decrease
+Trivy HIGH CRITICAL filesystem vulnerabilities,6,0,Decrease to 0
+Grype HIGH CRITICAL matches,6,0,Decrease to 0
+Public ingress 0.0.0.0/0,3,0,Decrease to 0
+Policy gate status,FAILED,PASSED,FAILED to PASSED

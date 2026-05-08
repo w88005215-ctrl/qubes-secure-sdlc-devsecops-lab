@@ -1,0 +1,12 @@
+Phase 9 Gitleaks fixed secret scan
+Qube: security-runner
+Date: 2026-05-08T16:38:43+00:00
+Target: app/fixed-version
+
+[90m4:38PM[0m [32mINF[0m [1mscanned ~2507 bytes (2.51 KB) in 3.87ms[0m
+[90m4:38PM[0m [32mINF[0m [1mno leaks found[0m
+
+Gitleaks return code: 0
+[OK] Gitleaks fixed JSON report created
+Findings count:
+0

@@ -1,0 +1,40 @@
+Phase 9 gate-relevant fixed scan diagnostics
+Qube: security-runner
+Date: 2026-05-08T16:47:05+00:00
+
+[Gate blocking counters]
+
+Semgrep ERROR findings:
+0
+
+Bandit HIGH findings:
+0
+
+Gitleaks findings:
+0
+
+Public ingress 0.0.0.0/0 occurrences in fixed IaC:
+0
+
+Trivy HIGH/CRITICAL filesystem vulnerabilities:
+0
+
+Trivy Dockerfile HIGH/CRITICAL misconfigurations:
+0
+
+Grype HIGH/CRITICAL SBOM matches:
+0
+
+[Residual non-blocking findings]
+
+pip-audit total vulnerabilities:
+4
+
+Checkov total failed checks:
+1
+
+[Checkov failed check details]
+- CKV2_AWS_5 | Ensure that Security Groups are attached to another resource | /main.tf
+
+[Conclusion]
+Expected fixed policy gate result: PASSED, because no configured gate-blocking condition is present.

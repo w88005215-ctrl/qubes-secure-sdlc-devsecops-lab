@@ -1,0 +1,21 @@
+Phase 9 evidence import
+Date: 2026-05-08T16:49:04+00:00
+Qube: dev-workbench
+
+Incoming Phase 9 directory:
+/home/user/QubesIncoming/security-runner/devsecops-phase9-evidence
+
+[OK] Phase 9 evidence imported
+
+Imported files check:
+[OK] gate diagnostics
+[OK] Semgrep fixed report
+[OK] Bandit fixed report
+[OK] pip-audit fixed report
+[OK] Gitleaks fixed report
+[OK] Checkov fixed report
+[OK] Trivy fs fixed report
+[OK] Trivy IaC fixed report
+[OK] Trivy Dockerfile fixed report
+[OK] Syft fixed SBOM
+[OK] Grype fixed report

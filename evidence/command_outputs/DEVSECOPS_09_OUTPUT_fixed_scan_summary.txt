@@ -1,0 +1,42 @@
+Phase 9 fixed scan summary
+Qube: security-runner
+Date: 2026-05-08T16:44:32+00:00
+
+[Semgrep results count]
+0
+
+[Semgrep ERROR severity count]
+0
+
+[Bandit results count]
+0
+
+[Bandit HIGH severity count]
+0
+
+[pip-audit vulnerabilities count]
+4
+
+[Gitleaks findings count]
+0
+
+[Checkov failed checks count]
+1
+
+[Public ingress occurrences in fixed IaC]
+0
+
+[Trivy fs vulnerabilities count]
+4
+
+[Trivy fs HIGH/CRITICAL vulnerabilities count]
+0
+
+[Trivy Dockerfile HIGH/CRITICAL misconfigurations count]
+0
+
+[Syft SBOM components count]
+3
+
+[Grype HIGH/CRITICAL matches count]
+0

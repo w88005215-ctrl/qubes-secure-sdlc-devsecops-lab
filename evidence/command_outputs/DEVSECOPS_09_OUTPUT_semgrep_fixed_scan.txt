@@ -1,0 +1,46 @@
+Phase 9 Semgrep fixed scan
+Qube: security-runner
+Date: 2026-05-08T16:36:18+00:00
+
+Targets:
+- app/fixed-version
+- docker/fixed.Dockerfile
+- iac/fixed
+
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 6 files tracked by git with 1059 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  <multilang>      47       6          Community    1059                                                                
+  python          243       1                                                                                           
+  terraform       101       1                                                                                           
+  dockerfile        6       1                                                                                           
+                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 0 (0 blocking)
+ • Rules run: 397
+ • Targets scanned: 6
+ • Parsed lines: ~100.0%
+ • No ignore information available
+Ran 397 rules on 6 files: 0 findings.
+(need more rules? `semgrep login` for additional free Semgrep Registry rules)
+
+If Semgrep missed a finding, please send us feedback to let us know!
+See https://semgrep.dev/docs/reporting-false-negatives/
+
+Semgrep return code: 0
+[OK] Semgrep fixed JSON report created
+Findings count:
+0
+ERROR severity count:
+0

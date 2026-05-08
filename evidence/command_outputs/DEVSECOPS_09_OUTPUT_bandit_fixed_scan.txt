@@ -1,0 +1,17 @@
+Phase 9 Bandit fixed scan
+Qube: security-runner
+Date: 2026-05-08T16:37:22+00:00
+Target: app/fixed-version
+
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[json]	INFO	JSON output written to file: evidence/scan_reports/bandit/DEVSECOPS_09_REPORT_bandit_fixed.json
+
+Bandit return code: 0
+[OK] Bandit fixed JSON report created
+Findings count:
+0
+HIGH severity count:
+0

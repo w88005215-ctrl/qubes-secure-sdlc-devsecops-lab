@@ -1,0 +1,6 @@
+
+Captured policy gate return code: 0
+[OK] Policy gate passed as expected for fixed version
+
+Policy status line:
+POLICY_GATE_STATUS=PASSED

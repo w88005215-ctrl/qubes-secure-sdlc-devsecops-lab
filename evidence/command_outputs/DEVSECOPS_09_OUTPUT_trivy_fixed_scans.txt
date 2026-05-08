@@ -1,0 +1,35 @@
+Phase 9 Trivy fixed scans
+Qube: security-runner
+Date: 2026-05-08T16:39:48+00:00
+
+Cache dir: /home/user/devsecops-tool-cache/trivy
+Targets:
+- app/fixed-version
+- iac/fixed
+- docker/fixed.Dockerfile
+
+2026-05-08T16:39:48Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-05-08T16:39:48Z	INFO	Number of language-specific files	num=1
+2026-05-08T16:39:48Z	INFO	[pip] Detecting vulnerabilities...
+2026-05-08T16:39:48Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-05-08T16:39:48Z	INFO	[checks-client] Need to update the checks bundle
+2026-05-08T16:39:48Z	INFO	[checks-client] Downloading the checks bundle...
+159.24 KiB / 234.65 KiB [-------------------------------------->__________________] 67.87% ? p/s ?234.65 KiB / 234.65 KiB [---------------------------------------------] 100.00% 1.78 MiB p/s 300ms2026-05-08T16:39:52Z	INFO	[terraform scanner] Scanning root module	file_path="."
+2026-05-08T16:39:52Z	INFO	Detected config files	num=1
+2026-05-08T16:39:52Z	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-05-08T16:39:52Z	INFO	[checks-client] Using existing checks from cache	path="/home/user/devsecops-tool-cache/trivy/policy/content"
+2026-05-08T16:39:53Z	INFO	Detected config files	num=1
+
+Trivy fs return code: 0
+Trivy IaC return code: 0
+Trivy Dockerfile return code: 0
+
+[OK] evidence/scan_reports/trivy/DEVSECOPS_09_REPORT_trivy_fs_fixed.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_09_REPORT_trivy_iac_fixed.json
+[OK] evidence/scan_reports/trivy/DEVSECOPS_09_REPORT_trivy_dockerfile_fixed.json
+
+Trivy fixed vulnerability count:
+4
+
+Trivy fixed HIGH/CRITICAL vulnerability count:
+0

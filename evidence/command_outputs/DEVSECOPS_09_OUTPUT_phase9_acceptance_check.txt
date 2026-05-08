@@ -1,0 +1,27 @@
+Phase 9 acceptance check
+Date: 2026-05-08T16:54:10+00:00
+Qube: dev-workbench
+Branch: remediation
+
+[OK] docs/ru/10_policy_gate_passed.md
+[OK] docs/en/10_policy_gate_passed.md
+[OK] evidence/command_outputs/DEVSECOPS_09_OUTPUT_evidence_import.txt
+[OK] evidence/command_outputs/DEVSECOPS_09_OUTPUT_fixed_scan_summary.txt
+[OK] evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt
+[OK] evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed_validation.txt
+[OK] evidence/before_after/DEVSECOPS_09_BEFORE_AFTER_SECURITY_SUMMARY.csv
+[OK] evidence/sbom/DEVSECOPS_09_SBOM_fixed_syft_cyclonedx.json
+[OK] evidence/command_outputs/DEVSECOPS_09_OUTPUT_project_tree_after_policy_gate_passed.txt
+[OK] PROJECT_TREE.txt
+
+Policy status:
+POLICY_GATE_STATUS=PASSED
+
+Before/after summary:
+Metric,Vulnerable Version,Fixed Version,Expected Direction
+Gitleaks findings,2,0,Decrease to 0
+Trivy filesystem vulnerabilities,17,4,Decrease
+Trivy HIGH CRITICAL filesystem vulnerabilities,6,0,Decrease to 0
+Grype HIGH CRITICAL matches,6,0,Decrease to 0
+Public ingress 0.0.0.0/0,3,0,Decrease to 0
+Policy gate status,FAILED,PASSED,FAILED to PASSED

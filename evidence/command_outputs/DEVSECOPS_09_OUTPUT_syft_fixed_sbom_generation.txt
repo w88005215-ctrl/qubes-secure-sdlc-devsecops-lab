@@ -1,0 +1,11 @@
+Phase 9 Syft fixed SBOM generation
+Qube: security-runner
+Date: 2026-05-08T16:40:32+00:00
+Target: app/fixed-version
+
+[0001]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal)
+
+Syft return code: 0
+[OK] Syft fixed CycloneDX SBOM created
+Components count:
+3

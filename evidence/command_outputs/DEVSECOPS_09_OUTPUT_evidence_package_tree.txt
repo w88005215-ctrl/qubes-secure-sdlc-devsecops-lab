@@ -1,0 +1,58 @@
+Phase 9 evidence package for dev-workbench
+Qube: security-runner
+Date: 2026-05-08T16:47:53+00:00
+
+Package path:
+/home/user/devsecops-phase9-evidence
+
+Package tree:
+/home/user/devsecops-phase9-evidence
+├── before_after
+│   ├── DEVSECOPS_07_POLICY_GATE_FAILED_SUMMARY.json
+│   └── DEVSECOPS_08_REMEDIATION_MATRIX.csv
+├── command_outputs
+│   ├── DEVSECOPS_09_OUTPUT_bandit_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_checkov_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_evidence_package_tree.txt
+│   ├── DEVSECOPS_09_OUTPUT_fixed_scan_summary.txt
+│   ├── DEVSECOPS_09_OUTPUT_fixed_snapshot_export.txt
+│   ├── DEVSECOPS_09_OUTPUT_gate_relevant_fixed_diagnostics.txt
+│   ├── DEVSECOPS_09_OUTPUT_gitleaks_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_grype_fixed_sbom_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_pip_audit_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_pre_scan_tool_check.txt
+│   ├── DEVSECOPS_09_OUTPUT_receive_remediation_snapshot.txt
+│   ├── DEVSECOPS_09_OUTPUT_semgrep_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_syft_fixed_sbom_generation.txt
+│   └── DEVSECOPS_09_OUTPUT_trivy_fixed_scans.txt
+├── sbom
+│   ├── DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+│   └── DEVSECOPS_09_SBOM_fixed_syft_cyclonedx.json
+└── scan_reports
+    ├── bandit
+    │   ├── DEVSECOPS_06_REPORT_bandit_vulnerable.json
+    │   └── DEVSECOPS_09_REPORT_bandit_fixed.json
+    ├── checkov
+    │   ├── DEVSECOPS_06_REPORT_checkov_vulnerable.json
+    │   └── DEVSECOPS_09_REPORT_checkov_fixed.json
+    ├── gitleaks
+    │   ├── DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
+    │   └── DEVSECOPS_09_REPORT_gitleaks_fixed.json
+    ├── grype
+    │   ├── DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json
+    │   └── DEVSECOPS_09_REPORT_grype_fixed_sbom.json
+    ├── pip-audit
+    │   ├── DEVSECOPS_06_REPORT_pip_audit_vulnerable.json
+    │   └── DEVSECOPS_09_REPORT_pip_audit_fixed.json
+    ├── semgrep
+    │   ├── DEVSECOPS_06_REPORT_semgrep_vulnerable.json
+    │   └── DEVSECOPS_09_REPORT_semgrep_fixed.json
+    └── trivy
+        ├── DEVSECOPS_06_REPORT_trivy_dockerfile_vulnerable.json
+        ├── DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json
+        ├── DEVSECOPS_06_REPORT_trivy_iac_vulnerable.json
+        ├── DEVSECOPS_09_REPORT_trivy_dockerfile_fixed.json
+        ├── DEVSECOPS_09_REPORT_trivy_fs_fixed.json
+        └── DEVSECOPS_09_REPORT_trivy_iac_fixed.json
+
+12 directories, 36 files
