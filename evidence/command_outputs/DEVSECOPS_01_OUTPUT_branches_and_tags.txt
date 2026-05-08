@@ -1,0 +1,13 @@
+Phase 1 branch and tag evidence
+Qube: dev-workbench
+Date: 2026-05-08T13:11:08+00:00
+
+Branches:
+  develop
+  evidence-pack
+* main
+  remediation
+  vulnerable-baseline
+
+Tags:
+v0.1-skeleton

@@ -1,3 +1,13 @@
+Phase 1 final tree validation
+Qube: dev-workbench
+Date: 2026-05-08T13:11:30+00:00
+
+[OK] PROJECT_TREE.txt
+-rw-rw-r-- 1 user user 4.5K May  8 13:11 PROJECT_TREE.txt
+[OK] evidence/command_outputs/DEVSECOPS_01_OUTPUT_project_tree_phase1_final.txt
+-rw-rw-r-- 1 user user 4.5K May  8 13:11 evidence/command_outputs/DEVSECOPS_01_OUTPUT_project_tree_phase1_final.txt
+
+PROJECT_TREE preview:
 .
 ├── app
 │   ├── fixed-version

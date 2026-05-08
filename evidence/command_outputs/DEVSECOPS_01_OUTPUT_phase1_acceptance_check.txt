@@ -1,0 +1,24 @@
+Phase 1 final acceptance check
+Qube: dev-workbench
+Date: 2026-05-08T13:12:12+00:00
+
+[OK] README.md
+[OK] README_RU.md
+[OK] README_EN.md
+[OK] PROJECT_TREE.txt
+[OK] RELEASE_CHECKLIST.md
+[OK] GITHUB_PUBLICATION_NOTE.md
+[OK] docs/ru/00_project_overview.md
+[OK] docs/en/00_project_overview.md
+[OK] docs/ru/01_qubes_architecture.md
+[OK] docs/en/01_qubes_architecture.md
+[OK] docs/ru/02_evidence_workflow.md
+[OK] docs/en/02_evidence_workflow.md
+[OK] evidence/EVIDENCE_INVENTORY.md
+[OK] evidence/EVIDENCE_SUMMARY.md
+[OK] scripts/09_collect_evidence.sh
+[OK] evidence/command_outputs/DEVSECOPS_01_OUTPUT_project_tree_phase1_final.txt
+[OK] evidence/command_outputs/DEVSECOPS_01_OUTPUT_branches_and_tags.txt
+[OK] evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_log_final_validation.txt
+
+[OK] Phase 1 acceptance check passed

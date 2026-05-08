@@ -1,0 +1,2 @@
+f88e76d (HEAD -> main) docs: add git log evidence after tree fix
+83fcb63 fix: enforce non-empty project tree evidence generation

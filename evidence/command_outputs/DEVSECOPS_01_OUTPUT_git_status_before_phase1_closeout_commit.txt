@@ -1,0 +1,8 @@
+ M PROJECT_TREE.txt
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_branches_and_tags.txt
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_log_final_validation.txt
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_log_validation_result.txt
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_status_before_phase1_closeout_commit.txt
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_phase1_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_project_tree_phase1_final.txt
+?? evidence/command_outputs/DEVSECOPS_01_OUTPUT_project_tree_phase1_final_validation.txt
