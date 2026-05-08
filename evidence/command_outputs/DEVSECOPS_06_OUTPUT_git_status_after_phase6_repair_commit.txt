@@ -1,0 +1,2 @@
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_git_log_after_phase6_repair_commit.txt
+?? evidence/command_outputs/DEVSECOPS_06_OUTPUT_git_status_after_phase6_repair_commit.txt
