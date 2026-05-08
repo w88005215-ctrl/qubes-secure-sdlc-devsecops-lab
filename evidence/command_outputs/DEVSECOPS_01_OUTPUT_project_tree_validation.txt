@@ -1,0 +1,93 @@
+Validation: PROJECT_TREE.txt
+Qube: dev-workbench
+Date: 2026-05-08T13:04:37+00:00
+
+[OK] PROJECT_TREE.txt is not empty
+
+File size:
+-rw-rw-r-- 1 user user 3.6K May  8 13:04 PROJECT_TREE.txt
+
+Line count:
+106 PROJECT_TREE.txt
+
+Preview:
+.
+├── app
+│   ├── fixed-version
+│   │   └── .gitkeep
+│   └── vulnerable-version
+│       └── .gitkeep
+├── diagrams
+│   ├── .gitkeep
+│   ├── qubes_devsecops_architecture.drawio
+│   ├── secure_sdlc_pipeline.drawio
+│   └── security_gates.drawio
+├── docker
+│   └── .gitkeep
+├── docs
+│   ├── 00_git_branching_strategy.md
+│   ├── 01_evidence_standard.md
+│   ├── 02_quality_acceptance_criteria.md
+│   ├── 03_demo_defect_matrix.md
+│   ├── 04_project_overview.md
+│   ├── 05_qubes_architecture.md
+│   ├── 06_secure_sdlc_methodology.md
+│   ├── 07_security_pipeline_design.md
+│   ├── 08_findings_summary.md
+│   ├── 09_remediation_plan.md
+│   ├── 10_before_after_results.md
+│   ├── 11_limitations.md
+│   ├── 12_lessons_learned.md
+│   ├── en
+│   │   ├── 00_project_overview.md
+│   │   ├── 01_qubes_architecture.md
+│   │   └── 02_evidence_workflow.md
+│   ├── .gitkeep
+│   └── ru
+│       ├── 00_project_overview.md
+│       ├── 01_qubes_architecture.md
+│       └── 02_evidence_workflow.md
+├── evidence
+│   ├── before_after
+│   │   └── .gitkeep
+│   ├── command_outputs
+│   │   ├── DEVSECOPS_00_OUTPUT_session_context.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_git_status_after_soc_style_alignment.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_git_status.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_project_tree.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_soc_style_alignment.txt
+│   │   └── .gitkeep
+│   ├── EVIDENCE_INVENTORY.md
+│   ├── EVIDENCE_SUMMARY.md
+│   ├── logs
+│   ├── raw_archives
+│   ├── sbom
+│   │   └── .gitkeep
+│   ├── scan_reports
+│   │   ├── bandit
+│   │   │   └── .gitkeep
+│   │   ├── checkov
+│   │   │   └── .gitkeep
+│   │   ├── gitleaks
+│   │   │   └── .gitkeep
+│   │   ├── grype
+│   │   │   └── .gitkeep
+│   │   ├── pip-audit
+│   │   │   └── .gitkeep
+│   │   ├── semgrep
+│   │   │   └── .gitkeep
+│   │   └── trivy
+│   │       └── .gitkeep
+│   └── screenshots
+│       └── .gitkeep
+├── .github
+│   └── workflows
+│       ├── policy-gate.yml
+│       ├── sbom.yml
+│       └── security-pipeline.yml
+├── GITHUB_PUBLICATION_NOTE.md
+├── .gitignore
+├── iac
+│   ├── fixed
+│   │   └── .gitkeep
+│   └── vulnerable

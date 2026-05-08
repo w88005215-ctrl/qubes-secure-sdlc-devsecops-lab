@@ -1,0 +1,11 @@
+Project: Qubes Secure SDLC / DevSecOps Lab
+Repository: qubes-secure-sdlc-devsecops-lab
+Phase: 0-1 Project Foundation and Repository Skeleton
+Qubes role: dev-workbench
+Date: 2026-05-08T06:32:37+00:00
+Hostname: dev-workbench
+User: user
+Working directory: /home/user/qubes-secure-sdlc-devsecops-lab
+dom0 used for project files: no
+Cloud API required: no
+VirtualBox/VMware/Docker Desktop on host: no

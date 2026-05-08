@@ -1,0 +1,11 @@
+Validation after scripts/09_collect_evidence.sh
+Qube: dev-workbench
+Date: 2026-05-08T13:07:03+00:00
+
+[OK] PROJECT_TREE.txt
+-rw-rw-r-- 1 user user 3.8K May  8 13:06 PROJECT_TREE.txt
+[OK] evidence/command_outputs/DEVSECOPS_99_OUTPUT_project_tree_final.txt
+-rw-rw-r-- 1 user user 3.8K May  8 13:06 evidence/command_outputs/DEVSECOPS_99_OUTPUT_project_tree_final.txt
+[OK] evidence/command_outputs/DEVSECOPS_99_OUTPUT_git_status.txt
+-rw-rw-r-- 1 user user 259 May  8 13:06 evidence/command_outputs/DEVSECOPS_99_OUTPUT_git_status.txt
+[FAIL] evidence/command_outputs/DEVSECOPS_99_OUTPUT_git_log.txt is missing or empty

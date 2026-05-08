@@ -1,0 +1,16 @@
+Project: Qubes Secure SDLC / DevSecOps Lab
+Phase: 1 SOC-style evidence alignment
+Qube: dev-workbench
+Date: 2026-05-08T06:42:10+00:00
+
+Added SOC-style repository elements:
+- README_RU.md
+- README_EN.md
+- PROJECT_TREE.txt
+- docs/ru
+- docs/en
+- evidence/EVIDENCE_INVENTORY.md
+- evidence/EVIDENCE_SUMMARY.md
+- RELEASE_CHECKLIST.md
+- GITHUB_PUBLICATION_NOTE.md
+- scripts/09_collect_evidence.sh
