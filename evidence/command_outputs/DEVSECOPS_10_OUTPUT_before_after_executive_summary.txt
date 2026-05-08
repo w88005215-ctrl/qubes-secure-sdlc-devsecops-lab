@@ -1,0 +1,12 @@
+Phase 10 before/after executive summary
+Date: 2026-05-08T18:05:56+00:00
+Qube: dev-workbench
+
+metric                               vulnerable  fixed   status
+semgrep_total_findings               10          0       improved
+bandit_total_findings                7           0       improved
+gitleaks_findings                    2           0       improved
+trivy_high_critical_vulnerabilities  6           0       improved
+grype_high_critical_matches          6           0       improved
+iac_public_ingress_occurrences       3           0       improved
+policy_gate_status                   FAILED      PASSED  improved

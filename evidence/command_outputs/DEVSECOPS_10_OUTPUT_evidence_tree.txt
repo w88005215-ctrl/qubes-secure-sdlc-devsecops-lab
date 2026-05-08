@@ -1,0 +1,219 @@
+Phase 10 evidence tree
+Date: 2026-05-08T17:29:32+00:00
+Qube: dev-workbench
+
+evidence
+├── before_after
+│   ├── DEVSECOPS_07_POLICY_GATE_FAILED_SUMMARY.json
+│   ├── DEVSECOPS_08_REMEDIATION_MATRIX.csv
+│   ├── DEVSECOPS_09_BEFORE_AFTER_SECURITY_SUMMARY.csv
+│   └── .gitkeep
+├── command_outputs
+│   ├── DEVSECOPS_00_OUTPUT_session_context.txt
+│   ├── DEVSECOPS_01_OUTPUT_branches_and_tags.txt
+│   ├── DEVSECOPS_01_OUTPUT_collect_evidence_validation.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_log_after_phase1_closeout.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_log_after_tree_fix.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_log_final_validation.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_log_validation_result.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_status_after_phase1_closeout.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_status_after_soc_style_alignment.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_status_after_tree_fix.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_status_before_phase1_closeout_commit.txt
+│   ├── DEVSECOPS_01_OUTPUT_git_status.txt
+│   ├── DEVSECOPS_01_OUTPUT_phase1_acceptance_check.txt
+│   ├── DEVSECOPS_01_OUTPUT_phase1_final_control.txt
+│   ├── DEVSECOPS_01_OUTPUT_project_tree_phase1_final.txt
+│   ├── DEVSECOPS_01_OUTPUT_project_tree_phase1_final_validation.txt
+│   ├── DEVSECOPS_01_OUTPUT_project_tree_soc_style.txt
+│   ├── DEVSECOPS_01_OUTPUT_project_tree.txt
+│   ├── DEVSECOPS_01_OUTPUT_project_tree_validation.txt
+│   ├── DEVSECOPS_01_OUTPUT_soc_style_alignment.txt
+│   ├── DEVSECOPS_01_OUTPUT_tree_files_validation.txt
+│   ├── DEVSECOPS_02_OUTPUT_git_log_after_phase2_commit.txt
+│   ├── DEVSECOPS_02_OUTPUT_git_status_after_phase2_commit.txt
+│   ├── DEVSECOPS_02_OUTPUT_git_status_before_phase2_commit.txt
+│   ├── DEVSECOPS_02_OUTPUT_phase2_acceptance_check.txt
+│   ├── DEVSECOPS_02_OUTPUT_phase2_final_control.txt
+│   ├── DEVSECOPS_02_OUTPUT_phase2_precheck_dev_workbench.txt
+│   ├── DEVSECOPS_02_OUTPUT_project_tree_after_qubes_architecture.txt
+│   ├── DEVSECOPS_02_OUTPUT_project_tree_before_qubes_architecture.txt
+│   ├── DEVSECOPS_02_OUTPUT_qubes_vm_architecture_gui_checklist.txt
+│   ├── DEVSECOPS_03_OUTPUT_dev_workbench_base_tools_check.txt
+│   ├── DEVSECOPS_03_OUTPUT_git_log_after_phase3_commit.txt
+│   ├── DEVSECOPS_03_OUTPUT_git_status_after_phase3_commit.txt
+│   ├── DEVSECOPS_03_OUTPUT_git_status_before_phase3_commit.txt
+│   ├── DEVSECOPS_03_OUTPUT_phase3_acceptance_check.txt
+│   ├── DEVSECOPS_03_OUTPUT_phase3_final_control.txt
+│   ├── DEVSECOPS_03_OUTPUT_project_tree_after_template_appvm_preparation.txt
+│   ├── DEVSECOPS_03_OUTPUT_security_runner_base_tools_check.txt
+│   ├── DEVSECOPS_03_OUTPUT_template_appvm_preparation_checklist.txt
+│   ├── DEVSECOPS_04_OUTPUT_branch_preparation.txt
+│   ├── DEVSECOPS_04_OUTPUT_git_log_after_phase4_commit.txt
+│   ├── DEVSECOPS_04_OUTPUT_git_status_after_phase4_commit.txt
+│   ├── DEVSECOPS_04_OUTPUT_git_status_before_phase4_commit.txt
+│   ├── DEVSECOPS_04_OUTPUT_git_tags_after_phase4.txt
+│   ├── DEVSECOPS_04_OUTPUT_phase4_acceptance_check.txt
+│   ├── DEVSECOPS_04_OUTPUT_phase4_final_control.txt
+│   ├── DEVSECOPS_04_OUTPUT_project_tree_after_vulnerable_demo_app.txt
+│   ├── DEVSECOPS_04_OUTPUT_vulnerable_app_created.txt
+│   ├── DEVSECOPS_04_OUTPUT_vulnerable_demo_inventory.txt
+│   ├── DEVSECOPS_04_OUTPUT_vulnerable_dockerfile_created.txt
+│   ├── DEVSECOPS_04_OUTPUT_vulnerable_iac_created.txt
+│   ├── DEVSECOPS_05_OUTPUT_acceptance_after_en_doc_fix.txt
+│   ├── DEVSECOPS_05_OUTPUT_en_doc_fix_validation.txt
+│   ├── DEVSECOPS_05_OUTPUT_gitleaks_installation.txt
+│   ├── DEVSECOPS_05_OUTPUT_git_log_after_en_doc_fix_commit.txt
+│   ├── DEVSECOPS_05_OUTPUT_git_log_after_phase5_commit.txt
+│   ├── DEVSECOPS_05_OUTPUT_git_status_after_en_doc_fix_commit.txt
+│   ├── DEVSECOPS_05_OUTPUT_git_status_after_phase5_commit.txt
+│   ├── DEVSECOPS_05_OUTPUT_git_status_before_en_doc_fix_commit.txt
+│   ├── DEVSECOPS_05_OUTPUT_git_status_before_phase5_commit.txt
+│   ├── DEVSECOPS_05_OUTPUT_imported_security_runner_evidence_validation.txt
+│   ├── DEVSECOPS_05_OUTPUT_installation_model_precheck.txt
+│   ├── DEVSECOPS_05_OUTPUT_phase5_acceptance_check.txt
+│   ├── DEVSECOPS_05_OUTPUT_phase5_final_control_after_fix.txt
+│   ├── DEVSECOPS_05_OUTPUT_phase5_final_control.txt
+│   ├── DEVSECOPS_05_OUTPUT_project_tree_after_en_doc_fix.txt
+│   ├── DEVSECOPS_05_OUTPUT_project_tree_after_security_tools_installation.txt
+│   ├── DEVSECOPS_05_OUTPUT_python_tools_installation.txt
+│   ├── DEVSECOPS_05_OUTPUT_qvm_copy_received_files.txt
+│   ├── DEVSECOPS_05_OUTPUT_security_tools_acceptance_check.txt
+│   ├── DEVSECOPS_05_OUTPUT_security_tools_versions.txt
+│   ├── DEVSECOPS_05_OUTPUT_syft_grype_installation.txt
+│   ├── DEVSECOPS_05_OUTPUT_trivy_installation.txt
+│   ├── DEVSECOPS_06_OUTPUT_bandit_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_checkov_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_evidence_package_tree.txt
+│   ├── DEVSECOPS_06_OUTPUT_gitleaks_config_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_gitleaks_vulnerable_scan_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_gitleaks_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_log_after_gitleaks_config_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_log_after_phase6_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_log_after_phase6_repair_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_status_after_phase6_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_status_after_phase6_repair_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_status_before_gitleaks_config_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_status_before_phase6_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_git_status_before_phase6_repair_commit.txt
+│   ├── DEVSECOPS_06_OUTPUT_grype_vulnerable_sbom_scan_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_grype_vulnerable_sbom_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_incoming_evidence_import.txt
+│   ├── DEVSECOPS_06_OUTPUT_phase6_acceptance_check_after_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_phase6_acceptance_check.txt
+│   ├── DEVSECOPS_06_OUTPUT_phase6_final_control_after_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_phase6_final_control.txt
+│   ├── DEVSECOPS_06_OUTPUT_pip_audit_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_pre_scan_tool_check.txt
+│   ├── DEVSECOPS_06_OUTPUT_project_tree_after_phase6_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_project_tree_after_vulnerable_scans.txt
+│   ├── DEVSECOPS_06_OUTPUT_repair_evidence_import.txt
+│   ├── DEVSECOPS_06_OUTPUT_repair_evidence_package_tree.txt
+│   ├── DEVSECOPS_06_OUTPUT_repair_workspace_preparation.txt
+│   ├── DEVSECOPS_06_OUTPUT_security_runner_workspace_preparation.txt
+│   ├── DEVSECOPS_06_OUTPUT_semgrep_vulnerable_scan.txt
+│   ├── DEVSECOPS_06_OUTPUT_syft_sbom_generation.txt
+│   ├── DEVSECOPS_06_OUTPUT_trivy_fs_vulnerable_scan_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_trivy_grype_cache_cleanup_after_resize.txt
+│   ├── DEVSECOPS_06_OUTPUT_trivy_vulnerable_scans.txt
+│   ├── DEVSECOPS_06_OUTPUT_vulnerable_scan_summary_after_repair.txt
+│   ├── DEVSECOPS_06_OUTPUT_vulnerable_scan_summary.txt
+│   ├── DEVSECOPS_07_OUTPUT_git_log_after_phase7_commit.txt
+│   ├── DEVSECOPS_07_OUTPUT_git_status_after_phase7_commit.txt
+│   ├── DEVSECOPS_07_OUTPUT_git_status_before_phase7_commit.txt
+│   ├── DEVSECOPS_07_OUTPUT_git_tags_after_phase7.txt
+│   ├── DEVSECOPS_07_OUTPUT_phase7_acceptance_check.txt
+│   ├── DEVSECOPS_07_OUTPUT_phase7_final_control.txt
+│   ├── DEVSECOPS_07_OUTPUT_policy_gate_failed_summary_json.txt
+│   ├── DEVSECOPS_07_OUTPUT_policy_gate_failed.txt
+│   ├── DEVSECOPS_07_OUTPUT_policy_gate_failed_validation.txt
+│   ├── DEVSECOPS_07_OUTPUT_policy_gate_precheck.txt
+│   ├── DEVSECOPS_07_OUTPUT_policy_gate_script_creation.txt
+│   ├── DEVSECOPS_07_OUTPUT_project_tree_after_policy_gate_failed.txt
+│   ├── DEVSECOPS_08_OUTPUT_branch_before_remediation.txt
+│   ├── DEVSECOPS_08_OUTPUT_fixed_files_acceptance_check.txt
+│   ├── DEVSECOPS_08_OUTPUT_git_log_after_phase8_commit.txt
+│   ├── DEVSECOPS_08_OUTPUT_git_status_after_phase8_commit.txt
+│   ├── DEVSECOPS_08_OUTPUT_git_status_before_phase8_commit.txt
+│   ├── DEVSECOPS_08_OUTPUT_git_tags_after_phase8.txt
+│   ├── DEVSECOPS_08_OUTPUT_phase8_acceptance_check.txt
+│   ├── DEVSECOPS_08_OUTPUT_phase8_final_control.txt
+│   ├── DEVSECOPS_08_OUTPUT_project_tree_after_remediation_files.txt
+│   ├── DEVSECOPS_08_OUTPUT_remediation_branch_preparation.txt
+│   ├── DEVSECOPS_08_OUTPUT_remediation_diff.txt
+│   ├── DEVSECOPS_09_OUTPUT_bandit_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_before_after_security_summary.txt
+│   ├── DEVSECOPS_09_OUTPUT_checkov_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_evidence_import.txt
+│   ├── DEVSECOPS_09_OUTPUT_evidence_package_tree.txt
+│   ├── DEVSECOPS_09_OUTPUT_fixed_scan_summary.txt
+│   ├── DEVSECOPS_09_OUTPUT_fixed_snapshot_export.txt
+│   ├── DEVSECOPS_09_OUTPUT_gate_relevant_fixed_diagnostics.txt
+│   ├── DEVSECOPS_09_OUTPUT_gitleaks_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_git_log_after_phase9_commit.txt
+│   ├── DEVSECOPS_09_OUTPUT_git_status_after_phase9_commit.txt
+│   ├── DEVSECOPS_09_OUTPUT_git_status_before_phase9_commit.txt
+│   ├── DEVSECOPS_09_OUTPUT_git_tags_after_phase9.txt
+│   ├── DEVSECOPS_09_OUTPUT_grype_fixed_sbom_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_phase9_acceptance_check.txt
+│   ├── DEVSECOPS_09_OUTPUT_phase9_final_control.txt
+│   ├── DEVSECOPS_09_OUTPUT_pip_audit_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_policy_gate_passed.txt
+│   ├── DEVSECOPS_09_OUTPUT_policy_gate_passed_validation.txt
+│   ├── DEVSECOPS_09_OUTPUT_pre_scan_tool_check.txt
+│   ├── DEVSECOPS_09_OUTPUT_project_tree_after_policy_gate_passed.txt
+│   ├── DEVSECOPS_09_OUTPUT_receive_remediation_snapshot.txt
+│   ├── DEVSECOPS_09_OUTPUT_semgrep_fixed_scan.txt
+│   ├── DEVSECOPS_09_OUTPUT_syft_fixed_sbom_generation.txt
+│   ├── DEVSECOPS_09_OUTPUT_trivy_fixed_scans.txt
+│   ├── DEVSECOPS_10_OUTPUT_evidence_tree.txt
+│   ├── DEVSECOPS_10_OUTPUT_project_tree_full.txt
+│   ├── DEVSECOPS_99_OUTPUT_git_log.txt
+│   ├── DEVSECOPS_99_OUTPUT_git_status.txt
+│   ├── DEVSECOPS_99_OUTPUT_project_tree_final.txt
+│   └── .gitkeep
+├── EVIDENCE_INVENTORY.md
+├── EVIDENCE_SUMMARY.md
+├── logs
+├── raw_archives
+├── sbom
+│   ├── DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json
+│   ├── DEVSECOPS_09_SBOM_fixed_syft_cyclonedx.json
+│   └── .gitkeep
+├── scan_reports
+│   ├── bandit
+│   │   ├── DEVSECOPS_06_REPORT_bandit_vulnerable.json
+│   │   ├── DEVSECOPS_09_REPORT_bandit_fixed.json
+│   │   └── .gitkeep
+│   ├── checkov
+│   │   ├── DEVSECOPS_06_REPORT_checkov_vulnerable.json
+│   │   ├── DEVSECOPS_09_REPORT_checkov_fixed.json
+│   │   └── .gitkeep
+│   ├── gitleaks
+│   │   ├── DEVSECOPS_06_REPORT_gitleaks_vulnerable.json
+│   │   ├── DEVSECOPS_09_REPORT_gitleaks_fixed.json
+│   │   └── .gitkeep
+│   ├── grype
+│   │   ├── DEVSECOPS_06_REPORT_grype_vulnerable_sbom.json
+│   │   ├── DEVSECOPS_09_REPORT_grype_fixed_sbom.json
+│   │   └── .gitkeep
+│   ├── pip-audit
+│   │   ├── DEVSECOPS_06_REPORT_pip_audit_vulnerable.json
+│   │   ├── DEVSECOPS_09_REPORT_pip_audit_fixed.json
+│   │   └── .gitkeep
+│   ├── semgrep
+│   │   ├── DEVSECOPS_06_REPORT_semgrep_vulnerable.json
+│   │   ├── DEVSECOPS_09_REPORT_semgrep_fixed.json
+│   │   └── .gitkeep
+│   └── trivy
+│       ├── DEVSECOPS_06_REPORT_trivy_dockerfile_vulnerable.json
+│       ├── DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json
+│       ├── DEVSECOPS_06_REPORT_trivy_iac_vulnerable.json
+│       ├── DEVSECOPS_09_REPORT_trivy_dockerfile_fixed.json
+│       ├── DEVSECOPS_09_REPORT_trivy_fs_fixed.json
+│       ├── DEVSECOPS_09_REPORT_trivy_iac_fixed.json
+│       └── .gitkeep
+└── screenshots
+    └── .gitkeep
+
+15 directories, 198 files

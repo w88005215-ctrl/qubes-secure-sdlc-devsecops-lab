@@ -1,0 +1,31 @@
+Phase 10 evidence inventory validation
+Date: 2026-05-08T18:04:53+00:00
+Qube: dev-workbench
+
+Evidence file count:
+200
+
+Inventory file:
+-rw-rw-r-- 1 user user 18K May  8 18:04 evidence/EVIDENCE_INVENTORY.csv
+
+Inventory preview:
+path,type,size_bytes
+"evidence/before_after/DEVSECOPS_07_POLICY_GATE_FAILED_SUMMARY.json","json","458"
+"evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv","csv","1809"
+"evidence/before_after/DEVSECOPS_09_BEFORE_AFTER_SECURITY_SUMMARY.csv","csv","346"
+"evidence/before_after/.gitkeep","other","0"
+"evidence/command_outputs/DEVSECOPS_00_OUTPUT_session_context.txt","text","396"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_branches_and_tags.txt","text","185"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_collect_evidence_validation.txt","text","612"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_log_after_phase1_closeout.txt","text","268"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_log_after_tree_fix.txt","text","79"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_log_final_validation.txt","text","129"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_log_validation_result.txt","text","251"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_status_after_phase1_closeout.txt","text","167"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_status_after_soc_style_alignment.txt","text","259"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_status_after_tree_fix.txt","text","3105"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_status_before_phase1_closeout_commit.txt","text","581"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_git_status.txt","text","153"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_phase1_acceptance_check.txt","text","812"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_phase1_final_control.txt","text","278"
+"evidence/command_outputs/DEVSECOPS_01_OUTPUT_project_tree_phase1_final.txt","text","4605"

@@ -1,0 +1,14 @@
+ M PROJECT_TREE.txt
+?? docs/en/11_evidence_collection.md
+?? docs/ru/11_evidence_collection.md
+?? evidence/DEVSECOPS_10_SHA256SUMS.txt
+?? evidence/EVIDENCE_INVENTORY.csv
+?? evidence/before_after/DEVSECOPS_10_BEFORE_AFTER_EXECUTIVE_SUMMARY.csv
+?? evidence/command_outputs/DEVSECOPS_09_OUTPUT_phase9_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_before_after_executive_summary.txt
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_evidence_inventory_validation.txt
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_evidence_tree.txt
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_git_status_before_phase10_commit.txt
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_phase10_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_project_tree_full.txt
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_sha256_manifest_validation.txt

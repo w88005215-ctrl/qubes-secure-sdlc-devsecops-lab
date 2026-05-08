@@ -1,3 +1,11 @@
+Phase 10 project and evidence tree collection
+Date: 2026-05-08T17:29:32+00:00
+Qube: dev-workbench
+
+Git branch:
+remediation
+
+Repository tree:
 .
 ├── app
 │   ├── fixed-version
