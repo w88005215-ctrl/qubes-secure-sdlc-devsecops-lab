@@ -1,0 +1,57 @@
+
+Phase 13 final reviewed overlay status
+Date: 2026-05-09T08:02:49+00:00
+Qube: dev-workbench
+
+Git branch:
+remediation
+
+Git status after overlay:
+ M GITHUB_PUBLICATION_NOTE.md
+ M PORTFOLIO_SUMMARY.md
+ M PROJECT_TREE.txt
+ M README.md
+ M README_EN.md
+ M README_RU.md
+ M RELEASE_CHECKLIST.md
+ M evidence/DEVSECOPS_10_SHA256SUMS.txt
+ M evidence/EVIDENCE_INVENTORY.csv
+ M evidence/EVIDENCE_INVENTORY.md
+ D evidence/command_outputs/DEVSECOPS_13_OUTPUT_final_archive_sha256.txt
+ D evidence/screenshots/Screenshot_2026-05-08_13-06-23.png
+ D evidence/screenshots/Screenshot_2026-05-08_13-12-44.png
+ D evidence/screenshots/Screenshot_2026-05-08_15-38-58.png
+ D evidence/screenshots/Screenshot_2026-05-08_16-55-29.png
+ D reports/_backup_phase11_20260508_183205/devsecops_lab_report.md
+ M reports/devsecops_lab_report.md
+ M reports/devsecops_lab_report_en.md
+ M reports/devsecops_lab_report_ru.md
+?? docs/en/12_github_publication_readiness.md
+?? docs/ru/12_github_publication_readiness.md
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_final_archive_quality_review.txt
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_final_reviewed_overlay_status.txt
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_project_tree_after_final_overlay.txt
+?? evidence/screenshots/DEVSECOPS_01_SCREENSHOT_initial_lab_workspace.png
+?? evidence/screenshots/DEVSECOPS_02_SCREENSHOT_project_structure_and_git_state.png
+?? evidence/screenshots/DEVSECOPS_06_SCREENSHOT_vulnerable_security_scans.png
+?? evidence/screenshots/DEVSECOPS_09_SCREENSHOT_fixed_policy_gate_passed.png
+?? reports/FINAL_PUBLICATION_REVIEW.md
+?? reports/devsecops_lab_report_en.html
+?? reports/devsecops_lab_report_en.pdf
+?? reports/devsecops_lab_report_ru.html
+?? reports/devsecops_lab_report_ru.pdf
+?? reports/report.css
+
+Key files:
+[OK] README.md
+[OK] README_RU.md
+[OK] README_EN.md
+[OK] PORTFOLIO_SUMMARY.md
+[OK] RU report PDF
+[OK] EN report PDF
+[OK] FINAL_PUBLICATION_REVIEW.md
+[OK] HTML presentation
+[OK] evidence inventory CSV
+[OK] security-pipeline.yml
+[OK] sbom.yml
+[OK] policy-gate.yml

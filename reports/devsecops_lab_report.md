@@ -1,34 +1,22 @@
-# Qubes Secure SDLC / DevSecOps Lab Report
+# Qubes Secure SDLC / DevSecOps Lab — Report Landing
 
-This is the main report landing page.
+This directory contains the final bilingual report pack.
 
-## RU report
+## Main reports
 
-- reports/devsecops_lab_report_ru.md
+- `devsecops_lab_report_ru.md` — full Russian technical report.
+- `devsecops_lab_report_en.md` — full English technical report.
+- `devsecops_lab_report_ru.html` — Russian HTML report.
+- `devsecops_lab_report_en.html` — English HTML report.
+- `devsecops_lab_report_ru.pdf` — Russian PDF report.
+- `devsecops_lab_report_en.pdf` — English PDF report.
+- `FINAL_PUBLICATION_REVIEW.md` — publication readiness review.
 
-## EN report
+## Evidence anchors
 
-- reports/devsecops_lab_report_en.md
+- Vulnerable policy gate: `evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt`
+- Fixed policy gate: `evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt`
+- Evidence inventory: `evidence/EVIDENCE_INVENTORY.csv`
+- SHA256 manifest: `evidence/DEVSECOPS_10_SHA256SUMS.txt`
 
-## Project result
-
-| Version | Policy Gate Result |
-|---|---|
-| vulnerable-version | FAILED |
-| fixed-version | PASSED |
-
-## Key evidence
-
-- evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt
-- evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt
-- evidence/before_after/DEVSECOPS_09_BEFORE_AFTER_SECURITY_SUMMARY.csv
-- evidence/EVIDENCE_INVENTORY.csv
-- evidence/DEVSECOPS_10_SHA256SUMS.txt
-
-## Portfolio summary RU
-
-Спроектировал и реализовал лабораторный DevSecOps workflow в Qubes OS для автоматизированного тестирования безопасности ПО. Настроил проверки SAST, SCA, secret scanning, IaC scanning, container scanning, генерацию SBOM и security gates. На демонстрационном приложении показал полный цикл: vulnerable version -> detection -> failed gate -> remediation -> fixed version -> passed gate -> report.
-
-## Portfolio summary EN
-
-Designed and implemented a Qubes OS-based Secure SDLC / DevSecOps lab demonstrating automated SAST, SCA, secret scanning, IaC scanning, container scanning, SBOM generation, policy gates and remediation workflow. Built a vulnerable demo application, detected security issues, blocked unsafe builds, remediated findings and documented before/after results.
+The report pack is designed for GitHub publication and portfolio review.

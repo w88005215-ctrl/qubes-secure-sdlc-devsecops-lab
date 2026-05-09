@@ -1,350 +1,417 @@
-# Project Report: Qubes Secure SDLC / DevSecOps Lab
+# Qubes Secure SDLC / DevSecOps Lab — Final Technical Report
 
-Subtitle: Automated Security Testing, SBOM, Policy Gates and Remediation Workflow  
-Environment: Qubes OS 4.3  
-Project type: diploma and portfolio engineering case  
-Language: EN  
-
----
+Final revision date: 2026-05-09 07:34:58 UTC  
+Status: publication-ready  
+Main result: the vulnerable baseline is reproducibly blocked by the policy gate, and the remediated version reproducibly passes.
 
 ## 1. Executive Summary
 
-This project implements a reproducible Secure SDLC / DevSecOps lab in Qubes OS.
-
-The main goal is to demonstrate the full secure software development workflow:
-
-    vulnerable application
-    -> security scans
-    -> findings
-    -> policy gate failed
-    -> remediation
-    -> fixed application
-    -> repeated scans
-    -> policy gate passed
-    -> evidence
-    -> report
-    -> GitHub portfolio
-
-Key result:
-
-| Version | Policy Gate Result |
-|---|---|
-| vulnerable-version | FAILED |
-| fixed-version | PASSED |
-
-The project demonstrates not only security tool execution, but also a complete evidence-first workflow: scan reports, SBOM, command outputs, before/after results, remediation matrix, policy gate results and Git history.
-
----
-
-## 2. Scope
-
-In scope:
-
-- Qubes OS lab architecture;
-- intentionally vulnerable Python/Flask application;
-- fixed version after remediation;
-- SAST checks;
-- SCA checks;
-- secret scanning;
-- IaC scanning;
-- Dockerfile/container-oriented checks;
-- SBOM generation;
-- SBOM vulnerability scanning;
-- policy gate failed/passed demonstration;
-- evidence collection;
-- technical report;
-- GitHub-ready portfolio structure.
-
-Out of scope:
-
-- production CI/CD deployment;
-- cloud-only security pipeline;
-- Docker Desktop on the host;
-- project work in dom0;
-- real secrets, tokens, keys or production credentials;
-- autonomous AI pentesting.
-
----
+This project demonstrates a full Secure SDLC / DevSecOps case study with a SOC-style evidence workflow. In Qubes OS, development and documentation were performed in `dev-workbench`, while security tooling and scans were executed in `security-runner`. Evidence was transferred manually through the Qubes copy workflow, making every boundary crossing explicit.
 
-## 3. Qubes OS Architecture
-
-The project separates responsibilities between qubes.
-
-| Qube | Purpose |
-|---|---|
-| dev-workbench | repository, documentation, demo app and final evidence assembly |
-| security-runner | security tools execution and scan report generation |
-| evidence-vault | optional long-term evidence storage |
-| report-vm | optional report and presentation build environment |
-| ai-workbench | optional human-in-the-loop layer for sanitized findings |
-
-Logical workflow:
-
-    dev-workbench
-      -> repository snapshot
-      -> security-runner
-      -> SAST / SCA / secrets / IaC / SBOM
-      -> evidence package
-      -> dev-workbench / evidence
-      -> report / GitHub portfolio
-
-Separating qubes reduces role mixing. File transfer through qvm-copy is a controlled inter-qube data exchange mechanism in Qubes OS.
+The objective was achieved: the project includes a vulnerable baseline, SAST/SCA/secrets/IaC/container/SBOM evidence, a failed policy gate, a remediation branch, fixed scans, and a passed policy gate.
 
----
+The strength of the case is not only the code. The main strength is provability: every phase contains command outputs, scan reports, summaries, project trees, Git evidence, and publication-readiness controls.
 
-## 4. Secure SDLC Methodology
+## 2. Objective and Success Criteria
 
-The project maps to Secure SDLC practices.
+Main objective: demonstrate what a Secure SDLC pipeline can look like in an isolated Qubes environment with SOC-style evidence discipline.
 
-| Secure SDLC stage | Project implementation |
-|---|---|
-| Requirements | security acceptance criteria and policy gate conditions |
-| Design | Qubes VM architecture and trust boundaries |
-| Implementation | vulnerable and fixed application versions |
-| Verification | SAST, SCA, secret scanning, IaC scanning, SBOM |
-| Remediation | fixing defects and repeating scans |
-| Release decision | policy gate failed / passed |
-| Evidence | reports, SBOM, outputs, before/after summaries |
+Success criteria:
 
-Methodology baseline:
+1. The vulnerable version contains intentional issues in application code, dependencies, secrets, Dockerfile, and IaC.
+2. Security tooling runs in a separate AppVM instead of being mixed with the development VM.
+3. All checks produce machine-readable reports.
+4. The vulnerable baseline fails the policy gate.
+5. Remediation removes gate-blocking risks.
+6. The fixed version passes the policy gate.
+7. The evidence pack contains project trees, checksums, scan reports, SBOMs, final reports, and a presentation.
+8. The repository is ready for public publication without transient cache or backup directories.
 
-- OWASP ASVS;
-- OWASP SAMM;
-- NIST SSDF;
-- SLSA;
-- CycloneDX.
+## 3. Qubes Architecture and Isolation Model
 
----
+The project uses practical role separation:
 
-## 5. Demo Application
+- `dev-workbench` — repository, documentation, Git, reports, and evidence inventory.
+- `security-runner` — Semgrep, Bandit, pip-audit, Gitleaks, Checkov, Trivy, Syft, and Grype.
+- TemplateVM — base system packages only. User-space security tools were installed inside the AppVM where needed.
+- Evidence transfer — explicit Qubes copy workflow.
 
-The demo application has two versions.
+This demonstrates not only tool knowledge, but also security engineering thinking: isolation, least trust, controlled evidence movement, and reproducible release evidence.
 
-| Path | Purpose |
-|---|---|
-| app/vulnerable-version/ | intentionally vulnerable baseline |
-| app/fixed-version/ | remediated version |
+## 4. Repository and Evidence Layout
 
-The vulnerable version contains intentionally introduced educational defects.
+The repository is structured as a case study:
 
-| ID | Defect | Security area |
-|---|---|---|
-| D01 | fake hardcoded secret | secret scanning |
-| D02 | vulnerable/outdated dependency | SCA |
-| D03 | unsafe subprocess usage | SAST |
-| D04 | debug mode enabled | insecure runtime configuration |
-| D05 | missing or weak security headers | web hardening |
-| D06 | insecure Dockerfile | container hardening |
-| D07 | Terraform ingress 0.0.0.0/0 | IaC scanning |
-| D08 | dependency without proper pinning | dependency hygiene |
-| D09 | missing input validation | AppSec controls |
+- `app/vulnerable-version` — intentionally vulnerable application.
+- `app/fixed-version` — remediated application.
+- `docker` — vulnerable and fixed Dockerfiles.
+- `iac/vulnerable` and `iac/fixed` — Terraform examples.
+- `scripts` — control scripts and policy gate.
+- `evidence/command_outputs` — command execution evidence.
+- `evidence/scan_reports` — JSON reports from security tools.
+- `evidence/sbom` — CycloneDX SBOMs generated by Syft.
+- `evidence/before_after` — matrices and summaries.
+- `reports` — RU/EN final reports.
+- `presentation` — storyboard, slide source, and HTML deck.
+- `docs/ru` and `docs/en` — phase documentation.
 
-All secrets are fake and used only for controlled lab detection.
+## 5. Vulnerable Baseline
 
----
+The vulnerable baseline is a controlled learning target. It contains common DevSecOps issues:
 
-## 6. Security Pipeline
+- insecure application patterns;
+- vulnerable dependencies;
+- lab secrets;
+- weak IaC security group design;
+- insecure Dockerfile patterns;
+- a failing policy gate.
 
-The project uses the following tools.
+The baseline is preserved as a separate phase and tag for before/after comparison.
 
-| Category | Tool | Evidence path |
-|---|---|---|
-| SAST | Semgrep | evidence/scan_reports/semgrep/ |
-| Python SAST | Bandit | evidence/scan_reports/bandit/ |
-| SCA | pip-audit | evidence/scan_reports/pip-audit/ |
-| Secret scanning | Gitleaks | evidence/scan_reports/gitleaks/ |
-| IaC scanning | Checkov | evidence/scan_reports/checkov/ |
-| FS/IaC/Dockerfile scanning | Trivy | evidence/scan_reports/trivy/ |
-| SBOM generation | Syft | evidence/sbom/ |
-| SBOM vulnerability scan | Grype | evidence/scan_reports/grype/ |
-| Policy gate | local bash gate | evidence/command_outputs/ |
+## 6. Security Tooling
 
----
+The project uses multiple security control classes:
 
-## 7. Vulnerable Baseline Results
+- Semgrep — SAST and multi-language rules.
+- Bandit — Python security scanning.
+- pip-audit — Python dependency SCA.
+- Gitleaks — secret detection.
+- Checkov — IaC scanning.
+- Trivy — filesystem dependency scan, IaC/config scan, and Dockerfile scan.
+- Syft — SBOM generation.
+- Grype — SBOM vulnerability scan.
 
-Vulnerable baseline results:
+This gives broad DevSecOps coverage across code, dependencies, secrets, IaC, container configuration, SBOM, and policy decisioning.
 
-| Check | Result |
-|---|---:|
-| Semgrep findings | 10 |
-| Bandit findings | 7 |
-| Gitleaks findings | 2 |
-| Checkov failed checks | 4 |
-| Trivy filesystem vulnerabilities | 17 |
-| Trivy IaC misconfigurations | 2 |
-| Trivy Dockerfile misconfigurations | 2 |
-| Syft SBOM components | 5 |
-| Grype matches | 17 |
+## 7. Before/After Results
 
-Policy gate result:
+| Control | Vulnerable baseline | Fixed version | Interpretation |
+| --- | --- | --- | --- |
+| Policy gate | FAILED | PASSED | FAILED baseline -> PASSED fixed release |
+| Semgrep findings | 10 | 0 | all Semgrep findings removed |
+| Semgrep ERROR findings | 5 | 0 | blocking severity removed |
+| Bandit findings | 7 | 0 | all Bandit findings removed |
+| Bandit HIGH findings | 2 | 0 | no HIGH issues in fixed app |
+| pip-audit vulnerabilities | 24 | 4 | residual non-blocking dependency findings documented |
+| Gitleaks findings | 2 | 0 | lab secrets removed from fixed app |
+| Checkov failed checks | 4 | 1 | public ingress removed; residual unattached SG check documented |
+| Checkov public ingress | 4 | 0 | 0.0.0.0/0 removed |
+| Trivy fs vulnerabilities | 17 | 4 | dependency risk reduced |
+| Trivy fs HIGH/CRITICAL | 6 | 0 | no gate-blocking high/critical risk |
+| Grype SBOM matches | 17 | 4 | SBOM scan retained for transparency |
+| Grype HIGH/CRITICAL | 6 | 0 | no high/critical SBOM blockers |
+| Syft SBOM components | 5 | 3 | smaller dependency surface |
 
-    POLICY_GATE_STATUS=FAILED
+The fixed version is not presented as "zero output from every scanner". Mature security engineering distinguishes gate-blocking findings from residual non-blocking noise. Residual findings are preserved and explained instead of being hidden.
 
-Key evidence:
+## 8. Policy Gate
 
-- evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt
-- evidence/before_after/DEVSECOPS_07_POLICY_GATE_FAILED_SUMMARY.json
+The policy gate is the key engineering control. It converts scan reports into a release decision:
 
----
+- vulnerable baseline: `POLICY_GATE_STATUS=FAILED`;
+- remediated version: `POLICY_GATE_STATUS=PASSED`.
 
-## 8. Remediation
+Gate-relevant conditions include blocking SAST findings, Bandit HIGH issues, secrets, public ingress, HIGH/CRITICAL dependency/container findings, and HIGH/CRITICAL SBOM matches. After remediation, all gate-blocking counters are zero.
 
-The fixed version remediates the intentionally introduced defects.
+## 9. Remediation
 
-| Defect | Vulnerable state | Fixed state |
-|---|---|---|
-| Hardcoded secret | fake secret in source | removed |
-| Unsafe subprocess | unsafe command pattern | controlled safe handling |
-| Debug mode | enabled | disabled |
-| Security headers | missing or weak | defensive headers added |
-| Public ingress | 0.0.0.0/0 | restricted CIDR |
-| Dockerfile | weak baseline | hardened non-root style |
-| Dependencies | outdated/vulnerable | reduced and updated |
-| Input validation | missing/weak | validation added |
+Remediation was implemented as an engineering phase:
 
-Main remediation artifact:
+- application code: safer input handling and removal of lab secrets;
+- dependencies: reduced and updated dependency surface;
+- IaC: public ingress removed;
+- Dockerfile: hardening and non-root execution;
+- evidence: remediation matrix and repeat scans.
 
-- evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv
+## 10. Evidence Map
 
----
+| Phase | What it proves | Artifact | Evidence |
+| --- | --- | --- | --- |
+| 00-03 | Базовая подготовка | docs/ru/03_qubes_vm_architecture.md, docs/ru/04_template_appvm_preparation.md | evidence/command_outputs/DEVSECOPS_03_OUTPUT_security_tools_versions.txt |
+| 04 | Уязвимый baseline | app/vulnerable-version, docker/vulnerable.Dockerfile, iac/vulnerable/main.tf | evidence/command_outputs/DEVSECOPS_04_OUTPUT_phase4_final_control.txt |
+| 05 | Security tooling | docs/ru/06_security_tools_installation.md | evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_versions.txt |
+| 06 | Vulnerable scans | Semgrep, Bandit, pip-audit, Gitleaks, Checkov, Trivy, Syft, Grype | evidence/command_outputs/DEVSECOPS_06_OUTPUT_vulnerable_scan_summary.txt |
+| 07 | Failed policy gate | scripts/08_policy_gate.sh | evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt |
+| 08 | Remediation | app/fixed-version, docker/fixed.Dockerfile, iac/fixed/main.tf | evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv |
+| 09 | Fixed scans + passed gate | fixed scan reports and SBOM | evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt |
+| 10 | Evidence pack | EVIDENCE_INVENTORY.csv, SHA256 manifest, project trees | evidence/DEVSECOPS_10_SHA256SUMS.txt |
+| 11 | Technical report | reports/devsecops_lab_report_ru.md and EN version | evidence/command_outputs/DEVSECOPS_11_OUTPUT_report_evidence.txt |
+| 12 | Presentation | presentation/devsecops_case_defense_ru_en.md and HTML | evidence/command_outputs/DEVSECOPS_12_OUTPUT_presentation_evidence.txt |
+| 13 | Publication cleanup | README, release notes, publication check | evidence/command_outputs/DEVSECOPS_13_OUTPUT_publication_cleanup_check.txt |
 
-## 9. Fixed Version Results
+## 11. Why Separate VMs Matter
 
-After remediation, repeated scans were performed.
+Separate VMs remain valuable even when evidence is copied manually:
 
-Gate-relevant counters:
+1. Tooling VM can access the internet for databases and rule updates while the workbench stays controlled.
+2. Security tools and their caches do not pollute the development VM.
+3. Evidence transfer becomes an explicit trust-boundary event.
+4. A compromised tool process does not automatically compromise the whole workspace.
+5. The model resembles production security workflows where build, scan, evidence, and release are separated.
 
-| Check | Result |
-|---|---:|
-| Semgrep ERROR findings | 0 |
-| Bandit HIGH findings | 0 |
-| Gitleaks findings | 0 |
-| Public ingress 0.0.0.0/0 | 0 |
-| Trivy HIGH/CRITICAL filesystem vulnerabilities | 0 |
-| Trivy Dockerfile HIGH/CRITICAL misconfigurations | 0 |
-| Grype HIGH/CRITICAL SBOM matches | 0 |
+Manual Qubes GUI transfers do not weaken the case. They reinforce the operational security model.
 
-Residual non-blocking findings:
+## 12. Limitations
 
-| Check | Result | Gate impact |
-|---|---:|---|
-| pip-audit total vulnerabilities | 4 | non-blocking |
-| Checkov failed checks | 1 | non-blocking; no public ingress |
+This is a lab, not a production deployment. Limitations:
 
-Policy gate result:
+- no live GitHub Actions runner with protected branches and secrets;
+- security tools were executed manually inside a Qubes AppVM;
+- IaC examples are demonstrational;
+- residual non-blocking findings are kept for transparency;
+- SBOM and vulnerability results depend on tool databases at scan time;
+- screenshots are supplementary evidence, not the only proof.
 
-    POLICY_GATE_STATUS=PASSED
+## 13. Publication Readiness
 
-Key evidence:
+Publication cleanup included:
 
-- evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt
-- evidence/before_after/DEVSECOPS_09_BEFORE_AFTER_SECURITY_SUMMARY.csv
+- transient `__pycache__` removal;
+- backup directory removal;
+- semantic screenshot names;
+- refreshed report pack;
+- rebuilt evidence inventory and checksum manifest;
+- added RU/EN PDF and HTML reports;
+- final publication review.
 
----
+## 14. Interview Defense Story
 
-## 10. Policy Gate Logic
+1. I built a Secure SDLC lab in Qubes OS with separated development and security scanning zones.
+2. I created an intentionally vulnerable baseline.
+3. I ran SAST, SCA, secrets, IaC, Trivy, SBOM, and Grype checks.
+4. The policy gate blocked the vulnerable baseline.
+5. I remediated the application, dependencies, Dockerfile, and IaC.
+6. The fixed version passed the policy gate.
+7. Every command, report, SBOM, tree, checksum, document, and presentation artifact is stored as evidence.
 
-The policy gate blocks the pipeline if one of the following conditions is present:
+## 15. Final Conclusion
 
-- hardcoded secret;
-- high or critical dependency vulnerability;
-- public ingress 0.0.0.0/0 in IaC;
-- critical container finding;
-- high severity SAST finding.
+The project goal was achieved. The repository demonstrates a full cycle: design -> vulnerable baseline -> security scans -> failed gate -> remediation -> fixed scans -> passed gate -> evidence pack -> report -> presentation -> publication readiness.
 
-Actual result:
+This is a strong portfolio case for DevSecOps, Secure SDLC, AppSec, security automation, and Qubes-based security workflows.
 
-| Version | Result |
-|---|---|
-| vulnerable-version | FAILED |
-| fixed-version | PASSED |
 
----
+## 16. Control Mapping
 
-## 11. Before / After Summary
+The project can be read as a set of security controls, not just a lab repository.
 
-| Category | Vulnerable | Fixed |
-|---|---:|---:|
-| Semgrep findings | 10 | 0 |
-| Bandit findings | 7 | 0 |
-| Gitleaks findings | 2 | 0 |
-| Checkov failed checks | 4 | 1 |
-| Trivy fs vulnerabilities | 17 | 4 |
-| Grype matches | 17 | 4 |
-| Policy gate | FAILED | PASSED |
+| Control area | Project implementation | Evidence |
+| --- | --- | --- |
+| Source security | Semgrep and Bandit for application code | `evidence/scan_reports/semgrep`, `evidence/scan_reports/bandit` |
+| Dependency security | pip-audit, Trivy fs, Grype over SBOM | `evidence/scan_reports/pip-audit`, `evidence/scan_reports/trivy`, `evidence/scan_reports/grype` |
+| Secret hygiene | Gitleaks and custom `.gitleaks.toml` | `evidence/scan_reports/gitleaks` |
+| IaC security | Checkov and Trivy IaC | `evidence/scan_reports/checkov`, `evidence/scan_reports/trivy` |
+| Container hardening | Trivy Dockerfile scan | `evidence/scan_reports/trivy` |
+| Software transparency | Syft CycloneDX SBOM | `evidence/sbom` |
+| Release decision | `scripts/08_policy_gate.sh` | Phase 7 and Phase 9 command outputs |
+| Evidence integrity | SHA256 manifest | `evidence/DEVSECOPS_10_SHA256SUMS.txt` |
 
----
+## 17. Tool-by-tool Interpretation
 
-## 12. Evidence Table
+### Semgrep
 
-| Evidence | Purpose |
-|---|---|
-| PROJECT_TREE.txt | project structure |
-| DEVSECOPS_05_OUTPUT_security_tools_versions.txt | tool versions |
-| DEVSECOPS_06_REPORT_semgrep_vulnerable.json | vulnerable SAST evidence |
-| DEVSECOPS_06_REPORT_bandit_vulnerable.json | vulnerable Python SAST evidence |
-| DEVSECOPS_06_REPORT_gitleaks_vulnerable.json | fake secret detection |
-| DEVSECOPS_06_REPORT_checkov_vulnerable.json | vulnerable IaC findings |
-| DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json | vulnerable dependency findings |
-| DEVSECOPS_06_SBOM_vulnerable_syft_cyclonedx.json | vulnerable SBOM |
-| DEVSECOPS_07_OUTPUT_policy_gate_failed.txt | failed gate evidence |
-| DEVSECOPS_08_REMEDIATION_MATRIX.csv | remediation mapping |
-| DEVSECOPS_09_REPORT_semgrep_fixed.json | fixed SAST evidence |
-| DEVSECOPS_09_REPORT_gitleaks_fixed.json | fixed secret scan evidence |
-| DEVSECOPS_09_SBOM_fixed_syft_cyclonedx.json | fixed SBOM |
-| DEVSECOPS_09_OUTPUT_policy_gate_passed.txt | passed gate evidence |
-| DEVSECOPS_10_SHA256SUMS.txt | integrity manifest |
-| EVIDENCE_INVENTORY.csv | evidence inventory |
+Semgrep provides early detection of insecure coding patterns. The baseline proves the vulnerable state. In the fixed version, Semgrep findings are `0` and ERROR findings are `0`.
 
----
+### Bandit
 
-## 13. Limitations
+Bandit adds a Python-specific security view. In the fixed version, Bandit findings are `0`, demonstrating that remediation affected the application layer, not only infrastructure files.
 
-Project limitations:
+### pip-audit
 
-1. This is a lab model, not a production CI/CD system.
-2. The demo application contains intentionally vulnerable code.
-3. All secrets are fake.
-4. Tool results require human validation.
-5. False positives and false negatives are possible.
-6. Policy gates must be tuned to the organization risk profile.
-7. SBOM does not remove risk by itself.
-8. Qubes OS is used as an isolated engineering workspace.
-9. Residual low/medium findings may remain outside the blocking policy.
+pip-audit exposes dependency risk. The fixed version still has `4` total vulnerabilities, preserved as residual non-blocking evidence. This is realistic: mature projects separate release-blocking risk from backlog risk.
 
----
+### Gitleaks
 
-## 14. Lessons Learned
+Gitleaks confirms that the fixed application contains no secret findings. Secret hygiene is critical because leaked secrets are a common real-world incident path.
 
-The project demonstrates:
+### Checkov
 
-- DevSecOps pipeline should be evidence-driven.
-- One tool does not cover all risk classes.
-- Security gates must be clear and reproducible.
-- Qubes OS helps separate development, scanning and evidence roles.
-- Automation does not replace human validation.
-- Before/after workflow makes the project strong for diploma defense and portfolio review.
+Checkov returns `1` failed check on fixed IaC. The gate-relevant condition, public ingress `0.0.0.0/0`, is removed: fixed public ingress occurrences are `0`.
 
----
+### Trivy
 
-## 15. Conclusion
+Trivy is used for filesystem vulnerabilities, IaC/config scanning, and Dockerfile scanning. In the fixed version, HIGH/CRITICAL filesystem vulnerabilities are `0` and Dockerfile HIGH/CRITICAL misconfigurations are `0`.
 
-The project demonstrates the complete Secure SDLC / DevSecOps cycle:
+### Syft and Grype
 
-    design
-    -> vulnerable baseline
-    -> automated security testing
-    -> failed policy gate
-    -> remediation
-    -> repeated security testing
-    -> passed policy gate
-    -> evidence pack
-    -> report
+Syft produces SBOMs and Grype scans them. This demonstrates supply chain transparency: the project records component composition and vulnerability matches.
 
-Portfolio value:
+## 18. Evidence Integrity Model
 
-- diploma: practical secure software development implementation;
-- GitHub: reproducible engineering case;
-- portfolio: AppSec, DevSecOps, supply chain security and Qubes OS;
-- interview: clear story about findings, remediation, SBOM and policy gates.
+The evidence model follows three principles.
+
+First, every important command stores stdout/stderr in `evidence/command_outputs`. This preserves date, qube, target, return code, and counters.
+
+Second, machine-readable reports are stored separately from human summaries. JSON reports can be recalculated with tools like `jq`, while Markdown/CSV summaries remain readable.
+
+Third, the SHA256 manifest makes post-build file changes visible. It is not a replacement for signed releases, but it is strong enough for a publication-ready portfolio case.
+
+## 19. Release Decision Logic
+
+The policy gate intentionally does not mean "every scanner returns zero". It means agreed blocking conditions are absent.
+
+Blocking examples:
+
+- Semgrep ERROR findings.
+- Bandit HIGH findings.
+- Gitleaks findings.
+- Public ingress in fixed IaC.
+- Trivy HIGH/CRITICAL filesystem vulnerabilities.
+- Trivy Dockerfile HIGH/CRITICAL misconfigurations.
+- Grype HIGH/CRITICAL SBOM matches.
+
+Non-blocking examples:
+
+- Residual dependency findings not treated as HIGH/CRITICAL by the configured gate.
+- Checkov design findings that do not reintroduce public ingress.
+- Tool-specific noise that should be triaged rather than hidden.
+
+A poor gate blocks everything and gets bypassed. A useful gate blocks what the team agrees is unacceptable for release.
+
+## 20. Reviewer Checklist
+
+A reviewer can validate the project without trusting the author:
+
+1. Open `PROJECT_TREE.txt`.
+2. Open `app/vulnerable-version` and `app/fixed-version`.
+3. Compare `docker/vulnerable.Dockerfile` and `docker/fixed.Dockerfile`.
+4. Compare `iac/vulnerable/main.tf` and `iac/fixed/main.tf`.
+5. Open Phase 6 scan reports.
+6. Confirm `POLICY_GATE_STATUS=FAILED`.
+7. Open the remediation matrix.
+8. Open Phase 9 fixed scan reports.
+9. Confirm `POLICY_GATE_STATUS=PASSED`.
+10. Verify `evidence/DEVSECOPS_10_SHA256SUMS.txt`.
+
+## 21. Interview Q&A
+
+**Why not use one VM?**  
+One VM mixes development trust, security tooling cache, internet access, and evidence generation. Qubes allows role separation.
+
+**Why do some fixed findings remain?**  
+Because gate design separates blocking risk from residual backlog. Residual findings are preserved, not hidden.
+
+**Why so much evidence?**  
+Because this is a defendable case. In real security work, provenance matters as much as the final result.
+
+**What is the strongest part of the project?**  
+The chain: vulnerable baseline -> failed gate -> remediation -> fixed scans -> passed gate.
+
+**What would you improve next?**  
+CI workflow, signed releases, branch protection, SARIF uploads, container image scanning, dependency lockfiles, and automated report generation.
+
+## 22. Future Improvements
+
+A future version could include:
+
+- GitHub Actions policy gate workflow.
+- SARIF output for security review.
+- Dependency lockfiles and reproducible Python environments.
+- Container image build and image scan.
+- Cosign signing for release artifacts.
+- SLSA-style provenance notes.
+- Renovate/Dependabot simulation.
+- Makefile for local phase execution.
+- Automated PDF/HTML report generation.
+- GitHub release artifacts.
+
+## 23. Final Reviewer Statement
+
+At final build time, the project contains all elements of a strong DevSecOps portfolio case: clear architecture, vulnerable baseline, real scanner outputs, policy decisioning, remediation, fixed evidence, reports, presentation, checksums, and publication cleanup.
+
+Main result: `FAILED` for the baseline and `PASSED` for the fixed version are proven by artifacts, not just described in prose.
+
+
+## 24. Detailed Phase Chronology
+
+| Phase | Name | What was done | Value type |
+| --- | --- | --- | --- |
+| 00 | Project skeleton | Repository directories, evidence folders, branch/tags prepared | foundation |
+| 01 | Qubes workflow | dev-workbench and security-runner separation documented | architecture |
+| 02 | Template/AppVM preparation | Tool installation strategy clarified | operations |
+| 03 | Security tools | Versions and local tool cache captured | toolchain |
+| 04 | Vulnerable baseline | Application, Dockerfile and IaC vulnerable examples created | baseline |
+| 05 | Security tooling docs | RU/EN tool usage notes added | documentation |
+| 06 | Vulnerable scans | All scanner reports generated for baseline | assessment |
+| 07 | Failed gate | Baseline blocked by policy gate | release control |
+| 08 | Remediation | Fixed application, Dockerfile and IaC created | engineering fix |
+| 09 | Fixed scans | Repeat scans and passed policy gate captured | verification |
+| 10 | Evidence pack | Inventory, project tree and SHA256 manifest created | auditability |
+| 11 | Report | Bilingual technical report created | communication |
+| 12 | Presentation | Storyboard, slide source and HTML presentation created | defense |
+| 13 | Publication cleanup | Backup/cache cleanup, final publication review | release readiness |
+
+## 25. Risk Acceptance Record
+
+Not every residual finding must block publication of a lab project. The residual position is recorded explicitly.
+
+| Residual item | Decision | Why acceptable | Next step |
+| --- | --- | --- | --- |
+| Residual pip-audit findings | Documented as non-blocking backlog | No HIGH/CRITICAL gate blocker in configured policy | Keep visible in evidence and track in future CI |
+| Checkov CKV2_AWS_5 | Accepted for lab Terraform example | No public ingress remains | Attach SG to real resource in production IaC |
+| Manual evidence transfer | Accepted Qubes operational model | Explicit boundary crossing is safer than implicit shared state | Automate only with controlled qrexec policy in future |
+| No production deployment | By design | This is a portfolio lab | Add deployment only in a future isolated sandbox |
+
+## 26. Reviewer Reproduction Guide
+
+Minimal verification path without rerunning the full project:
+
+1. Read `README.md` and `PORTFOLIO_SUMMARY.md`.
+2. Open `reports/devsecops_lab_report_en.pdf`.
+3. Check `PROJECT_TREE.txt`.
+4. Check vulnerable evidence:
+   - `evidence/scan_reports/semgrep/DEVSECOPS_06_REPORT_semgrep_vulnerable.json`;
+   - `evidence/scan_reports/bandit/DEVSECOPS_06_REPORT_bandit_vulnerable.json`;
+   - `evidence/scan_reports/gitleaks/DEVSECOPS_06_REPORT_gitleaks_vulnerable.json`;
+   - `evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json`.
+5. Check failed gate:
+   - `evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt`.
+6. Check remediation:
+   - `evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv`.
+7. Check fixed evidence:
+   - `evidence/scan_reports/semgrep/DEVSECOPS_09_REPORT_semgrep_fixed.json`;
+   - `evidence/scan_reports/bandit/DEVSECOPS_09_REPORT_bandit_fixed.json`;
+   - `evidence/scan_reports/gitleaks/DEVSECOPS_09_REPORT_gitleaks_fixed.json`;
+   - `evidence/scan_reports/trivy/DEVSECOPS_09_REPORT_trivy_fs_fixed.json`.
+8. Check passed gate:
+   - `evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt`.
+9. Check integrity:
+   - `evidence/EVIDENCE_INVENTORY.csv`;
+   - `evidence/DEVSECOPS_10_SHA256SUMS.txt`.
+
+## 27. What Was Improved in the Final Revision
+
+The final revision strengthens the intermediate version:
+
+- landing README is portfolio-ready;
+- RU/EN reports are now full technical reports;
+- PDF and HTML report versions were added;
+- final publication review was added;
+- screenshots received semantic names;
+- backup directories were removed;
+- SHA256 manifest was rebuilt;
+- evidence inventory was rebuilt;
+- release checklist was updated;
+- phase 13 publication readiness was documented.
+
+## 28. Why This Case Is Strong
+
+The case is strong for three reasons.
+
+First, it demonstrates process rather than isolated screenshots. It has baseline, failure, remediation, and passing result.
+
+Second, it combines multiple DevSecOps tooling classes: SAST, SCA, secrets, IaC, container, SBOM, and policy gate.
+
+Third, it is implemented in Qubes, where separation of duties is part of the design, not just decoration.
+
+## 29. Expected GitHub Reviewer Impression
+
+Expected repository impression:
+
+- the structure is understandable on first open;
+- README explains the project story;
+- reports provide executive and technical levels;
+- evidence can be verified without trusting the author;
+- presentation is ready for defense;
+- the vulnerable version is clearly marked as a controlled baseline;
+- the fixed version and policy gate show engineering closure.

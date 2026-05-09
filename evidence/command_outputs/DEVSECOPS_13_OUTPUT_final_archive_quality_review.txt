@@ -1,0 +1,38 @@
+Phase 13 final archive quality review
+Date: 2026-05-09T07:39:14.047309+00:00
+Qube: offline archive review
+
+[Cleanup]
+Report backup directories: 0
+Python __pycache__ directories: 0
+Python .pyc files: 0
+
+[Core artifacts]
+README.md: OK
+README_RU.md: OK
+README_EN.md: OK
+PORTFOLIO_SUMMARY.md: OK
+reports/devsecops_lab_report_ru.md: OK
+reports/devsecops_lab_report_en.md: OK
+reports/devsecops_lab_report_ru.pdf: OK
+reports/devsecops_lab_report_en.pdf: OK
+reports/devsecops_lab_report_ru.html: OK
+reports/devsecops_lab_report_en.html: OK
+presentation/devsecops_case_defense.html: OK
+evidence/EVIDENCE_INVENTORY.csv: OK
+evidence/DEVSECOPS_10_SHA256SUMS.txt: OK
+PROJECT_TREE.txt: OK
+
+[Policy]
+Vulnerable gate: FAILED
+Fixed gate: PASSED
+
+[Report page counts]
+RU PDF pages: 14
+EN PDF pages: 13
+
+[Counts]
+Command output files: 196
+Scan report files: 25
+SBOM files: 3
+Screenshot files: 5

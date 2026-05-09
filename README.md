@@ -1,31 +1,74 @@
 # Qubes Secure SDLC / DevSecOps Lab
 
-- Russian version: README_RU.md
-- English version: README_EN.md
+[RU](README_RU.md) | [EN](README_EN.md)
 
-This repository contains a diploma and portfolio project for an isolated Secure SDLC / DevSecOps lab in Qubes OS.
+## What this project demonstrates
 
-The lab demonstrates:
+This repository is a publication-ready Secure SDLC / DevSecOps case study built with a SOC-style evidence workflow in Qubes OS.
 
-- SAST
-- SCA
-- secret scanning
-- IaC scanning
-- container scanning
-- SBOM generation
-- vulnerability scan by SBOM
-- policy gates
-- remediation workflow
-- before/after evidence
+The lab shows the full path:
 
-## Project Chain
+1. Design an isolated Qubes workflow.
+2. Create an intentionally vulnerable baseline.
+3. Run multi-tool security scans.
+4. Fail a policy gate on the vulnerable baseline.
+5. Remediate the application, dependencies, Dockerfile, and IaC.
+6. Re-run scans.
+7. Pass the policy gate.
+8. Build an evidence pack, final report, and presentation.
 
-architecture -> demo vulnerable app -> security scans -> findings -> policy gate failed -> remediation -> fixed app -> policy gate passed -> evidence -> report -> presentation
+## Final status
 
-## Repository Status
+- Vulnerable baseline policy gate: `FAILED`
+- Fixed policy gate: `PASSED`
+- Final release state: publication-ready
 
-Current phase:
+## Main artifacts
 
-Phase 0 — Project Foundation
+- Final RU report: `reports/devsecops_lab_report_ru.md`
+- Final EN report: `reports/devsecops_lab_report_en.md`
+- PDF reports: `reports/devsecops_lab_report_ru.pdf`, `reports/devsecops_lab_report_en.pdf`
+- Presentation: `presentation/devsecops_case_defense.html`
+- Evidence inventory: `evidence/EVIDENCE_INVENTORY.csv`
+- SHA256 manifest: `evidence/DEVSECOPS_10_SHA256SUMS.txt`
+- Project tree: `PROJECT_TREE.txt`
+- Portfolio summary: `PORTFOLIO_SUMMARY.md`
 
-Phase 1 — Repository Skeleton and SOC-style evidence alignment
+## Security tools
+
+Semgrep, Bandit, pip-audit, Gitleaks, Checkov, Trivy, Syft, and Grype.
+
+## Result snapshot
+
+| Control | Vulnerable baseline | Fixed version | Interpretation |
+| --- | --- | --- | --- |
+| Policy gate | FAILED | PASSED | FAILED baseline -> PASSED fixed release |
+| Semgrep findings | 10 | 0 | all Semgrep findings removed |
+| Semgrep ERROR findings | 5 | 0 | blocking severity removed |
+| Bandit findings | 7 | 0 | all Bandit findings removed |
+| Bandit HIGH findings | 2 | 0 | no HIGH issues in fixed app |
+| pip-audit vulnerabilities | 24 | 4 | residual non-blocking dependency findings documented |
+| Gitleaks findings | 2 | 0 | lab secrets removed from fixed app |
+| Checkov failed checks | 4 | 1 | public ingress removed; residual unattached SG check documented |
+| Checkov public ingress | 4 | 0 | 0.0.0.0/0 removed |
+| Trivy fs vulnerabilities | 17 | 4 | dependency risk reduced |
+| Trivy fs HIGH/CRITICAL | 6 | 0 | no gate-blocking high/critical risk |
+| Grype SBOM matches | 17 | 4 | SBOM scan retained for transparency |
+| Grype HIGH/CRITICAL | 6 | 0 | no high/critical SBOM blockers |
+| Syft SBOM components | 5 | 3 | smaller dependency surface |
+
+## Repository layout
+
+- `app/vulnerable-version` — intentionally vulnerable application.
+- `app/fixed-version` — remediated application.
+- `docker` — vulnerable and fixed Dockerfiles.
+- `iac` — vulnerable and fixed Terraform examples.
+- `scripts` — control scripts and policy gate.
+- `evidence` — command outputs, scan reports, SBOMs, screenshots, summaries.
+- `docs/ru`, `docs/en` — phase documentation.
+- `reports` — final report pack.
+- `presentation` — storyboard, slide source, and HTML deck.
+
+## Educational scope
+
+This repository contains intentionally vulnerable code for controlled educational demonstration. Do not deploy the vulnerable version in a real environment.

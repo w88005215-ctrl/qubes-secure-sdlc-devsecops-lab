@@ -1,17 +1,29 @@
 # GitHub Publication Note
 
-This Qubes Secure SDLC / DevSecOps Lab is prepared as a portfolio-ready educational cybersecurity project.
+This repository is a controlled Secure SDLC / DevSecOps educational lab.
 
-Repository name:
+## Important
 
-qubes-secure-sdlc-devsecops-lab
+The repository intentionally includes a vulnerable baseline for demonstration purposes. The vulnerable files are not production examples and must not be deployed.
 
-Publication principles:
+## Recommended GitHub description
 
-- no real secrets
-- no private keys
-- no production credentials
-- no sensitive personal data
-- only fake educational findings
-- evidence is sanitized before publication
-- runtime caches and temporary files are excluded
+Qubes-based Secure SDLC / DevSecOps lab with vulnerable baseline, multi-tool scans, failed policy gate, remediation, fixed scans, passed policy gate, evidence pack, final report, and presentation.
+
+## Recommended topics
+
+qubes-os, devsecops, secure-sdlc, appsec, semgrep, bandit, trivy, checkov, gitleaks, syft, grype, sbom, security-automation, portfolio-project
+
+## Main entry points
+
+- `README.md`
+- `PORTFOLIO_SUMMARY.md`
+- `reports/devsecops_lab_report_ru.md`
+- `reports/devsecops_lab_report_en.md`
+- `presentation/devsecops_case_defense.html`
+- `evidence/EVIDENCE_INVENTORY.csv`
+
+## Final status
+
+- Vulnerable baseline gate: FAILED
+- Fixed version gate: PASSED

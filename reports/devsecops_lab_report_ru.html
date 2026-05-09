@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Qubes Secure SDLC / DevSecOps Lab</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="report.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Qubes Secure SDLC / DevSecOps Lab</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a
+href="#qubes-secure-sdlc-devsecops-lab-итоговый-технический-отчет"
+id="toc-qubes-secure-sdlc-devsecops-lab-итоговый-технический-отчет">Qubes
+Secure SDLC / DevSecOps Lab — итоговый технический отчет</a>
+<ul>
+<li><a href="#executive-summary" id="toc-executive-summary">1. Executive
+Summary</a></li>
+<li><a href="#цель-и-критерии-успеха" id="toc-цель-и-критерии-успеха">2.
+Цель и критерии успеха</a></li>
+<li><a href="#архитектура-qubes-и-модель-изоляции"
+id="toc-архитектура-qubes-и-модель-изоляции">3. Архитектура Qubes и
+модель изоляции</a></li>
+<li><a href="#репозиторий-и-evidence-layout"
+id="toc-репозиторий-и-evidence-layout">4. Репозиторий и evidence
+layout</a></li>
+<li><a href="#уязвимый-baseline" id="toc-уязвимый-baseline">5. Уязвимый
+baseline</a></li>
+<li><a href="#security-tooling" id="toc-security-tooling">6. Security
+tooling</a></li>
+<li><a href="#результаты-beforeafter" id="toc-результаты-beforeafter">7.
+Результаты before/after</a></li>
+<li><a href="#policy-gate" id="toc-policy-gate">8. Policy gate</a></li>
+<li><a href="#remediation" id="toc-remediation">9. Remediation</a></li>
+<li><a href="#evidence-map" id="toc-evidence-map">10. Evidence
+map</a></li>
+<li><a href="#почему-отдельные-vm-имеют-смысл"
+id="toc-почему-отдельные-vm-имеют-смысл">11. Почему отдельные VM имеют
+смысл</a></li>
+<li><a href="#limitations" id="toc-limitations">12. Limitations</a></li>
+<li><a href="#публикационная-готовность"
+id="toc-публикационная-готовность">13. Публикационная
+готовность</a></li>
+<li><a href="#как-защищать-проект-на-интервью"
+id="toc-как-защищать-проект-на-интервью">14. Как защищать проект на
+интервью</a></li>
+<li><a href="#финальное-заключение" id="toc-финальное-заключение">15.
+Финальное заключение</a></li>
+<li><a href="#control-mapping" id="toc-control-mapping">16. Control
+mapping</a></li>
+<li><a href="#tool-by-tool-interpretation"
+id="toc-tool-by-tool-interpretation">17. Tool-by-tool interpretation</a>
+<ul>
+<li><a href="#semgrep" id="toc-semgrep">Semgrep</a></li>
+<li><a href="#bandit" id="toc-bandit">Bandit</a></li>
+<li><a href="#pip-audit" id="toc-pip-audit">pip-audit</a></li>
+<li><a href="#gitleaks" id="toc-gitleaks">Gitleaks</a></li>
+<li><a href="#checkov" id="toc-checkov">Checkov</a></li>
+<li><a href="#trivy" id="toc-trivy">Trivy</a></li>
+<li><a href="#syft-and-grype" id="toc-syft-and-grype">Syft and
+Grype</a></li>
+</ul></li>
+<li><a href="#evidence-integrity-model"
+id="toc-evidence-integrity-model">18. Evidence integrity model</a></li>
+<li><a href="#release-decision-logic"
+id="toc-release-decision-logic">19. Release decision logic</a></li>
+<li><a href="#reviewer-checklist" id="toc-reviewer-checklist">20.
+Reviewer checklist</a></li>
+<li><a href="#interview-qa" id="toc-interview-qa">21. Interview
+Q&amp;A</a></li>
+<li><a href="#future-improvements" id="toc-future-improvements">22.
+Future improvements</a></li>
+<li><a href="#final-reviewer-statement"
+id="toc-final-reviewer-statement">23. Final reviewer statement</a></li>
+<li><a href="#детальная-хронология-фаз"
+id="toc-детальная-хронология-фаз">24. Детальная хронология фаз</a></li>
+<li><a href="#risk-acceptance-record"
+id="toc-risk-acceptance-record">25. Risk acceptance record</a></li>
+<li><a href="#reproduction-guide-для-reviewer"
+id="toc-reproduction-guide-для-reviewer">26. Reproduction guide для
+reviewer</a></li>
+<li><a href="#что-именно-улучшено-в-финальной-редакции"
+id="toc-что-именно-улучшено-в-финальной-редакции">27. Что именно
+улучшено в финальной редакции</a></li>
+<li><a href="#почему-кейс-сильный" id="toc-почему-кейс-сильный">28.
+Почему кейс сильный</a></li>
+<li><a href="#expected-github-reviewer-impression"
+id="toc-expected-github-reviewer-impression">29. Expected GitHub
+reviewer impression</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="qubes-secure-sdlc-devsecops-lab-итоговый-технический-отчет">Qubes
+Secure SDLC / DevSecOps Lab — итоговый технический отчет</h1>
+<p>Дата финальной редакции: 2026-05-09 07:34:58 UTC<br />
+Статус: publication-ready<br />
+Основной результат: уязвимый baseline воспроизводимо блокируется policy
+gate, исправленная версия воспроизводимо проходит gate.</p>
+<h2 id="executive-summary">1. Executive Summary</h2>
+<p>Проект демонстрирует полный Secure SDLC / DevSecOps кейс в стиле SOC
+evidence workflow. В Qubes OS был разделен рабочий контур: разработка и
+документация выполнялись в <code>dev-workbench</code>, security tooling
+и сканирования — в <code>security-runner</code>, перенос evidence
+выполнялся вручную через Qubes copy workflow. Это не автоматизация ради
+автоматизации, а контролируемый изолированный процесс, где каждый
+результат сохраняется как артефакт.</p>
+<p>Цель проекта достигнута: создан уязвимый baseline, собраны отчеты
+SAST, SCA, secrets, IaC, container/config и SBOM, зафиксирован провал
+policy gate, затем выполнена remediation, повторные проверки показали
+отсутствие gate-blocking условий, а итоговый policy gate получил статус
+<code>PASSED</code>.</p>
+<p>Ключевая ценность проекта не только в наличии уязвимого и
+исправленного кода. Сильная сторона кейса — в доказуемости. Для каждой
+фазы есть command output, scan report, summary, tree, git evidence и
+публикационный контроль.</p>
+<h2 id="цель-и-критерии-успеха">2. Цель и критерии успеха</h2>
+<p>Главная цель: показать, как Secure SDLC pipeline может выглядеть в
+изолированной Qubes-среде с SOC-подходом к доказательствам.</p>
+<p>Критерии успеха:</p>
+<ol type="1">
+<li>Уязвимая версия содержит намеренные дефекты приложения,
+зависимостей, секретов, Dockerfile и IaC.</li>
+<li>Security tooling выполняется в отдельной AppVM, а не смешивается с
+рабочей VM.</li>
+<li>Все проверки сохраняют machine-readable отчеты.</li>
+<li>Policy gate на уязвимой версии завершается <code>FAILED</code>.</li>
+<li>Remediation устраняет gate-blocking риски.</li>
+<li>Policy gate на исправленной версии завершается
+<code>PASSED</code>.</li>
+<li>Evidence pack содержит дерево проекта, hash manifest, отчеты, SBOM,
+итоговый отчет и презентацию.</li>
+<li>Репозиторий готов к публичной публикации без временных cache и
+backup-директорий.</li>
+</ol>
+<h2 id="архитектура-qubes-и-модель-изоляции">3. Архитектура Qubes и
+модель изоляции</h2>
+<p>Проект использует практическое разделение ролей:</p>
+<ul>
+<li><code>dev-workbench</code> — рабочая VM для репозитория,
+документации, Git, отчетов и evidence inventory.</li>
+<li><code>security-runner</code> — VM для запуска Semgrep, Bandit,
+pip-audit, Gitleaks, Checkov, Trivy, Syft и Grype.</li>
+<li>TemplateVM — база для пакетов системы, но пользовательские security
+tools устанавливались в AppVM, чтобы не ожидать переноса содержимого
+<code>~/.local</code> из template.</li>
+<li>Передача evidence выполнялась через Qubes copy workflow. Это
+сохраняет границу доверия между VM и делает перенос данных явным
+действием.</li>
+</ul>
+<p>Такой подход важен для портфолио: он показывает не просто знание
+инструментов, а понимание того, почему безопасность требует разделения
+рабочих зон, минимизации доверия и воспроизводимого evidence trail.</p>
+<h2 id="репозиторий-и-evidence-layout">4. Репозиторий и evidence
+layout</h2>
+<p>Проект оформлен как case study, а не как набор случайных команд.
+Основные зоны:</p>
+<ul>
+<li><code>app/vulnerable-version</code> — намеренно уязвимое
+приложение.</li>
+<li><code>app/fixed-version</code> — исправленная версия.</li>
+<li><code>docker</code> — vulnerable/fixed Dockerfile.</li>
+<li><code>iac/vulnerable</code> и <code>iac/fixed</code> — Terraform
+examples.</li>
+<li><code>scripts</code> — подготовленные control scripts и policy
+gate.</li>
+<li><code>evidence/command_outputs</code> — полный журнал ключевых
+команд.</li>
+<li><code>evidence/scan_reports</code> — JSON-отчеты security
+tools.</li>
+<li><code>evidence/sbom</code> — SBOM CycloneDX от Syft.</li>
+<li><code>evidence/before_after</code> — matrices и summaries.</li>
+<li><code>reports</code> — итоговые RU/EN отчеты.</li>
+<li><code>presentation</code> — storyboard, slide source и
+HTML-презентация.</li>
+<li><code>docs/ru</code> и <code>docs/en</code> — фазовая
+документация.</li>
+</ul>
+<h2 id="уязвимый-baseline">5. Уязвимый baseline</h2>
+<p>Уязвимая версия нужна не для эксплуатации реальных систем, а как
+учебный контролируемый объект. Она содержит дефекты, которые типично
+встречаются в DevSecOps pipeline:</p>
+<ul>
+<li>insecure application patterns;</li>
+<li>dependency vulnerabilities;</li>
+<li>lab secrets;</li>
+<li>weak IaC security group model;</li>
+<li>insecure Dockerfile practices;</li>
+<li>отсутствие passing policy gate.</li>
+</ul>
+<p>Baseline зафиксирован отдельной фазой и тегом, затем использован как
+источник для сравнения before/after.</p>
+<h2 id="security-tooling">6. Security tooling</h2>
+<p>В проекте использованы инструменты нескольких классов:</p>
+<ul>
+<li>Semgrep — SAST и multi-language правила.</li>
+<li>Bandit — Python security scanning.</li>
+<li>pip-audit — Python dependency SCA.</li>
+<li>Gitleaks — secrets detection.</li>
+<li>Checkov — IaC scanning.</li>
+<li>Trivy — filesystem dependency scan, IaC/config scan и Dockerfile
+scan.</li>
+<li>Syft — SBOM generation.</li>
+<li>Grype — SBOM vulnerability scan.</li>
+</ul>
+<p>Это покрывает не один тип проверки, а полный DevSecOps control plane:
+code, dependencies, secrets, IaC, container configuration, SBOM и policy
+gate.</p>
+<h2 id="результаты-beforeafter">7. Результаты before/after</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Контроль</th>
+<th>Уязвимая версия</th>
+<th>Исправленная версия</th>
+<th>Интерпретация</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Policy gate</td>
+<td>FAILED</td>
+<td>PASSED</td>
+<td>FAILED baseline -&gt; PASSED fixed release</td>
+</tr>
+<tr class="even">
+<td>Semgrep findings</td>
+<td>10</td>
+<td>0</td>
+<td>all Semgrep findings removed</td>
+</tr>
+<tr class="odd">
+<td>Semgrep ERROR findings</td>
+<td>5</td>
+<td>0</td>
+<td>blocking severity removed</td>
+</tr>
+<tr class="even">
+<td>Bandit findings</td>
+<td>7</td>
+<td>0</td>
+<td>all Bandit findings removed</td>
+</tr>
+<tr class="odd">
+<td>Bandit HIGH findings</td>
+<td>2</td>
+<td>0</td>
+<td>no HIGH issues in fixed app</td>
+</tr>
+<tr class="even">
+<td>pip-audit vulnerabilities</td>
+<td>24</td>
+<td>4</td>
+<td>residual non-blocking dependency findings documented</td>
+</tr>
+<tr class="odd">
+<td>Gitleaks findings</td>
+<td>2</td>
+<td>0</td>
+<td>lab secrets removed from fixed app</td>
+</tr>
+<tr class="even">
+<td>Checkov failed checks</td>
+<td>4</td>
+<td>1</td>
+<td>public ingress removed; residual unattached SG check documented</td>
+</tr>
+<tr class="odd">
+<td>Checkov public ingress</td>
+<td>4</td>
+<td>0</td>
+<td>0.0.0.0/0 removed</td>
+</tr>
+<tr class="even">
+<td>Trivy fs vulnerabilities</td>
+<td>17</td>
+<td>4</td>
+<td>dependency risk reduced</td>
+</tr>
+<tr class="odd">
+<td>Trivy fs HIGH/CRITICAL</td>
+<td>6</td>
+<td>0</td>
+<td>no gate-blocking high/critical risk</td>
+</tr>
+<tr class="even">
+<td>Grype SBOM matches</td>
+<td>17</td>
+<td>4</td>
+<td>SBOM scan retained for transparency</td>
+</tr>
+<tr class="odd">
+<td>Grype HIGH/CRITICAL</td>
+<td>6</td>
+<td>0</td>
+<td>no high/critical SBOM blockers</td>
+</tr>
+<tr class="even">
+<td>Syft SBOM components</td>
+<td>5</td>
+<td>3</td>
+<td>smaller dependency surface</td>
+</tr>
+</tbody>
+</table>
+<p>Вывод по таблице: фиксированная версия не является “идеально пустой”
+с точки зрения любых сканеров, потому что часть инструментов возвращает
+residual non-blocking findings. Это нормально для зрелого security
+engineering подхода: gate должен блокировать согласованные критичные
+условия, а не любой шум. Остаточные findings сохранены и объяснены, а не
+скрыты.</p>
+<h2 id="policy-gate">8. Policy gate</h2>
+<p>Policy gate — центральная контрольная точка проекта. Он переводит
+набор отчетов в понятный engineering decision:</p>
+<ul>
+<li>уязвимый baseline: <code>POLICY_GATE_STATUS=FAILED</code>;</li>
+<li>исправленная версия: <code>POLICY_GATE_STATUS=PASSED</code>.</li>
+</ul>
+<p>Gate-relevant условия включают blocking findings по SAST, Bandit
+HIGH, secrets, публичный ingress, HIGH/CRITICAL container/dependency
+risks и SBOM HIGH/CRITICAL matches. После remediation все blocking
+counters стали нулевыми.</p>
+<h2 id="remediation">9. Remediation</h2>
+<p>Remediation была выполнена как отдельная engineering-фаза, а не как
+ручное удаление отчетов. Исправления разделены по зонам:</p>
+<ul>
+<li>application code: безопасная обработка inputs и удаление lab secrets
+из fixed version;</li>
+<li>dependencies: сокращение и обновление dependency surface;</li>
+<li>IaC: удаление public ingress <code>0.0.0.0/0</code>;</li>
+<li>Dockerfile: hardening и non-root подход;</li>
+<li>evidence: remediation matrix и повторные сканы.</li>
+</ul>
+<h2 id="evidence-map">10. Evidence map</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Фаза</th>
+<th>Что доказывает</th>
+<th>Артефакт</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>00-03</td>
+<td>Базовая подготовка</td>
+<td>docs/ru/03_qubes_vm_architecture.md,
+docs/ru/04_template_appvm_preparation.md</td>
+<td>evidence/command_outputs/DEVSECOPS_03_OUTPUT_security_tools_versions.txt</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>Уязвимый baseline</td>
+<td>app/vulnerable-version, docker/vulnerable.Dockerfile,
+iac/vulnerable/main.tf</td>
+<td>evidence/command_outputs/DEVSECOPS_04_OUTPUT_phase4_final_control.txt</td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>Security tooling</td>
+<td>docs/ru/06_security_tools_installation.md</td>
+<td>evidence/command_outputs/DEVSECOPS_05_OUTPUT_security_tools_versions.txt</td>
+</tr>
+<tr class="even">
+<td>06</td>
+<td>Vulnerable scans</td>
+<td>Semgrep, Bandit, pip-audit, Gitleaks, Checkov, Trivy, Syft,
+Grype</td>
+<td>evidence/command_outputs/DEVSECOPS_06_OUTPUT_vulnerable_scan_summary.txt</td>
+</tr>
+<tr class="odd">
+<td>07</td>
+<td>Failed policy gate</td>
+<td>scripts/08_policy_gate.sh</td>
+<td>evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt</td>
+</tr>
+<tr class="even">
+<td>08</td>
+<td>Remediation</td>
+<td>app/fixed-version, docker/fixed.Dockerfile, iac/fixed/main.tf</td>
+<td>evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv</td>
+</tr>
+<tr class="odd">
+<td>09</td>
+<td>Fixed scans + passed gate</td>
+<td>fixed scan reports and SBOM</td>
+<td>evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Evidence pack</td>
+<td>EVIDENCE_INVENTORY.csv, SHA256 manifest, project trees</td>
+<td>evidence/DEVSECOPS_10_SHA256SUMS.txt</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Technical report</td>
+<td>reports/devsecops_lab_report_ru.md and EN version</td>
+<td>evidence/command_outputs/DEVSECOPS_11_OUTPUT_report_evidence.txt</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Presentation</td>
+<td>presentation/devsecops_case_defense_ru_en.md and HTML</td>
+<td>evidence/command_outputs/DEVSECOPS_12_OUTPUT_presentation_evidence.txt</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Publication cleanup</td>
+<td>README, release notes, publication check</td>
+<td>evidence/command_outputs/DEVSECOPS_13_OUTPUT_publication_cleanup_check.txt</td>
+</tr>
+</tbody>
+</table>
+<h2 id="почему-отдельные-vm-имеют-смысл">11. Почему отдельные VM имеют
+смысл</h2>
+<p>Даже при ручном переносе evidence отдельные VM полезны:</p>
+<ol type="1">
+<li>Tooling VM может быть подключена к интернету для скачивания DB и
+rules, а рабочая VM остается более контролируемой.</li>
+<li>Результаты security tools не смешиваются с исходной разработческой
+средой.</li>
+<li>Перенос evidence становится осознанным boundary crossing.</li>
+<li>Компрометация одного tooling процесса не равна компрометации всей
+рабочей зоны.</li>
+<li>Такая модель похожа на production security practice: build, scan,
+evidence и release имеют разные доверенные зоны.</li>
+</ol>
+<p>Ручной перенос через Qubes GUI не ослабляет кейс. Наоборот, он
+показывает, что проект учитывает реальную operational security модель
+Qubes.</p>
+<h2 id="limitations">12. Limitations</h2>
+<p>Проект является лабораторным и не претендует на production
+deployment. Ограничения:</p>
+<ul>
+<li>нет реального CI runner в GitHub Actions с secrets и protected
+branches;</li>
+<li>security tools запускались вручную в Qubes AppVM;</li>
+<li>IaC examples являются демонстрационными;</li>
+<li>residual non-blocking findings сохранены для прозрачности;</li>
+<li>SBOM и vulnerability DB зависят от состояния tool databases на
+момент запуска;</li>
+<li>скриншоты являются дополнительным evidence, а не единственным
+источником доказательств.</li>
+</ul>
+<h2 id="публикационная-готовность">13. Публикационная готовность</h2>
+<p>Перед публикацией выполнена cleanup-проверка:</p>
+<ul>
+<li>удалены <code>__pycache__</code>;</li>
+<li>удалены backup-директории;</li>
+<li>добавлены semantic screenshot names;</li>
+<li>обновлен report pack;</li>
+<li>пересобраны evidence inventory и hash manifest;</li>
+<li>добавлены RU/EN report PDFs и HTML versions;</li>
+<li>создан final publication review.</li>
+</ul>
+<h2 id="как-защищать-проект-на-интервью">14. Как защищать проект на
+интервью</h2>
+<p>Короткая defense story:</p>
+<ol type="1">
+<li>Я построил Secure SDLC lab в Qubes OS с разделением разработки и
+security scanning.</li>
+<li>Сначала создал намеренно уязвимый baseline.</li>
+<li>Запустил набор инструментов: SAST, SCA, secrets, IaC, Trivy, SBOM,
+Grype.</li>
+<li>Policy gate доказуемо заблокировал baseline.</li>
+<li>Затем я сделал remediation и повторил проверки.</li>
+<li>Исправленная версия прошла policy gate.</li>
+<li>Все команды, отчеты, SBOM, trees, checksums, docs и презентация
+сохранены как evidence.</li>
+</ol>
+<h2 id="финальное-заключение">15. Финальное заключение</h2>
+<p>Цель задания достигнута. Проект показывает полный цикл: design -&gt;
+vulnerable baseline -&gt; security scans -&gt; failed gate -&gt;
+remediation -&gt; fixed scans -&gt; passed gate -&gt; evidence pack
+-&gt; report -&gt; presentation -&gt; publication readiness.</p>
+<p>Это сильный портфолио-кейс для DevSecOps, Secure SDLC, AppSec,
+security automation и Qubes-based security workflow.</p>
+<h2 id="control-mapping">16. Control mapping</h2>
+<p>Проект можно читать как набор security controls, а не только как
+учебный репозиторий.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control area</th>
+<th>Реализация в проекте</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Source security</td>
+<td>Semgrep и Bandit для application code</td>
+<td><code>evidence/scan_reports/semgrep</code>,
+<code>evidence/scan_reports/bandit</code></td>
+</tr>
+<tr class="even">
+<td>Dependency security</td>
+<td>pip-audit, Trivy fs, Grype over SBOM</td>
+<td><code>evidence/scan_reports/pip-audit</code>,
+<code>evidence/scan_reports/trivy</code>,
+<code>evidence/scan_reports/grype</code></td>
+</tr>
+<tr class="odd">
+<td>Secret hygiene</td>
+<td>Gitleaks и отдельный <code>.gitleaks.toml</code></td>
+<td><code>evidence/scan_reports/gitleaks</code></td>
+</tr>
+<tr class="even">
+<td>IaC security</td>
+<td>Checkov и Trivy IaC</td>
+<td><code>evidence/scan_reports/checkov</code>,
+<code>evidence/scan_reports/trivy</code></td>
+</tr>
+<tr class="odd">
+<td>Container hardening</td>
+<td>Trivy Dockerfile scan</td>
+<td><code>evidence/scan_reports/trivy</code></td>
+</tr>
+<tr class="even">
+<td>Software transparency</td>
+<td>Syft CycloneDX SBOM</td>
+<td><code>evidence/sbom</code></td>
+</tr>
+<tr class="odd">
+<td>Release decision</td>
+<td><code>scripts/08_policy_gate.sh</code></td>
+<td>Phase 7 and Phase 9 command outputs</td>
+</tr>
+<tr class="even">
+<td>Evidence integrity</td>
+<td>SHA256 manifest</td>
+<td><code>evidence/DEVSECOPS_10_SHA256SUMS.txt</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tool-by-tool-interpretation">17. Tool-by-tool
+interpretation</h2>
+<h3 id="semgrep">Semgrep</h3>
+<p>Semgrep отвечает за раннее обнаружение insecure coding patterns. В
+baseline он показывает, что приложение действительно содержит
+security-relevant findings. В fixed version количество Semgrep findings
+равно <code>0</code>, а ERROR findings равно <code>0</code>. Это важно,
+потому что gate ориентируется на blocking severity, а не на субъективное
+ощущение “код стал лучше”.</p>
+<h3 id="bandit">Bandit</h3>
+<p>Bandit добавляет Python-specific взгляд на безопасность. В baseline
+были findings, включая HIGH-level findings. В fixed version Bandit
+findings стали <code>0</code>. Это демонстрирует, что remediation
+коснулась не только инфраструктуры, но и application layer.</p>
+<h3 id="pip-audit">pip-audit</h3>
+<p>pip-audit показывает dependency risk. В fixed version осталось
+<code>4</code> total vulnerabilities. Они сохранены как residual
+non-blocking evidence. Это зрелая позиция: реальные проекты редко имеют
+абсолютно пустой dependency report, поэтому важно отделять
+release-blocking risk от backlog risk.</p>
+<h3 id="gitleaks">Gitleaks</h3>
+<p>Gitleaks подтверждает, что fixed version не содержит lab secret
+findings. Для проекта это особенно важно, потому что secret hygiene
+является одной из самых частых причин инцидентов в реальных
+репозиториях.</p>
+<h3 id="checkov">Checkov</h3>
+<p>Checkov на fixed IaC возвращает <code>1</code> failed check. Главное
+gate-relevant условие — отсутствие public ingress <code>0.0.0.0/0</code>
+— выполнено: fixed public ingress occurrences равно <code>0</code>.
+Остаточный check связан с демонстрационным характером Terraform example
+и зафиксирован явно.</p>
+<h3 id="trivy">Trivy</h3>
+<p>Trivy используется сразу в нескольких режимах: filesystem
+vulnerabilities, IaC/misconfiguration scanning и Dockerfile scanning. В
+fixed version HIGH/CRITICAL filesystem vulnerabilities равны
+<code>0</code>, а Dockerfile HIGH/CRITICAL misconfigurations равны
+<code>0</code>. Это подтверждает, что gate-blocking risk снят.</p>
+<h3 id="syft-and-grype">Syft and Grype</h3>
+<p>Syft создает SBOM, Grype сканирует SBOM. Эта связка важна, потому что
+она показывает supply chain transparency: проект не только сканирует
+исходники, но и фиксирует состав компонентов.</p>
+<h2 id="evidence-integrity-model">18. Evidence integrity model</h2>
+<p>Evidence model построена вокруг трех принципов.</p>
+<p>Первый принцип — каждая важная команда сохраняет stdout/stderr в
+<code>evidence/command_outputs</code>. Это позволяет проверить не только
+итоговый JSON, но и контекст запуска: дату, qube, target, return code,
+counters.</p>
+<p>Второй принцип — machine-readable reports сохраняются отдельно от
+human-readable summaries. JSON-файлы можно пересчитать через
+<code>jq</code>, а Markdown/CSV summaries можно читать вручную.</p>
+<p>Третий принцип — финальный SHA256 manifest позволяет увидеть,
+менялись ли файлы после сборки evidence pack. Это не заменяет
+cryptographic signing, но является хорошим publication-ready уровнем для
+портфолио.</p>
+<h2 id="release-decision-logic">19. Release decision logic</h2>
+<p>Policy gate intentionally does not mean “every scanner returns zero”.
+Gate means: agreed blocking conditions are absent.</p>
+<p>Blocking examples:</p>
+<ul>
+<li>Semgrep ERROR findings.</li>
+<li>Bandit HIGH findings.</li>
+<li>Gitleaks findings.</li>
+<li>Public ingress in fixed IaC.</li>
+<li>Trivy HIGH/CRITICAL filesystem vulnerabilities.</li>
+<li>Trivy Dockerfile HIGH/CRITICAL misconfigurations.</li>
+<li>Grype HIGH/CRITICAL SBOM matches.</li>
+</ul>
+<p>Non-blocking examples:</p>
+<ul>
+<li>Residual dependency findings that are not HIGH/CRITICAL in
+configured gate logic.</li>
+<li>Checkov informational/design findings that do not reintroduce public
+ingress.</li>
+<li>Tool-specific noise that should be triaged, not hidden.</li>
+</ul>
+<p>This distinction is important for real DevSecOps work. A poor gate
+blocks everything and gets bypassed. A useful gate blocks what the team
+has agreed is unacceptable for release.</p>
+<h2 id="reviewer-checklist">20. Reviewer checklist</h2>
+<p>A reviewer can validate the project without trusting the author:</p>
+<ol type="1">
+<li>Open <code>PROJECT_TREE.txt</code> and verify repository
+structure.</li>
+<li>Open <code>app/vulnerable-version</code> and
+<code>app/fixed-version</code>.</li>
+<li>Compare <code>docker/vulnerable.Dockerfile</code> and
+<code>docker/fixed.Dockerfile</code>.</li>
+<li>Compare <code>iac/vulnerable/main.tf</code> and
+<code>iac/fixed/main.tf</code>.</li>
+<li>Open Phase 6 scan reports and confirm vulnerable findings.</li>
+<li>Open <code>DEVSECOPS_07_OUTPUT_policy_gate_failed.txt</code> and
+confirm <code>POLICY_GATE_STATUS=FAILED</code>.</li>
+<li>Open Phase 8 remediation matrix.</li>
+<li>Open Phase 9 fixed scan reports.</li>
+<li>Open <code>DEVSECOPS_09_OUTPUT_policy_gate_passed.txt</code> and
+confirm <code>POLICY_GATE_STATUS=PASSED</code>.</li>
+<li>Verify <code>evidence/DEVSECOPS_10_SHA256SUMS.txt</code>.</li>
+</ol>
+<h2 id="interview-qa">21. Interview Q&amp;A</h2>
+<p><strong>Почему не просто один VM?</strong><br />
+Потому что один VM смешивает development trust zone, security tooling
+cache, internet access и evidence generation. Qubes позволяет явно
+разделить роли.</p>
+<p><strong>Почему у fixed версии остались некоторые
+findings?</strong><br />
+Потому что gate design отделяет blocking risk от residual backlog.
+Остаточные findings сохранены, а не скрыты.</p>
+<p><strong>Почему evidence так много?</strong><br />
+Потому что проект сделан как defendable case. В реальном
+audit/incident/security review важны не только результаты, но и
+доказательства происхождения результатов.</p>
+<p><strong>Что самое сильное в проекте?</strong><br />
+Связка vulnerable baseline -&gt; failed gate -&gt; remediation -&gt;
+fixed scans -&gt; passed gate. Это показывает engineering process, а не
+только знание отдельных tools.</p>
+<p><strong>Что можно улучшить дальше?</strong><br />
+Добавить CI workflow, signed releases, GitHub branch protection, SARIF
+upload, container image build, dependency lockfiles и automated report
+generation.</p>
+<h2 id="future-improvements">22. Future improvements</h2>
+<p>Следующая версия проекта может включать:</p>
+<ul>
+<li>GitHub Actions workflow для автоматического запуска policy
+gate.</li>
+<li>SARIF output для Semgrep и CodeQL-style review.</li>
+<li>Dependency lockfiles и reproducible Python environment.</li>
+<li>Container image build and image scan.</li>
+<li>Cosign signing for release artifacts.</li>
+<li>SLSA-style provenance notes.</li>
+<li>Renovate/Dependabot simulation.</li>
+<li>Makefile для локального запуска фаз.</li>
+<li>Автоматическую сборку PDF/HTML reports.</li>
+<li>Release notes с GitHub tag artifacts.</li>
+</ul>
+<h2 id="final-reviewer-statement">23. Final reviewer statement</h2>
+<p>На момент финальной сборки проект содержит все элементы сильного
+DevSecOps portfolio case: понятную архитектуру, намеренно уязвимый
+baseline, реальные scanner outputs, policy decision, remediation, fixed
+evidence, reports, presentation, hashes and publication cleanup.</p>
+<p>Главный результат: <code>FAILED</code> для baseline и
+<code>PASSED</code> для fixed version подтверждены артефактами, а не
+заявлены словами.</p>
+<h2 id="детальная-хронология-фаз">24. Детальная хронология фаз</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Фаза</th>
+<th>Название</th>
+<th>Что сделано</th>
+<th>Тип ценности</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>00</td>
+<td>Project skeleton</td>
+<td>Repository directories, evidence folders, branch/tags prepared</td>
+<td>foundation</td>
+</tr>
+<tr class="even">
+<td>01</td>
+<td>Qubes workflow</td>
+<td>dev-workbench and security-runner separation documented</td>
+<td>architecture</td>
+</tr>
+<tr class="odd">
+<td>02</td>
+<td>Template/AppVM preparation</td>
+<td>Tool installation strategy clarified</td>
+<td>operations</td>
+</tr>
+<tr class="even">
+<td>03</td>
+<td>Security tools</td>
+<td>Versions and local tool cache captured</td>
+<td>toolchain</td>
+</tr>
+<tr class="odd">
+<td>04</td>
+<td>Vulnerable baseline</td>
+<td>Application, Dockerfile and IaC vulnerable examples created</td>
+<td>baseline</td>
+</tr>
+<tr class="even">
+<td>05</td>
+<td>Security tooling docs</td>
+<td>RU/EN tool usage notes added</td>
+<td>documentation</td>
+</tr>
+<tr class="odd">
+<td>06</td>
+<td>Vulnerable scans</td>
+<td>All scanner reports generated for baseline</td>
+<td>assessment</td>
+</tr>
+<tr class="even">
+<td>07</td>
+<td>Failed gate</td>
+<td>Baseline blocked by policy gate</td>
+<td>release control</td>
+</tr>
+<tr class="odd">
+<td>08</td>
+<td>Remediation</td>
+<td>Fixed application, Dockerfile and IaC created</td>
+<td>engineering fix</td>
+</tr>
+<tr class="even">
+<td>09</td>
+<td>Fixed scans</td>
+<td>Repeat scans and passed policy gate captured</td>
+<td>verification</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Evidence pack</td>
+<td>Inventory, project tree and SHA256 manifest created</td>
+<td>auditability</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Report</td>
+<td>Bilingual technical report created</td>
+<td>communication</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Presentation</td>
+<td>Storyboard, slide source and HTML presentation created</td>
+<td>defense</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>Publication cleanup</td>
+<td>Backup/cache cleanup, final publication review</td>
+<td>release readiness</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risk-acceptance-record">25. Risk acceptance record</h2>
+<p>Не все residual findings должны блокировать публикацию лабораторного
+проекта. Ниже зафиксирована явная позиция по остаточным пунктам.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Residual item</th>
+<th>Решение</th>
+<th>Почему допустимо</th>
+<th>Следующий шаг</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Residual pip-audit findings</td>
+<td>Documented as non-blocking backlog</td>
+<td>No HIGH/CRITICAL gate blocker in configured policy</td>
+<td>Keep visible in evidence and track in future CI</td>
+</tr>
+<tr class="even">
+<td>Checkov CKV2_AWS_5</td>
+<td>Accepted for lab Terraform example</td>
+<td>No public ingress remains</td>
+<td>Attach SG to real resource in production IaC</td>
+</tr>
+<tr class="odd">
+<td>Manual evidence transfer</td>
+<td>Accepted Qubes operational model</td>
+<td>Explicit boundary crossing is safer than implicit shared state</td>
+<td>Automate only with controlled qrexec policy in future</td>
+</tr>
+<tr class="even">
+<td>No production deployment</td>
+<td>By design</td>
+<td>This is a portfolio lab</td>
+<td>Add deployment only in a future isolated sandbox</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reproduction-guide-для-reviewer">26. Reproduction guide для
+reviewer</h2>
+<p>Минимальный путь проверки без запуска всего проекта:</p>
+<ol type="1">
+<li>Прочитать <code>README.md</code> и
+<code>PORTFOLIO_SUMMARY.md</code>.</li>
+<li>Открыть <code>reports/devsecops_lab_report_ru.pdf</code>.</li>
+<li>Проверить <code>PROJECT_TREE.txt</code>.</li>
+<li>Проверить vulnerable evidence:
+<ul>
+<li><code>evidence/scan_reports/semgrep/DEVSECOPS_06_REPORT_semgrep_vulnerable.json</code>;</li>
+<li><code>evidence/scan_reports/bandit/DEVSECOPS_06_REPORT_bandit_vulnerable.json</code>;</li>
+<li><code>evidence/scan_reports/gitleaks/DEVSECOPS_06_REPORT_gitleaks_vulnerable.json</code>;</li>
+<li><code>evidence/scan_reports/trivy/DEVSECOPS_06_REPORT_trivy_fs_vulnerable.json</code>.</li>
+</ul></li>
+<li>Проверить failed gate:
+<ul>
+<li><code>evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt</code>.</li>
+</ul></li>
+<li>Проверить remediation:
+<ul>
+<li><code>evidence/before_after/DEVSECOPS_08_REMEDIATION_MATRIX.csv</code>.</li>
+</ul></li>
+<li>Проверить fixed evidence:
+<ul>
+<li><code>evidence/scan_reports/semgrep/DEVSECOPS_09_REPORT_semgrep_fixed.json</code>;</li>
+<li><code>evidence/scan_reports/bandit/DEVSECOPS_09_REPORT_bandit_fixed.json</code>;</li>
+<li><code>evidence/scan_reports/gitleaks/DEVSECOPS_09_REPORT_gitleaks_fixed.json</code>;</li>
+<li><code>evidence/scan_reports/trivy/DEVSECOPS_09_REPORT_trivy_fs_fixed.json</code>.</li>
+</ul></li>
+<li>Проверить passed gate:
+<ul>
+<li><code>evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt</code>.</li>
+</ul></li>
+<li>Проверить integrity:
+<ul>
+<li><code>evidence/EVIDENCE_INVENTORY.csv</code>;</li>
+<li><code>evidence/DEVSECOPS_10_SHA256SUMS.txt</code>.</li>
+</ul></li>
+</ol>
+<h2 id="что-именно-улучшено-в-финальной-редакции">27. Что именно
+улучшено в финальной редакции</h2>
+<p>Финальная редакция была усилена относительно промежуточной
+версии:</p>
+<ul>
+<li>landing README стал portfolio-ready;</li>
+<li>RU/EN отчеты стали полноценными техническими отчетами;</li>
+<li>добавлены PDF и HTML версии отчетов;</li>
+<li>добавлен final publication review;</li>
+<li>screenshots получили смысловые имена;</li>
+<li>backup директории удалены;</li>
+<li>SHA256 manifest пересобран;</li>
+<li>evidence inventory пересобран;</li>
+<li>release checklist обновлен;</li>
+<li>phase 13 publication readiness документирована.</li>
+</ul>
+<h2 id="почему-кейс-сильный">28. Почему кейс сильный</h2>
+<p>Кейс сильный по трем причинам.</p>
+<p>Первая причина — он показывает процесс, а не набор screenshots. Есть
+baseline, failure, remediation и passing result.</p>
+<p>Вторая причина — он объединяет несколько классов DevSecOps tooling:
+SAST, SCA, secrets, IaC, container, SBOM и policy gate.</p>
+<p>Третья причина — он реализован в Qubes, где separation of duties
+является частью дизайна, а не декоративной деталью.</p>
+<h2 id="expected-github-reviewer-impression">29. Expected GitHub
+reviewer impression</h2>
+<p>Ожидаемое впечатление от репозитория:</p>
+<ul>
+<li>структура понятна с первого открытия;</li>
+<li>README объясняет историю проекта;</li>
+<li>reports дают executive и technical уровень;</li>
+<li>evidence можно проверить без доверия к автору;</li>
+<li>презентация готова для защиты;</li>
+<li>уязвимая версия не выглядит ошибкой, потому что она явно обозначена
+как controlled baseline;</li>
+<li>fixed version и policy gate демонстрируют инженерное завершение
+работы.</li>
+</ul>
+</body>
+</html>

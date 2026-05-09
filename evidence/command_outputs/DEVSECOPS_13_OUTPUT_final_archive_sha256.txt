@@ -1,9 +1,0 @@
-Final publication archive
-Date: 2026-05-09T07:19:53+00:00
-Qube: dev-workbench
-
-Archive:
-/home/user/qubes-secure-sdlc-devsecops-lab-final-publication-ready.tar
-
-SHA256:
-eae3c5624a2ffeb24d6d92301fb6b2bc1e9cdd68b1374fa62c79113e57eb082c  qubes-secure-sdlc-devsecops-lab-final-publication-ready.tar
