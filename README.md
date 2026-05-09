@@ -1,5 +1,33 @@
 # Qubes Secure SDLC / DevSecOps Lab
 
+<!-- DEVSECOPS_VISUAL_SECTION_START -->
+
+## Visual Project Map
+
+The diagrams below summarize the Qubes OS isolation model, Secure SDLC pipeline, failed/passed policy gate transition, evidence chain, and final GitHub publication package.
+
+![Qubes DevSecOps Architecture](diagrams/rendered/01-qubes-devsecops-architecture.svg)
+
+![Secure SDLC Security Pipeline](diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
+
+![Policy Gate Before After](diagrams/rendered/03-policy-gate-before-after.svg)
+
+![Evidence Chain](diagrams/rendered/04-evidence-chain.svg)
+
+![Publication Readiness](diagrams/rendered/05-publication-readiness.svg)
+
+<!-- DEVSECOPS_VISUAL_SECTION_END -->
+
+
+## Визуальная карта проекта
+
+![Qubes DevSecOps Architecture](diagrams/rendered/01-qubes-devsecops-architecture.svg)
+
+![Secure SDLC Security Pipeline](diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
+
+![Policy Gate Before After](diagrams/rendered/03-policy-gate-before-after.svg)
+
+
 [RU](README_RU.md) | [EN](README_EN.md)
 
 ## What this project demonstrates

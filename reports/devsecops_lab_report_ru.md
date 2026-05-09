@@ -1,5 +1,39 @@
 # Qubes Secure SDLC / DevSecOps Lab — итоговый технический отчет
 
+<!-- DEVSECOPS_VISUAL_SECTION_START -->
+
+## Визуальная архитектура и результаты
+
+Этот раздел добавлен для того, чтобы отчет был не только текстовым, но и визуально показывал архитектуру, pipeline, evidence workflow и итоговый результат проекта.
+
+![Qubes DevSecOps Architecture](../diagrams/rendered/01-qubes-devsecops-architecture.svg)
+
+![Secure SDLC Security Pipeline](../diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
+
+![Policy Gate Before After](../diagrams/rendered/03-policy-gate-before-after.svg)
+
+![Evidence Chain](../diagrams/rendered/04-evidence-chain.svg)
+
+![Publication Readiness](../diagrams/rendered/05-publication-readiness.svg)
+
+<!-- DEVSECOPS_VISUAL_SECTION_END -->
+
+
+## Визуальная архитектура и результаты
+
+Ниже добавлены визуальные схемы, которые показывают не только текстовое описание проекта, но и инженерную логику кейса: изоляцию Qubes OS, Secure SDLC pipeline, failed/passed policy gate, цепочку доказательств и финальный publication package.
+
+![Qubes DevSecOps Architecture](../diagrams/rendered/01-qubes-devsecops-architecture.svg)
+
+![Secure SDLC Security Pipeline](../diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
+
+![Policy Gate Before After](../diagrams/rendered/03-policy-gate-before-after.svg)
+
+![Evidence Chain](../diagrams/rendered/04-evidence-chain.svg)
+
+![Publication Readiness](../diagrams/rendered/05-publication-readiness.svg)
+
+
 Дата финальной редакции: 2026-05-09 07:34:58 UTC  
 Статус: publication-ready  
 Основной результат: уязвимый baseline воспроизводимо блокируется policy gate, исправленная версия воспроизводимо проходит gate.

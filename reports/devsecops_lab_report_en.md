@@ -1,5 +1,39 @@
 # Qubes Secure SDLC / DevSecOps Lab — Final Technical Report
 
+<!-- DEVSECOPS_VISUAL_SECTION_START -->
+
+## Visual Architecture and Results
+
+This section makes the report easier to review by showing the architecture, pipeline, evidence workflow, and final project outcome visually.
+
+![Qubes DevSecOps Architecture](../diagrams/rendered/01-qubes-devsecops-architecture.svg)
+
+![Secure SDLC Security Pipeline](../diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
+
+![Policy Gate Before After](../diagrams/rendered/03-policy-gate-before-after.svg)
+
+![Evidence Chain](../diagrams/rendered/04-evidence-chain.svg)
+
+![Publication Readiness](../diagrams/rendered/05-publication-readiness.svg)
+
+<!-- DEVSECOPS_VISUAL_SECTION_END -->
+
+
+## Visual Architecture and Results
+
+The following diagrams make the case easier to review: Qubes OS isolation, Secure SDLC pipeline, failed/passed policy gate, evidence chain and final publication package.
+
+![Qubes DevSecOps Architecture](../diagrams/rendered/01-qubes-devsecops-architecture.svg)
+
+![Secure SDLC Security Pipeline](../diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
+
+![Policy Gate Before After](../diagrams/rendered/03-policy-gate-before-after.svg)
+
+![Evidence Chain](../diagrams/rendered/04-evidence-chain.svg)
+
+![Publication Readiness](../diagrams/rendered/05-publication-readiness.svg)
+
+
 Final revision date: 2026-05-09 07:34:58 UTC  
 Status: publication-ready  
 Main result: the vulnerable baseline is reproducibly blocked by the policy gate, and the remediated version reproducibly passes.

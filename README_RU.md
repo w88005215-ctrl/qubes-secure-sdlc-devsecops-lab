@@ -1,5 +1,33 @@
 # Qubes Secure SDLC / DevSecOps Lab
 
+<!-- DEVSECOPS_VISUAL_SECTION_START -->
+
+## Визуальная карта проекта
+
+Ниже показаны ключевые схемы проекта: изоляция Qubes OS, Secure SDLC pipeline, переход от failed policy gate к passed policy gate, цепочка evidence и финальный publication-ready пакет.
+
+![Qubes DevSecOps Architecture](diagrams/rendered/01-qubes-devsecops-architecture.svg)
+
+![Secure SDLC Security Pipeline](diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
+
+![Policy Gate Before After](diagrams/rendered/03-policy-gate-before-after.svg)
+
+![Evidence Chain](diagrams/rendered/04-evidence-chain.svg)
+
+![Publication Readiness](diagrams/rendered/05-publication-readiness.svg)
+
+<!-- DEVSECOPS_VISUAL_SECTION_END -->
+
+
+## Визуальная карта проекта
+
+![Qubes DevSecOps Architecture](diagrams/rendered/01-qubes-devsecops-architecture.svg)
+
+![Secure SDLC Security Pipeline](diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
+
+![Policy Gate Before After](diagrams/rendered/03-policy-gate-before-after.svg)
+
+
 ## Что демонстрирует проект
 
 Это publication-ready лабораторный проект по Secure SDLC / DevSecOps в стиле SOC evidence workflow. Проект построен в Qubes OS и показывает полный путь от уязвимого baseline до исправленной версии с passed policy gate.
