@@ -1,0 +1,18 @@
+Publication cleanup check
+Date: 2026-05-09T07:09:59+00:00
+Qube: dev-workbench
+
+Removed transient cache directories:
+
+Backup directory check:
+[OK] reports/backup_before_repair removed
+
+Git status:
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_phase10_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_phase11_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_12_OUTPUT_phase12_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_publication_cleanup_check.txt
+?? evidence/screenshots/Screenshot_2026-05-08_13-06-23.png
+?? evidence/screenshots/Screenshot_2026-05-08_13-12-44.png
+?? evidence/screenshots/Screenshot_2026-05-08_15-38-58.png
+?? evidence/screenshots/Screenshot_2026-05-08_16-55-29.png

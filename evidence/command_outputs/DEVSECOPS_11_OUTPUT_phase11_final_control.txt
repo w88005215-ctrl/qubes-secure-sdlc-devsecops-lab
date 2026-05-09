@@ -1,0 +1,43 @@
+Phase 11 final control
+Date: 2026-05-08T18:35:03+00:00
+Qube: dev-workbench
+
+[OK] main report landing
+[OK] RU report
+[OK] EN report
+[OK] report build notes
+[OK] report format repair evidence
+[OK] report evidence
+[OK] Phase 11 acceptance evidence
+[OK] Phase 11 git log evidence
+[OK] PROJECT_TREE.txt
+
+Policy status:
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
+
+Branch:
+remediation
+
+Tags:
+v0.1-skeleton
+v1.0-vulnerable-baseline
+v1.1-policy-gate-failed
+v1.2-remediation
+v1.3-policy-gate-passed
+v1.4-evidence-pack
+v1.5-report
+
+Git log:
+dd0567e (HEAD -> remediation) docs: add phase 11 git evidence
+21a585f (tag: v1.5-report) docs: add phase 11 technical report
+4c519b4 docs: add phase 10 git evidence
+897a29d (tag: v1.4-evidence-pack) docs: add phase 10 evidence collection pack
+f4e578c docs: add phase 9 git evidence
+c2fe9dd (tag: v1.3-policy-gate-passed) test: add fixed security scans and passed policy gate evidence
+a8de048 docs: add phase 8 git evidence
+2546af6 (tag: v1.2-remediation) fix: add remediated application infrastructure and documentation
+1f517c1 (vulnerable-baseline) docs: add phase 7 git evidence
+abc785e (tag: v1.1-policy-gate-failed) test: add failed policy gate for vulnerable baseline
+91f5596 docs: add phase 6 repair git evidence
+5090018 test: repair phase 6 vulnerable scan evidence
