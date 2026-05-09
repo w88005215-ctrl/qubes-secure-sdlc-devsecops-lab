@@ -1,0 +1,61 @@
+Phase 13.1 final visual publication control
+Date: 2026-05-09T08:34:59+00:00
+Qube: dev-workbench
+
+[Visual diagrams]
+[OK] Qubes architecture SVG
+[OK] Secure SDLC pipeline SVG
+[OK] Policy gate before/after SVG
+[OK] Evidence chain SVG
+[OK] Publication readiness SVG
+
+[Reports]
+[OK] RU report has visual section
+[OK] EN report has visual section
+
+[README]
+[OK] README_RU visual section
+[OK] README_EN visual section
+
+[Policy status]
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
+
+[Tags]
+v0.1-skeleton
+v1.0-vulnerable-baseline
+v1.1-policy-gate-failed
+v1.2-remediation
+v1.3-policy-gate-passed
+v1.4-evidence-pack
+v1.5-report
+v1.6-presentation
+v1.7-publication-ready
+v1.8-final-publication
+
+[Git status]
+ M README.md
+ M README_EN.md
+ M README_RU.md
+ M reports/devsecops_lab_report_en.md
+ M reports/devsecops_lab_report_ru.md
+?? diagrams/rendered/
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_final_visual_publication_control.txt
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_visual_report_upgrade.txt
+
+[Git log]
+8cd9280 (HEAD -> main, tag: v1.8-final-publication, origin/remediation, origin/main, remediation) docs: add final GitHub publication control evidence
+76f1c5d docs: add publication completeness audit evidence
+ea48c39 docs: add local control after final reviewed overlay
+3d12dd9 docs: add final reviewed overlay git evidence
+70e0425 docs: apply final reviewed publication package
+efef9f1 docs: add final publication archive checksum evidence
+64cdbdd docs: add final publication git status evidence
+6186a3f docs: add phase 13 final control evidence
+c457d96 docs: add phase 13 git evidence
+c0c345e (tag: v1.7-publication-ready) docs: add phase 13 GitHub publication readiness
+131348a docs: add publication cleanup git evidence
+7417502 chore: clean publication artifacts before release
+1b8944f docs: add phase 12 git evidence
+f890287 (tag: v1.6-presentation) docs: add phase 12 presentation pack
+dd0567e docs: add phase 11 git evidence
