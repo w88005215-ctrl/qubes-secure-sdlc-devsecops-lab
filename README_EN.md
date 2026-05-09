@@ -1,33 +1,5 @@
 # Qubes Secure SDLC / DevSecOps Lab
 
-<!-- DEVSECOPS_VISUAL_SECTION_START -->
-
-## Visual Project Map
-
-The diagrams below summarize the Qubes OS isolation model, Secure SDLC pipeline, failed/passed policy gate transition, evidence chain, and final GitHub publication package.
-
-![Qubes DevSecOps Architecture](diagrams/rendered/01-qubes-devsecops-architecture.svg)
-
-![Secure SDLC Security Pipeline](diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
-
-![Policy Gate Before After](diagrams/rendered/03-policy-gate-before-after.svg)
-
-![Evidence Chain](diagrams/rendered/04-evidence-chain.svg)
-
-![Publication Readiness](diagrams/rendered/05-publication-readiness.svg)
-
-<!-- DEVSECOPS_VISUAL_SECTION_END -->
-
-
-## Visual Project Map
-
-![Qubes DevSecOps Architecture](diagrams/rendered/01-qubes-devsecops-architecture.svg)
-
-![Secure SDLC Security Pipeline](diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
-
-![Policy Gate Before After](diagrams/rendered/03-policy-gate-before-after.svg)
-
-
 ## What this project demonstrates
 
 This is a publication-ready Secure SDLC / DevSecOps lab using a SOC-style evidence workflow. The project was built in Qubes OS and demonstrates the full path from a vulnerable baseline to a remediated version with a passed policy gate.
@@ -82,3 +54,18 @@ This is a publication-ready Secure SDLC / DevSecOps lab using a SOC-style eviden
 ## Scope
 
 This is an educational controlled lab. The vulnerable version is intentionally preserved to demonstrate the failed policy gate and must not be deployed.
+
+## Reviewer quick path
+
+Start with the visual reports:
+
+- Russian PDF: `reports/devsecops_lab_report_ru.pdf`
+- English PDF: `reports/devsecops_lab_report_en.pdf`
+- HTML presentation: `presentation/devsecops_case_defense.html`
+
+Then validate the evidence:
+
+- failed gate: `evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt`
+- passed gate: `evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt`
+- before/after comparison: `evidence/before_after/DEVSECOPS_09_BEFORE_AFTER_SECURITY_SUMMARY.csv`
+- full inventory: `evidence/EVIDENCE_INVENTORY.csv`

@@ -1,33 +1,5 @@
 # Qubes Secure SDLC / DevSecOps Lab
 
-<!-- DEVSECOPS_VISUAL_SECTION_START -->
-
-## Визуальная карта проекта
-
-Ниже показаны ключевые схемы проекта: изоляция Qubes OS, Secure SDLC pipeline, переход от failed policy gate к passed policy gate, цепочка evidence и финальный publication-ready пакет.
-
-![Qubes DevSecOps Architecture](diagrams/rendered/01-qubes-devsecops-architecture.svg)
-
-![Secure SDLC Security Pipeline](diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
-
-![Policy Gate Before After](diagrams/rendered/03-policy-gate-before-after.svg)
-
-![Evidence Chain](diagrams/rendered/04-evidence-chain.svg)
-
-![Publication Readiness](diagrams/rendered/05-publication-readiness.svg)
-
-<!-- DEVSECOPS_VISUAL_SECTION_END -->
-
-
-## Визуальная карта проекта
-
-![Qubes DevSecOps Architecture](diagrams/rendered/01-qubes-devsecops-architecture.svg)
-
-![Secure SDLC Security Pipeline](diagrams/rendered/02-secure-sdlc-security-pipeline.svg)
-
-![Policy Gate Before After](diagrams/rendered/03-policy-gate-before-after.svg)
-
-
 ## Что демонстрирует проект
 
 Это publication-ready лабораторный проект по Secure SDLC / DevSecOps в стиле SOC evidence workflow. Проект построен в Qubes OS и показывает полный путь от уязвимого baseline до исправленной версии с passed policy gate.
@@ -82,3 +54,18 @@
 ## Область применения
 
 Проект является учебным controlled lab. Уязвимая версия сохранена специально для демонстрации failed policy gate и не предназначена для deployment.
+
+## Быстрый путь проверки
+
+Начните с визуальных отчетов:
+
+- русский PDF: `reports/devsecops_lab_report_ru.pdf`
+- английский PDF: `reports/devsecops_lab_report_en.pdf`
+- HTML-презентация: `presentation/devsecops_case_defense.html`
+
+Затем проверьте доказательства:
+
+- failed gate: `evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt`
+- passed gate: `evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt`
+- before/after comparison: `evidence/before_after/DEVSECOPS_09_BEFORE_AFTER_SECURITY_SUMMARY.csv`
+- полный inventory: `evidence/EVIDENCE_INVENTORY.csv`

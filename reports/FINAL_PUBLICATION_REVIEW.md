@@ -57,3 +57,16 @@ These do not block the configured policy gate because the gate is focused on the
 ## Final decision
 
 The project is ready for final local review and then GitHub publication.
+
+
+## Visual report upgrade
+
+The final report package now includes embedded SVG diagrams and rebuilt HTML/PDF reports:
+
+- Qubes isolation architecture
+- Secure SDLC timeline
+- before/after findings chart
+- policy gate decision model
+- evidence review map
+
+The recommended reviewer entry point is `reports/devsecops_lab_report_ru.pdf` or `reports/devsecops_lab_report_en.pdf`.

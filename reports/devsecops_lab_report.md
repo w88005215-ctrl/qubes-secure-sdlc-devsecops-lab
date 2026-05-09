@@ -1,22 +1,24 @@
-# Qubes Secure SDLC / DevSecOps Lab — Report Landing
+# DevSecOps Lab Report
 
-This directory contains the final bilingual report pack.
+This folder contains the final visual reports for the Qubes Secure SDLC / DevSecOps Lab.
 
-## Main reports
+## Reports
 
-- `devsecops_lab_report_ru.md` — full Russian technical report.
-- `devsecops_lab_report_en.md` — full English technical report.
-- `devsecops_lab_report_ru.html` — Russian HTML report.
-- `devsecops_lab_report_en.html` — English HTML report.
-- `devsecops_lab_report_ru.pdf` — Russian PDF report.
-- `devsecops_lab_report_en.pdf` — English PDF report.
-- `FINAL_PUBLICATION_REVIEW.md` — publication readiness review.
+| Language | Markdown | HTML | PDF |
+| --- | --- | --- | --- |
+| Russian | `devsecops_lab_report_ru.md` | `devsecops_lab_report_ru.html` | `devsecops_lab_report_ru.pdf` |
+| English | `devsecops_lab_report_en.md` | `devsecops_lab_report_en.html` | `devsecops_lab_report_en.pdf` |
 
-## Evidence anchors
+## Visual assets
 
-- Vulnerable policy gate: `evidence/command_outputs/DEVSECOPS_07_OUTPUT_policy_gate_failed.txt`
-- Fixed policy gate: `evidence/command_outputs/DEVSECOPS_09_OUTPUT_policy_gate_passed.txt`
-- Evidence inventory: `evidence/EVIDENCE_INVENTORY.csv`
-- SHA256 manifest: `evidence/DEVSECOPS_10_SHA256SUMS.txt`
+The report includes visual diagrams stored in `reports/assets/`:
 
-The report pack is designed for GitHub publication and portfolio review.
+- `qubes_isolation_architecture.svg`
+- `secure_sdlc_timeline.svg`
+- `before_after_findings.svg`
+- `policy_gate_logic.svg`
+- `evidence_map.svg`
+
+## Reviewer path
+
+Open the PDF first, then validate the claims through `evidence/command_outputs/`, `evidence/scan_reports/`, `evidence/sbom/` and `evidence/before_after/`.
