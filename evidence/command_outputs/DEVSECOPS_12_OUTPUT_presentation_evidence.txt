@@ -1,0 +1,40 @@
+Phase 12 presentation evidence
+Date: 2026-05-09T06:52:22+00:00
+Qube: dev-workbench
+
+[Presentation files]
+total 24K
+-rw-rw-r-- 1 user user 6.7K May  9 06:52 devsecops_case_defense.html
+-rw-rw-r-- 1 user user 6.8K May  9 06:51 devsecops_case_defense_ru_en.md
+-rw-rw-r-- 1 user user 1.4K May  9 06:52 PRESENTATION_BUILD_NOTES.md
+-rw-rw-r-- 1 user user 3.1K May  9 06:51 PRESENTATION_STORYBOARD.md
+
+[Presentation tree]
+presentation
+├── devsecops_case_defense.html
+├── devsecops_case_defense_ru_en.md
+├── PRESENTATION_BUILD_NOTES.md
+└── PRESENTATION_STORYBOARD.md
+
+1 directory, 4 files
+
+[Line counts]
+  268 presentation/devsecops_case_defense_ru_en.md
+   58 presentation/PRESENTATION_BUILD_NOTES.md
+  146 presentation/PRESENTATION_STORYBOARD.md
+  237 presentation/devsecops_case_defense.html
+  709 total
+
+[Policy status evidence]
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
+
+[Git status]
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_phase10_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_phase11_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_12_OUTPUT_presentation_evidence.txt
+?? evidence/command_outputs/DEVSECOPS_12_OUTPUT_presentation_preparation.txt
+?? presentation/PRESENTATION_BUILD_NOTES.md
+?? presentation/PRESENTATION_STORYBOARD.md
+?? presentation/devsecops_case_defense.html
+?? presentation/devsecops_case_defense_ru_en.md

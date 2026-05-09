@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Qubes Secure SDLC / DevSecOps Lab</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0b1020;
+      color: #eef2ff;
+      font-family: Arial, sans-serif;
+    }
+    .slide {
+      min-height: 100vh;
+      box-sizing: border-box;
+      padding: 70px 90px;
+      border-bottom: 2px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 56px;
+      margin: 0 0 24px 0;
+      color: #f8fafc;
+    }
+    h2 {
+      font-size: 38px;
+      margin: 0 0 24px 0;
+      color: #93c5fd;
+    }
+    p, li {
+      font-size: 25px;
+      line-height: 1.35;
+    }
+    .subtitle {
+      font-size: 30px;
+      color: #cbd5e1;
+      margin-bottom: 34px;
+    }
+    .tag {
+      display: inline-block;
+      background: #1d4ed8;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 22px;
+      margin: 6px;
+    }
+    .success {
+      color: #86efac;
+      font-weight: bold;
+    }
+    .fail {
+      color: #fca5a5;
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .box {
+      background: #111827;
+      border: 1px solid #334155;
+      border-radius: 18px;
+      padding: 24px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+      font-size: 23px;
+    }
+    th, td {
+      border: 1px solid #334155;
+      padding: 14px;
+      text-align: left;
+    }
+    th {
+      background: #1e293b;
+      color: #bfdbfe;
+    }
+    .flow {
+      font-size: 30px;
+      color: #bfdbfe;
+      line-height: 1.6;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<section class="slide">
+  <h1>Qubes Secure SDLC / DevSecOps Lab</h1>
+  <div class="subtitle">Automated Security Testing, SBOM, Policy Gates and Remediation Workflow</div>
+  <div>
+    <span class="tag">Qubes OS</span>
+    <span class="tag">Secure SDLC</span>
+    <span class="tag">DevSecOps</span>
+    <span class="tag">SBOM</span>
+    <span class="tag">Policy Gates</span>
+  </div>
+  <p class="footer">Diploma and portfolio engineering case</p>
+</section>
+
+<section class="slide">
+  <h2>Problem</h2>
+  <p>Security is often introduced too late: after development, before release or after an incident.</p>
+  <div class="grid">
+    <div class="box"><p>Vulnerable dependencies</p></div>
+    <div class="box"><p>Hardcoded secrets</p></div>
+    <div class="box"><p>Unsafe code patterns</p></div>
+    <div class="box"><p>Insecure IaC and weak release controls</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Project Goal</h2>
+  <p>Build a reproducible Secure SDLC / DevSecOps lab in Qubes OS.</p>
+  <p class="flow">vulnerable app → scans → findings → failed gate → remediation → fixed app → repeated scans → passed gate</p>
+</section>
+
+<section class="slide">
+  <h2>Qubes OS Architecture</h2>
+  <table>
+    <tr><th>Qube</th><th>Purpose</th></tr>
+    <tr><td>dev-workbench</td><td>repository, code, docs, evidence assembly</td></tr>
+    <tr><td>security-runner</td><td>security tools and scan reports</td></tr>
+    <tr><td>evidence-vault</td><td>optional evidence storage</td></tr>
+    <tr><td>report-vm</td><td>report and presentation work</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Demo Vulnerable Application</h2>
+  <div class="grid">
+    <div class="box"><p>Fake hardcoded secret</p></div>
+    <div class="box"><p>Vulnerable dependencies</p></div>
+    <div class="box"><p>Unsafe subprocess usage</p></div>
+    <div class="box"><p>Terraform ingress 0.0.0.0/0</p></div>
+    <div class="box"><p>Debug mode enabled</p></div>
+    <div class="box"><p>Missing input validation</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Security Pipeline</h2>
+  <table>
+    <tr><th>Category</th><th>Tool</th></tr>
+    <tr><td>SAST</td><td>Semgrep, Bandit</td></tr>
+    <tr><td>SCA</td><td>pip-audit, Trivy, Grype</td></tr>
+    <tr><td>Secrets</td><td>Gitleaks</td></tr>
+    <tr><td>IaC</td><td>Checkov, Trivy</td></tr>
+    <tr><td>SBOM</td><td>Syft CycloneDX</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Vulnerable Scan Results</h2>
+  <table>
+    <tr><th>Check</th><th>Result</th></tr>
+    <tr><td>Semgrep findings</td><td>10</td></tr>
+    <tr><td>Bandit findings</td><td>7</td></tr>
+    <tr><td>Gitleaks findings</td><td>2</td></tr>
+    <tr><td>Checkov failed checks</td><td>4</td></tr>
+    <tr><td>Trivy filesystem vulnerabilities</td><td>17</td></tr>
+    <tr><td>Grype matches</td><td>17</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Policy Gate Failed</h2>
+  <p class="fail">POLICY_GATE_STATUS=FAILED</p>
+  <p>The vulnerable version was blocked because gate-blocking findings were detected.</p>
+  <div class="grid">
+    <div class="box"><p>Hardcoded secret</p></div>
+    <div class="box"><p>High-risk dependency findings</p></div>
+    <div class="box"><p>Public ingress</p></div>
+    <div class="box"><p>SAST findings</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Remediation</h2>
+  <div class="grid">
+    <div class="box"><p>Removed fake secret</p></div>
+    <div class="box"><p>Removed unsafe subprocess</p></div>
+    <div class="box"><p>Disabled debug mode</p></div>
+    <div class="box"><p>Added input validation</p></div>
+    <div class="box"><p>Added security headers</p></div>
+    <div class="box"><p>Restricted Terraform ingress</p></div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Fixed Scan Results</h2>
+  <table>
+    <tr><th>Gate-relevant check</th><th>Result</th></tr>
+    <tr><td>Semgrep ERROR findings</td><td>0</td></tr>
+    <tr><td>Bandit HIGH findings</td><td>0</td></tr>
+    <tr><td>Gitleaks findings</td><td>0</td></tr>
+    <tr><td>Public ingress 0.0.0.0/0</td><td>0</td></tr>
+    <tr><td>Trivy HIGH/CRITICAL</td><td>0</td></tr>
+    <tr><td>Grype HIGH/CRITICAL</td><td>0</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Policy Gate Passed</h2>
+  <p class="success">POLICY_GATE_STATUS=PASSED</p>
+  <table>
+    <tr><th>Version</th><th>Gate</th></tr>
+    <tr><td>vulnerable-version</td><td class="fail">FAILED</td></tr>
+    <tr><td>fixed-version</td><td class="success">PASSED</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Portfolio Value</h2>
+  <p>This project demonstrates practical AppSec, DevSecOps, Secure SDLC, software supply chain security and Qubes OS skills.</p>
+  <div>
+    <span class="tag">Evidence-first</span>
+    <span class="tag">SBOM</span>
+    <span class="tag">Policy gates</span>
+    <span class="tag">Remediation</span>
+    <span class="tag">Before / After</span>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+ M PROJECT_TREE.txt
+?? evidence/command_outputs/DEVSECOPS_10_OUTPUT_phase10_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_11_OUTPUT_phase11_final_control.txt
+?? evidence/command_outputs/DEVSECOPS_12_OUTPUT_git_status_before_phase12_commit.txt
+?? evidence/command_outputs/DEVSECOPS_12_OUTPUT_phase12_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_12_OUTPUT_presentation_evidence.txt
+?? evidence/command_outputs/DEVSECOPS_12_OUTPUT_presentation_preparation.txt
+?? evidence/command_outputs/DEVSECOPS_12_OUTPUT_project_tree_after_presentation.txt
+?? evidence/screenshots/Screenshot_2026-05-08_13-06-23.png
+?? evidence/screenshots/Screenshot_2026-05-08_13-12-44.png
+?? evidence/screenshots/Screenshot_2026-05-08_15-38-58.png
+?? evidence/screenshots/Screenshot_2026-05-08_16-55-29.png
+?? presentation/PRESENTATION_BUILD_NOTES.md
+?? presentation/PRESENTATION_STORYBOARD.md
+?? presentation/devsecops_case_defense.html
+?? presentation/devsecops_case_defense_ru_en.md

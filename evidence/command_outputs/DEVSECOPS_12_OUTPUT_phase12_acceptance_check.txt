@@ -1,0 +1,25 @@
+Phase 12 acceptance check
+Date: 2026-05-09T06:53:44+00:00
+Qube: dev-workbench
+
+[OK] storyboard
+[OK] RU/EN slide source
+[OK] HTML presentation
+[OK] build notes
+[OK] preparation evidence
+[OK] presentation evidence
+[OK] project tree after presentation
+[OK] PROJECT_TREE.txt
+
+[Slide count check]
+12
+
+[Required topics check]
+[OK] Qubes architecture topic
+[OK] security pipeline topic
+[OK] failed gate topic
+[OK] passed gate topic
+
+[Policy status check]
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
