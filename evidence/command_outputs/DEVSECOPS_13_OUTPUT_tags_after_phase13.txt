@@ -1,0 +1,9 @@
+v0.1-skeleton
+v1.0-vulnerable-baseline
+v1.1-policy-gate-failed
+v1.2-remediation
+v1.3-policy-gate-passed
+v1.4-evidence-pack
+v1.5-report
+v1.6-presentation
+v1.7-publication-ready
