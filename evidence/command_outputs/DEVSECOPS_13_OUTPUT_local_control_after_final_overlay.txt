@@ -1,0 +1,63 @@
+Phase 13 local control after final reviewed overlay
+Date: 2026-05-09T08:03:15+00:00
+Qube: dev-workbench
+
+[Repository]
+[OK] PROJECT_TREE.txt
+[OK] README.md
+[OK] README_RU.md
+[OK] README_EN.md
+[OK] PORTFOLIO_SUMMARY.md
+
+[Reports]
+[OK] report landing
+[OK] RU report markdown
+[OK] EN report markdown
+[OK] RU report PDF
+[OK] EN report PDF
+[OK] final publication review
+
+[Evidence]
+[OK] failed gate evidence
+[OK] passed gate evidence
+[OK] before/after summary
+[OK] evidence inventory CSV
+
+[Policy statuses]
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
+
+[Git]
+Branch:
+remediation
+
+Tags:
+v0.1-skeleton
+v1.0-vulnerable-baseline
+v1.1-policy-gate-failed
+v1.2-remediation
+v1.3-policy-gate-passed
+v1.4-evidence-pack
+v1.5-report
+v1.6-presentation
+v1.7-publication-ready
+
+Recent log:
+3d12dd9 (HEAD -> remediation) docs: add final reviewed overlay git evidence
+70e0425 docs: apply final reviewed publication package
+efef9f1 docs: add final publication archive checksum evidence
+64cdbdd docs: add final publication git status evidence
+6186a3f docs: add phase 13 final control evidence
+c457d96 docs: add phase 13 git evidence
+c0c345e (tag: v1.7-publication-ready) docs: add phase 13 GitHub publication readiness
+131348a docs: add publication cleanup git evidence
+7417502 chore: clean publication artifacts before release
+1b8944f docs: add phase 12 git evidence
+f890287 (tag: v1.6-presentation) docs: add phase 12 presentation pack
+dd0567e docs: add phase 11 git evidence
+21a585f (tag: v1.5-report) docs: add phase 11 technical report
+4c519b4 docs: add phase 10 git evidence
+897a29d (tag: v1.4-evidence-pack) docs: add phase 10 evidence collection pack
+
+Status:
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_local_control_after_final_overlay.txt
