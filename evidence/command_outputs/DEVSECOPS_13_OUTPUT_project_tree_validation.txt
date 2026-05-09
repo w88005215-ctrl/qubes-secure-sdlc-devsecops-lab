@@ -1,0 +1,88 @@
+Phase 13 project tree validation
+Date: 2026-05-09T07:18:22+00:00
+Qube: dev-workbench
+
+[OK] PROJECT_TREE.txt
+[OK] publication-ready tree evidence
+
+Tree preview:
+.
+├── app
+│   ├── fixed-version
+│   │   ├── app.py
+│   │   ├── .gitkeep
+│   │   └── requirements.txt
+│   └── vulnerable-version
+│       ├── app.py
+│       ├── .env.example
+│       ├── .gitkeep
+│       ├── README.md
+│       └── requirements.txt
+├── diagrams
+│   ├── .gitkeep
+│   ├── qubes_devsecops_architecture.drawio
+│   ├── secure_sdlc_pipeline.drawio
+│   └── security_gates.drawio
+├── docker
+│   ├── fixed.Dockerfile
+│   ├── .gitkeep
+│   └── vulnerable.Dockerfile
+├── docs
+│   ├── 00_git_branching_strategy.md
+│   ├── 01_evidence_standard.md
+│   ├── 02_quality_acceptance_criteria.md
+│   ├── 03_demo_defect_matrix.md
+│   ├── 04_project_overview.md
+│   ├── 05_qubes_architecture.md
+│   ├── 06_secure_sdlc_methodology.md
+│   ├── 07_security_pipeline_design.md
+│   ├── 08_findings_summary.md
+│   ├── 09_remediation_plan.md
+│   ├── 10_before_after_results.md
+│   ├── 11_limitations.md
+│   ├── 12_lessons_learned.md
+│   ├── en
+│   │   ├── 00_project_overview.md
+│   │   ├── 01_qubes_architecture.md
+│   │   ├── 02_evidence_workflow.md
+│   │   ├── 03_qubes_vm_architecture.md
+│   │   ├── 04_template_appvm_preparation.md
+│   │   ├── 05_vulnerable_demo_application.md
+│   │   ├── 06_security_tools_installation.md
+│   │   ├── 07_vulnerable_security_scans.md
+│   │   ├── 08_policy_gate_failed.md
+│   │   ├── 09_remediation.md
+│   │   ├── 10_policy_gate_passed.md
+│   │   ├── 11_evidence_collection.md
+│   │   └── 13_github_publication.md
+│   ├── .gitkeep
+│   └── ru
+│       ├── 00_project_overview.md
+│       ├── 01_qubes_architecture.md
+│       ├── 02_evidence_workflow.md
+│       ├── 03_qubes_vm_architecture.md
+│       ├── 04_template_appvm_preparation.md
+│       ├── 05_vulnerable_demo_application.md
+│       ├── 06_security_tools_installation.md
+│       ├── 07_vulnerable_security_scans.md
+│       ├── 08_policy_gate_failed.md
+│       ├── 09_remediation.md
+│       ├── 10_policy_gate_passed.md
+│       ├── 11_evidence_collection.md
+│       └── 13_github_publication.md
+├── evidence
+│   ├── before_after
+│   │   ├── DEVSECOPS_07_POLICY_GATE_FAILED_SUMMARY.json
+│   │   ├── DEVSECOPS_08_REMEDIATION_MATRIX.csv
+│   │   ├── DEVSECOPS_09_BEFORE_AFTER_SECURITY_SUMMARY.csv
+│   │   ├── DEVSECOPS_10_BEFORE_AFTER_EXECUTIVE_SUMMARY.csv
+│   │   └── .gitkeep
+│   ├── command_outputs
+│   │   ├── DEVSECOPS_00_OUTPUT_session_context.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_branches_and_tags.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_collect_evidence_validation.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_git_log_after_phase1_closeout.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_git_log_after_tree_fix.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_git_log_final_validation.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_git_log_validation_result.txt
+│   │   ├── DEVSECOPS_01_OUTPUT_git_status_after_phase1_closeout.txt

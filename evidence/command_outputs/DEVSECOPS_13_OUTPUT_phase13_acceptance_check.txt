@@ -1,0 +1,36 @@
+Phase 13 acceptance check
+Date: 2026-05-09T07:18:38+00:00
+Qube: dev-workbench
+
+[OK] README.md
+[OK] README_RU.md
+[OK] README_EN.md
+[OK] PORTFOLIO_SUMMARY.md
+[OK] RU GitHub publication doc
+[OK] EN GitHub publication doc
+[OK] RU technical report
+[OK] EN technical report
+[OK] presentation source
+[OK] HTML presentation
+[OK] failed gate evidence
+[OK] passed gate evidence
+[OK] evidence inventory CSV
+[OK] evidence SHA256 manifest
+[OK] PROJECT_TREE.txt
+
+Policy status:
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
+
+Cache check:
+[OK] no __pycache__ directories
+
+Git status:
+ M PROJECT_TREE.txt
+?? PORTFOLIO_SUMMARY.md
+?? docs/en/13_github_publication.md
+?? docs/ru/13_github_publication.md
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_phase13_acceptance_check.txt
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_project_tree_publication_ready.txt
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_project_tree_validation.txt
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_publication_readiness_precheck.txt

@@ -1,0 +1,52 @@
+Phase 13 publication readiness precheck
+Date: 2026-05-09T07:17:22+00:00
+Qube: dev-workbench
+
+Branch:
+remediation
+
+Latest commits:
+131348a (HEAD -> remediation) docs: add publication cleanup git evidence
+7417502 chore: clean publication artifacts before release
+1b8944f docs: add phase 12 git evidence
+f890287 (tag: v1.6-presentation) docs: add phase 12 presentation pack
+dd0567e docs: add phase 11 git evidence
+21a585f (tag: v1.5-report) docs: add phase 11 technical report
+4c519b4 docs: add phase 10 git evidence
+897a29d (tag: v1.4-evidence-pack) docs: add phase 10 evidence collection pack
+f4e578c docs: add phase 9 git evidence
+c2fe9dd (tag: v1.3-policy-gate-passed) test: add fixed security scans and passed policy gate evidence
+a8de048 docs: add phase 8 git evidence
+2546af6 (tag: v1.2-remediation) fix: add remediated application infrastructure and documentation
+1f517c1 (vulnerable-baseline) docs: add phase 7 git evidence
+abc785e (tag: v1.1-policy-gate-failed) test: add failed policy gate for vulnerable baseline
+91f5596 docs: add phase 6 repair git evidence
+
+Tags:
+v0.1-skeleton
+v1.0-vulnerable-baseline
+v1.1-policy-gate-failed
+v1.2-remediation
+v1.3-policy-gate-passed
+v1.4-evidence-pack
+v1.5-report
+v1.6-presentation
+
+Policy gate statuses:
+POLICY_GATE_STATUS=FAILED
+POLICY_GATE_STATUS=PASSED
+
+Required publication files:
+[OK] README.md
+[OK] README_RU.md
+[OK] README_EN.md
+[OK] RU report
+[OK] EN report
+[OK] presentation source
+[OK] HTML presentation
+[OK] passed gate evidence
+[OK] evidence inventory
+[OK] evidence SHA256 manifest
+
+Git status:
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_publication_readiness_precheck.txt
