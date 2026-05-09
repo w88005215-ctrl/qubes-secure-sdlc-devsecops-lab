@@ -1,0 +1,139 @@
+Phase 13 publication completeness audit
+Date: 2026-05-09T08:05:59+00:00
+Qube: dev-workbench
+
+[Repository root]
+[OK] README.md
+[OK] README_RU.md
+[OK] README_EN.md
+[OK] PORTFOLIO_SUMMARY.md
+[OK] RELEASE_CHECKLIST.md
+[OK] GITHUB_PUBLICATION_NOTE.md
+[OK] LICENSE
+[OK] .gitignore
+[OK] .gitleaks.toml
+
+[Demo application]
+[OK] vulnerable app.py
+[OK] vulnerable requirements.txt
+[OK] fixed app.py
+[OK] fixed requirements.txt
+
+[Docker and IaC]
+[OK] vulnerable Dockerfile
+[OK] fixed Dockerfile
+[OK] vulnerable IaC
+[OK] fixed IaC
+
+[GitHub Actions]
+[OK] security-pipeline.yml
+[OK] sbom.yml
+[OK] policy-gate.yml
+
+[Scripts]
+[OK] scripts/00_prepare_dirs.sh
+[OK] scripts/01_collect_tool_versions.sh
+[OK] scripts/02_run_sast.sh
+[OK] scripts/03_run_sca.sh
+[OK] scripts/04_run_secret_scan.sh
+[OK] scripts/05_run_iac_scan.sh
+[OK] scripts/06_generate_sbom.sh
+[OK] scripts/07_run_container_scan.sh
+[OK] scripts/08_policy_gate.sh
+[OK] scripts/09_collect_evidence.sh
+
+[Reports]
+[OK] report landing
+[OK] RU report markdown
+[OK] EN report markdown
+[OK] RU report PDF
+[OK] EN report PDF
+[OK] final publication review
+
+[Presentation]
+[OK] storyboard
+[OK] RU/EN presentation source
+[OK] HTML presentation
+
+[Evidence core]
+[OK] EVIDENCE_INVENTORY.csv
+[OK] EVIDENCE_INVENTORY.md
+[OK] EVIDENCE_SUMMARY.md
+[OK] SHA256 manifest
+
+[Policy gate evidence]
+[OK] failed policy gate output
+[OK] passed policy gate output
+[OK] failed gate status confirmed
+[OK] passed gate status confirmed
+
+[Scan reports]
+[OK] Semgrep vulnerable
+[OK] Semgrep fixed
+[OK] Bandit vulnerable
+[OK] Bandit fixed
+[OK] pip-audit vulnerable
+[OK] pip-audit fixed
+[OK] Gitleaks vulnerable
+[OK] Gitleaks fixed
+[OK] Checkov vulnerable
+[OK] Checkov fixed
+[OK] Trivy fs vulnerable
+[OK] Trivy fs fixed
+[OK] Grype vulnerable
+[OK] Grype fixed
+
+[SBOM]
+[OK] vulnerable SBOM
+[OK] fixed SBOM
+
+[Before/after]
+[OK] remediation matrix
+[OK] before/after security summary
+[OK] executive before/after summary
+
+[Counts]
+Evidence files: 243
+Command output files: 201
+Scan report files: 25
+SBOM files: 3
+Screenshot files: 5
+Report files: 11
+Documentation files: 42
+
+[Noise check]
+
+[Git]
+Branch:
+remediation
+
+Tags:
+v0.1-skeleton
+v1.0-vulnerable-baseline
+v1.1-policy-gate-failed
+v1.2-remediation
+v1.3-policy-gate-passed
+v1.4-evidence-pack
+v1.5-report
+v1.6-presentation
+v1.7-publication-ready
+
+Recent log:
+ea48c39 (HEAD -> remediation) docs: add local control after final reviewed overlay
+3d12dd9 docs: add final reviewed overlay git evidence
+70e0425 docs: apply final reviewed publication package
+efef9f1 docs: add final publication archive checksum evidence
+64cdbdd docs: add final publication git status evidence
+6186a3f docs: add phase 13 final control evidence
+c457d96 docs: add phase 13 git evidence
+c0c345e (tag: v1.7-publication-ready) docs: add phase 13 GitHub publication readiness
+131348a docs: add publication cleanup git evidence
+7417502 chore: clean publication artifacts before release
+1b8944f docs: add phase 12 git evidence
+f890287 (tag: v1.6-presentation) docs: add phase 12 presentation pack
+dd0567e docs: add phase 11 git evidence
+21a585f (tag: v1.5-report) docs: add phase 11 technical report
+4c519b4 docs: add phase 10 git evidence
+
+Status:
+?? evidence/command_outputs/DEVSECOPS_13_OUTPUT_publication_completeness_audit.txt
