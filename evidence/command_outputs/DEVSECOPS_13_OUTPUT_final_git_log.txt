@@ -1,0 +1,15 @@
+6186a3f (HEAD -> remediation) docs: add phase 13 final control evidence
+c457d96 docs: add phase 13 git evidence
+c0c345e (tag: v1.7-publication-ready) docs: add phase 13 GitHub publication readiness
+131348a docs: add publication cleanup git evidence
+7417502 chore: clean publication artifacts before release
+1b8944f docs: add phase 12 git evidence
+f890287 (tag: v1.6-presentation) docs: add phase 12 presentation pack
+dd0567e docs: add phase 11 git evidence
+21a585f (tag: v1.5-report) docs: add phase 11 technical report
+4c519b4 docs: add phase 10 git evidence
+897a29d (tag: v1.4-evidence-pack) docs: add phase 10 evidence collection pack
+f4e578c docs: add phase 9 git evidence
+c2fe9dd (tag: v1.3-policy-gate-passed) test: add fixed security scans and passed policy gate evidence
+a8de048 docs: add phase 8 git evidence
+2546af6 (tag: v1.2-remediation) fix: add remediated application infrastructure and documentation
